@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="?attr/paddingSmall"
+    android:paddingTop="?attr/paddingSmall"
+    android:paddingBottom="?attr/paddingSmall">
+
+
+    <ImageView
+        android:id="@+id/iv_veg_non"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="?attr/marginSmall"
+        android:layout_marginBottom="?attr/marginSmall"
+        android:background="@color/red" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_product"
+        style="@style/NormalTextViewDark"
+        android:textSize="@dimen/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_12"
+        android:layout_toRightOf="@id/iv_veg_non"
+        android:maxWidth="120dp"
+        android:text="Product name"
+        />
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_product_price"
+        style="@style/NormalTextViewDark"
+        android:textSize="@dimen/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignTop="@+id/tv_product"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="\u20B9 120" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_cal"
+        style="@style/NormalTextView"
+        android:textColor="?attr/textColorGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignBottom="@+id/tv_product"
+        android:layout_marginStart="@dimen/dimen_8"
+        android:layout_marginLeft="@dimen/dimen_8"
+        android:layout_toEndOf="@+id/tv_product"
+        android:layout_toRightOf="@+id/tv_product"
+        android:text="120 cal" />
+
+
+</RelativeLayout>

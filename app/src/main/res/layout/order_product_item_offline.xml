@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+
+    <ImageView
+        android:id="@+id/iv_veg_non"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/red" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_product"
+        style="@style/ContentMainTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_veg_non"
+        android:maxWidth="120dp"
+        android:text="product name" />
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_product_price"
+        style="@style/ContentSecondaryTextLabelLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignTop="@+id/tv_product"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="\u20B9 120" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_cal"
+        style="@style/ContentSecondaryTextLabelLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignBottom="@+id/tv_product"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/tv_product"
+        android:layout_toRightOf="@+id/tv_product"
+        android:text="120 cal" />
+
+
+</RelativeLayout>

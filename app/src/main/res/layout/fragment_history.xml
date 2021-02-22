@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/white_border"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/iv_booking"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/office_meeting" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_booking_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_booking"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_booking"
+        android:text="Booking Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_booking_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_booking_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/iv_booking"
+        android:text="Booking Location"
+        android:textSize="@dimen/small_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_booking_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_booking_location"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/iv_booking"
+        android:text="Booking Date"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_booking_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_booking_date"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_booking"
+        android:text="Booking time"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_event_meeting_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_booking_time"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_booking"
+        android:text="Booking Status"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text" />
+
+    <ImageView
+        android:id="@+id/booking_separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_event_meeting_status"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/grey_line" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_booking_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/booking_separator"
+        android:layout_marginTop="10dp"
+        android:text="status"
+        android:textAllCaps="true"
+        android:textSize="@dimen/small_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/booking_separator"
+        android:layout_alignTop="@+id/tv_booking_status"
+        android:layout_alignParentRight="true"
+        android:text="November 12, 2:39 PM"
+        android:textSize="@dimen/small_text" />
+
+    <Button
+        android:id="@+id/btn_booking_feedback"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/booking_separator"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/capsule_shape_blue"
+        android:text="feedback"
+        android:textColor="@color/white" />
+</RelativeLayout>

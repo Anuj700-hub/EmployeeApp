@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card"
+        android:minHeight="60dp"
+        android:layout_marginRight="@dimen/dimen_24"
+        android:layout_marginLeft="@dimen/dimen_24"
+        android:background="@drawable/rounded_bordered"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginBottom="@dimen/dimen_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.46" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guide_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guide2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <TextView
+            android:id="@+id/bt_check_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="Show Menu"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_vendor_item"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="@dimen/dimen_8"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/default_vendor_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide"
+            app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+        <TextView
+            android:id="@+id/tv_min_order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/xsmall_text"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/iv_vendor_item"
+            app:layout_constraintRight_toLeftOf="@+id/tv_v_rating"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_vendor_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_8"
+            style="@style/MediumTextViewBoldNoPadding"
+            android:textColor="@color/text_black_alpha_90"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            app:layout_constraintLeft_toRightOf="@+id/iv_vendor_item"
+            app:layout_constraintRight_toLeftOf="@+id/iv_star"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Vijaylakshmi Amul Counter" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_vendor_cuisines"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:textColor="@color/text_black_alpha_90"
+            style="@style/SmallTextViewGrey"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintLeft_toRightOf="@+id/iv_vendor_item"
+            app:layout_constraintRight_toLeftOf="@+id/tv_v_rating"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_name"
+            tools:text="north indian, south indian, pizza, italian, chinese, drinks" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="tv_vendor_time,tv_corona_safe,tv_delivery_type"/>
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/black_alpha_30"
+            android:layout_marginRight="@dimen/dimen_8"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/barrier"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_vendor_cuisines"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_vendor_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="starts at 8"
+            android:textSize="11sp"
+            android:visibility="gone"
+            style="@style/SmallTextViewGrey"
+            app:layout_constraintBottom_toTopOf="@+id/line"
+            app:layout_constraintRight_toRightOf="@+id/tv_vendor_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_cuisines" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:visibility="invisible"
+            android:id="@+id/tv_vendor_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dimen_4"
+            style="@style/SmallTextViewGrey"
+            android:gravity="right"
+            android:layout_marginBottom="@dimen/dimen_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide2"
+            app:layout_constraintLeft_toLeftOf="@+id/vertical_guide"
+            tools:text="No pending orders" />
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_delivery_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MediumTextView"
+            android:gravity="right"
+            android:textSize="@dimen/xsmall_text"
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide2"
+            app:layout_constraintLeft_toLeftOf="@+id/vertical_guide_middle"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            tools:text="Pickup/Delivery" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_corona_safe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dimen_4"
+            style="@style/SmallTextViewGrey"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/xsmall_text"
+            android:gravity="left"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide_middle"
+            app:layout_constraintLeft_toRightOf="@+id/iv_tick"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            android:text="Corona Safe" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_tick"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:padding="@dimen/dimen_2"
+            app:srcCompat="@drawable/ic_accent_circle_tick"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_corona_safe"
+            app:layout_constraintTop_toTopOf="@+id/tv_corona_safe"
+            app:layout_constraintLeft_toLeftOf="@+id/vertical_guide"
+            app:layout_constraintRight_toLeftOf="@+id/tv_corona_safe"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_star"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:padding="@dimen/dimen_5"
+            app:srcCompat="@drawable/ic_star_filled"
+            app:layout_constraintTop_toTopOf="@+id/tv_vendor_name"
+            app:layout_constraintRight_toLeftOf="@+id/tv_v_rating"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide2"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_v_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            style="@style/MediumTextViewBold"
+            android:textSize="@dimen/xsmall_text"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_star"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide2"
+            app:layout_constraintTop_toTopOf="@+id/iv_star"
+            tools:text="4.5" />
+
+        <View
+            android:id="@+id/v_disabled"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_disabled"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>

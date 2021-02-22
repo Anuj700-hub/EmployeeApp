@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_express_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        android:paddingLeft="10dp"
+        android:src="@drawable/express" />
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/vendor_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:text="Vendors"
+        android:textAllCaps="true"
+        android:textSize="@dimen/medium_text"
+        android:layout_below="@id/gif_express_checkout"
+        android:textStyle="bold" />
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@id/gif_express_checkout"
+        android:text="VIEW ALL"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/medium_text"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cp_order_confirmed"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40"/>
+
+    <View
+        android:id="@+id/iv_order_confirm_line"
+        android:layout_width="@dimen/dimen_2"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/guide1"
+        app:layout_constraintRight_toLeftOf="@+id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_order_confirm_checkpoint"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        app:srcCompat="@drawable/blue_tick"
+        app:layout_constraintLeft_toRightOf="@+id/guide1"
+        app:layout_constraintRight_toLeftOf="@+id/guide2"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guide1"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_guide1" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_4"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@+id/guide3"
+        app:layout_constraintStart_toStartOf="@+id/guide2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="@dimen/dimen_8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dimen_16">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_order_confirmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/medium_text"
+                        android:fontFamily="@font/groteskbold"
+                        android:text="Order Placed"
+                        android:textColor="@color/order_detail_text_black" />
+
+                    <View
+                        android:id="@+id/horizontal_line"
+                        android:layout_width="23dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tv_order_confirmed"
+                        android:layout_marginTop="@dimen/dimen_6"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/tv_order_confirmed_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/horizontal_line"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:textSize="@dimen/medium_text"
+                        android:fontFamily="@font/groteskreg"
+                        android:text="Your order is placed"
+                        android:textColor="@color/order_detail_text_black" />
+
+                    <TextView
+                        android:id="@+id/tv_vendor_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/medium_text"
+                        android:fontFamily="@font/grotesksemibold"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="gone"
+                        android:layout_below="@id/tv_order_confirmed_text"
+                        android:text="Namma Cafe" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

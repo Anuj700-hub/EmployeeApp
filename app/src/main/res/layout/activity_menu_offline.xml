@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_call_To_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="2dp"
+        android:visibility="gone"
+        cardView:cardCornerRadius="10dp"
+        cardView:elevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_call_to_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_dialog_info"
+                android:tint="@color/black" />
+
+            <View
+                android:id="@+id/v_sep"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_toRightOf="@+id/iv_call_to_order"
+                android:background="@color/bg"
+                android:elevation="0dp"
+                android:stateListAnimator="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_call_to_order"
+                android:layout_toRightOf="@+id/v_sep"
+                android:padding="2dp"
+                android:text="You can call this vendor to place an order."
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_call_to_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/primary_button_back"
+                android:backgroundTint="@color/colorAccent"
+                android:drawableRight="@android:drawable/ic_menu_call"
+                android:drawablePadding="10dp"
+                android:elevation="2dp"
+                android:padding="12dp"
+                android:text="Call"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text"
+                android:transitionName="@string/checkout_trans" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/rl_base_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cv_call_To_order"
+        android:elevation="0dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/fl_cart_container"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_curved_border_top_accent"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/bt_checkout"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="22dp"
+                android:padding="3dp"
+                android:text="VIEW CART"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text"
+                android:transitionName="@string/checkout_trans" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:tint="@color/white"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/orderhistory" />
+
+
+        </LinearLayout>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="99"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_cart"
+            android:padding="5dp"
+            android:text="Rs 123"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text"
+            android:textStyle="bold" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_cart"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="Extra Charges may apply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

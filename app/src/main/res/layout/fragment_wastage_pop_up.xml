@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hungerbox.customer.util.view.WastagePopUpFragment"
+    android:background="@color/transparent"
+    android:layout_marginRight="@dimen/dimen_5"
+    android:layout_marginLeft="@dimen/dimen_5">
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hungerbox.customer.util.view.WastagePopUpFragment"
+    app:cardCornerRadius="@dimen/dimen_10"
+    app:cardElevation="@dimen/dimen_10"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:layout_marginBottom="@dimen/dimen_20">
+
+<RelativeLayout
+    android:id="@+id/rl_image"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_waste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bt_back"
+        android:layout_width="@dimen/dimen_20"
+        android:layout_height="@dimen/dimen_20"
+        app:srcCompat="@drawable/ic_cancel_24_px"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

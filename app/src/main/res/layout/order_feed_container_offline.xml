@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#EAEAEA"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="7dp"
+            android:background="#EAEAEA"
+            android:id="@+id/updateStatus"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.hungerbox.customer.util.view.HBTextViewBold
+                android:id="@+id/updateStatusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INSTALL"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentRight="true"/>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/updateStatusText"
+                android:layout_toLeftOf="@+id/updateStatusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We are updating your app in background"/>
+
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/updateStatusProgress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_no_vendors_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/ic_no_vendor"
+            android:gravity="center"
+            android:text="No vendors found"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/updateStatus"
+            android:id="@+id/rv_order_feed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EAEAEA"
+            android:clipToPadding="false"
+            android:paddingBottom="60dp"
+            android:layout_above="@+id/bottomBox"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            <requestFocus />
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottomBox"
+            android:background="#EAEAEA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/powered"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/currentOrder"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="100">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:cardCornerRadius="5dp"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardElevation="5dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/currentOrderText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/box2"
+                                android:layout_alignRight="@+id/box2">
+
+                                <TextView
+                                    android:id="@+id/currentOrderText1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Placed"
+                                    android:textColor="@color/text_dark"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/currentOrderText2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:text="Confirmed"
+                                    android:textColor="@color/text_dark"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/currentOrderText3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="Processed"
+                                    android:textColor="@color/text_dark"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/box2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/currentOrderText"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp">
+
+
+                                <RelativeLayout
+                                    android:elevation="1dp"
+                                    android:id="@+id/currentOrderDot1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/currentOrderOnlyDot1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:tint="@color/colorPrimaryBlue"
+                                        app:srcCompat="@drawable/dots" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/currentOrderOnlyTick1"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/ic_check_mark" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_alignLeft="@+id/currentOrderDot1"
+                                    android:layout_alignRight="@+id/currentOrderDot2"
+                                    android:id="@+id/currentOrderLine1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@color/colorGrey_Dot"
+                                    android:elevation="0dp"
+                                    android:orientation="horizontal"
+                                    android:stateListAnimator="@null" />
+
+                                <RelativeLayout
+                                    android:elevation="1dp"
+                                    android:id="@+id/currentOrderDot2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/currentOrderOnlyDot2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:tint="@color/colorPrimaryBlue"
+                                        app:srcCompat="@drawable/dots" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/currentOrderOnlyTick2"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/ic_check_mark" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_alignLeft="@+id/currentOrderDot2"
+                                    android:layout_alignRight="@+id/currentOrderDot3"
+                                    android:id="@+id/currentOrderLine2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@color/colorGrey_Dot"
+                                    android:elevation="0dp"
+                                    android:orientation="horizontal"
+                                    android:stateListAnimator="@null" />
+
+                                <RelativeLayout
+                                    android:elevation="1dp"
+                                    android:id="@+id/currentOrderDot3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/currentOrderOnlyDot3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:tint="@color/colorPrimaryBlue"
+                                        app:srcCompat="@drawable/dots" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/currentOrderOnlyTick3"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/ic_check_mark" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/qr"
+                        android:layout_width="68dp"
+                        android:layout_height="54dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/ic_viewqrcode"
+                        android:elevation="0dp"
+                        android:gravity="center"
+                        android:stateListAnimator="@null"
+                        >
+
+                    </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/fl_cart_container"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_curved_border_top_accent"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <Button
+                    android:id="@+id/bt_checkout"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="22dp"
+                    android:padding="3dp"
+                    android:text="VIEW CART"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text"
+                    android:transitionName="@string/checkout_trans" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_vertical"
+                    android:tint="@color/white"
+                    android:src="@drawable/orderhistory" />
+
+
+            </LinearLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_order_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_cart"
+                android:padding="5dp"
+                android:text="Rs 123"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text"
+                android:textStyle="bold" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_cart"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="Extra Charges may apply"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#dddddd"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_pager_height"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/pager_indicator_selector" />
+
+                        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/pager_indicator_selector" />
+
+                        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/pager_indicator_selector" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/a1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#dddddd"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="10dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_margin="5dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/a1"
+                    app:cardBackgroundColor="#dddddd"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="10dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_margin="5dp" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</RelativeLayout>

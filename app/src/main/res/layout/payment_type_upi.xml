@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_8"
+    android:layout_marginRight="@dimen/dimen_8"
+    android:layout_marginLeft="@dimen/dimen_8"
+    android:background="@drawable/white_drawable_without_border"
+    >
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_payment_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dimen_40"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingTop="@dimen/dimen_4"
+        android:text="Test Method"
+        android:elevation="0dp"
+        android:visibility="gone"
+        style="@style/NormalTextViewDark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_upi_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_payment_method"
+        android:clipToPadding="false"
+        />
+
+
+</RelativeLayout>

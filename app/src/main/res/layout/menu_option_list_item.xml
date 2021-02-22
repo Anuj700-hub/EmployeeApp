@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_4">
+
+
+    <View
+        android:id="@+id/v_sep"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        android:visibility="gone" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_menu_option_name"
+        style="@style/MediumTextViewDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_sep"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:paddingBottom="?attr/paddingMedium"
+        android:text="Test option"
+        android:textSize="?attr/largeTextSize"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_option_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_menu_option_name"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</RelativeLayout>

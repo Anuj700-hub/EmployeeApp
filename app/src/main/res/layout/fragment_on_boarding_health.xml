@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tranparent"
+    tools:context="com.hungerbox.customer.prelogin.fragment.OnBoardingFragment">
+
+    <ImageView
+        android:id="@+id/iv_onboarding_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/health_onboarding_1" />
+
+    <com.hungerbox.customer.util.view.HBTextViewBold
+        android:text="Onboard"
+        android:id="@+id/tv_onborad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_onboarding_icon"
+        android:layout_marginTop="49dp"
+        android:gravity="center"
+        android:padding="10dp"
+        style="@style/MediumTextViewDark" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.hungerbox.customer.bluetooth.BluetoothViolationActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/dimen_10"
+        android:paddingTop="?attr/paddingMedium"
+        android:paddingBottom="?attr/paddingMedium">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/header"
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="Social Distancing"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_header"
+        android:layout_marginTop="@dimen/dimen_36"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/social_distancing_icon" />
+
+            <TextView
+                style="@style/LargeTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social Distancing Summary"
+                android:textSize="@dimen/label_font_small" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:checked="true"
+                android:gravity="end" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/NormalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:text="Notification"
+                android:textColor="@color/black_87" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_violations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingRight="@dimen/dimen_20dp" />
+
+    </LinearLayout>
+</RelativeLayout>

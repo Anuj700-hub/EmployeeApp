@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BarView">
+        <attr name="complete" format="integer" />
+        <attr name="bar_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="GoalProgressBar">
+        <attr name="goalIndicatorHeight" format="dimension" />
+        <attr name="goalIndicatorThickness" format="dimension" />
+        <attr name="goalReachedColor" format="color" />
+        <attr name="goalNotReachedColor" format="color" />
+        <attr name="unfilledSectionColor" format="color" />
+        <attr name="barThickness" format="dimension" />
+        <attr name="indicatorType" format="enum">
+            <enum name="line" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="square" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="HbCardView">
+        <attr name="viewType" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="HbTextView">
+        <attr name="textFontType" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="HbPaymentCardView">
+        <attr name="cardType" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="ColorOptionsView">
+        <attr name="iv_logo" format="reference"  />
+    </declare-styleable>
+
+
+
+<!--
+    rebranding attributes
+-->
+
+    <attr name="colorPrimaryVariant" format="color"/>
+    <attr name="colorOnPrimary" format="color"/>
+    <attr name="colorSecondaryVariant" format="color"/>
+    <attr name="colorOnSecondary" format="color"/>
+    <attr name="colorError" format="color"/>
+    <attr name="colorOnError" format="color"/>
+    <attr name="colorSurface" format="color"/>
+    <attr name="colorOnSurface" format="color"/>
+    <attr name="colorOnBackground" format="color"/>
+    <attr name="textColor" format="color"/> <!-- white -->
+    <attr name="textColorGrey" format="color"/>
+    <attr name="textColorDark" format="color"/>
+    <attr name="colorBackgroundGrey" format="color"/>
+    <attr name="blackTransparent" format="color"/>
+    <attr name="alertColor" format="color"/>
+    <attr name="iconTintLight" format="color"/>
+    <attr name="colorPrimaryBlue" format="color"/>
+    <attr name="colorGreen" format="color"/>
+    <attr name="colorGreenContest" format="color"/>
+    <attr name="colorAccentLight" format="color"/>
+    <attr name="colorAccentLightAlpha" format="color"/>
+    <attr name="tabColor" format="color"/>
+    <attr name="cartFooterColor" format="color"/>
+    <attr name="colorAccent" format="color"/>
+    <attr name="textDark" format="color"/>
+    <attr name="textLight" format="color"/>
+    <attr name="colorAccentVeryLight" format="color"/>
+
+    <attr name="extraSmallTextSize" format="dimension"/>
+    <attr name="smallTextSize" format="dimension"/>
+    <attr name="mediumTextSize" format="dimension"/>
+    <attr name="largeTextSize" format="dimension"/>
+    <attr name="extraLargeTextSize" format="dimension"/>
+    <attr name="superLargeTextSize" format="dimension"/>
+
+    <attr name="paddingTextView" format="dimension"/>
+    <attr name="paddingExtraSmall" format="dimension"/>
+    <attr name="paddingSmall" format="dimension"/>
+    <attr name="paddingMedium" format="dimension"/>
+    <attr name="paddingLarge" format="dimension"/>
+
+    <attr name="marginSmall" format="dimension"/>
+    <attr name="marginMedium" format="dimension"/>
+    <attr name="mediumLargeText" format="dimension"/>
+    <attr name="marginLarge" format="dimension"/>
+    <attr name="largerText" format="dimension"/>
+
+    <attr name="radiusExtraSmall" format="dimension"/>
+    <attr name="radiusSmall" format="dimension"/>
+    <attr name="radiusMedium" format="dimension"/>
+    <attr name="radiusLarge" format="dimension"/>
+
+    <attr name="buttonBackground" format="reference"/>
+    <attr name="buttonCurvedBackground" format="reference"/>
+    <attr name="buttonSmallCurvedBackground" format="reference"/>
+    <attr name="buttonCurvedRadiusSmall" format="reference"/>
+    <attr name="buttonWhiteBackground" format="reference"/>
+    <attr name="buttonCurvedTopBackground" format="reference"/>
+    <attr name="footerCurvedTopBackground" format="reference"/>
+    <attr name="buttonBorderedBackground" format="reference"/>
+    <attr name="buttonStateSelector" format="reference"/>
+    <attr name="whiteCurvedBorder" format="reference" />
+    <attr name="RadioTextViewDark" format="reference"/>
+    <attr name="BottomRoundedAccentAlpha" format="reference"/>
+    <attr name="ButtonSquare" format="reference"/>
+
+    <attr name="ExtraSmallTextViewDark" format="reference"/>
+    <attr name="ExtraSmallTextView" format="reference"/>
+    <attr name="SmallTextView" format="reference"/>
+    <attr name="SmallTextViewGrey" format="reference"/>
+    <attr name="SmallTextViewDark" format="reference"/>
+    <attr name="NormalTextView" format="reference"/>
+    <attr name="NormalTextViewGrey" format="reference"/>
+    <attr name="NormalTextViewDark" format="reference"/>
+    <attr name="MediumTextView" format="reference"/>
+    <attr name="MediumTextViewDark" format="reference"/>
+    <attr name="HeaderTextView" format="reference"/>
+    <attr name="LargeTextView" format="reference"/>
+    <attr name="LargeTextViewGrey" format="reference"/>
+    <attr name="SuperLargeTextViewGrey" format="reference"/>
+    <attr name="LargeTextViewDark" format="reference"/>
+    <attr name="LargeTextViewBold" format="reference"/>
+    <attr name="SmallButton" format="reference"/>
+    <attr name="NormalButton" format="reference"/>
+    <attr name="NormalBorderedButton" format="reference"/>
+    <attr name="LargeButton" format="reference"/>
+    <attr name="NormalBorderlessButton" format="reference"/>
+    <attr name="NormalWhiteButton" format="reference"/>
+    <attr name="ButtonStateSelector" format="reference"/>
+    <attr name="NormalTextInputLayout" format="reference"/>
+    <attr name="NormalTextInputEditText" format="reference"/>
+    <attr name="NormalEditTextDark" format="reference"/>
+    <attr name="errorAppearance" format="reference"/>
+    <attr name="SmallCardView" format="reference"/>
+    <attr name="NormalCardView" format="reference"/>
+    <attr name="RecyclerView" format="reference"/>
+    <attr name="GreyCardView" format="reference"/>
+    <attr name="NormalSwitch" format="reference"/>
+    <attr name="RatingCircle" format="reference"/>
+    <attr name="CheckBoxStyle" format="reference"/>
+    <attr name="PaymentButton" format="reference"/>
+    <attr name="HintTextInputLayout" format="reference"/>
+
+
+
+
+
+</resources>

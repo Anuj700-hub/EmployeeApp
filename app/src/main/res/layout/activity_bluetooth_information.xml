@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen_16"
+    android:background="@color/tranparent"
+    tools:context="com.hungerbox.customer.bluetooth.BluetoothInformationActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dimen_16"
+        android:layout_centerInParent="true"
+        android:background="?attr/whiteCurvedBorder"
+        android:padding="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_information"
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_87" />
+
+        <Button
+            android:id="@+id/bt_ok"
+            style="@style/NormalButtonNoPadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_information"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:padding="@dimen/dimen_8"
+            android:text="Ok" />
+    </RelativeLayout>
+</RelativeLayout>

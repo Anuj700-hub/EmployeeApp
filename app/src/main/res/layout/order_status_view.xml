@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/currentOrder"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_60"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/rl_order_status_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="80">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/currentOrderText1"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="Placed"
+                app:layout_constraintBottom_toTopOf="@+id/guide_horizontal"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/currentOrderOnlyDot1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="@color/green"
+                app:layout_constraintLeft_toLeftOf="@id/currentOrderText1"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderText1"
+                app:layout_constraintTop_toBottomOf="@+id/currentOrderText1"
+                app:srcCompat="@drawable/dots" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/currentOrderOnlyTick1"
+                android:layout_width="15dp"
+                android:layout_height="14dp"
+                android:layout_centerInParent="true"
+                app:layout_constraintBottom_toBottomOf="@+id/currentOrderOnlyDot1"
+                app:layout_constraintLeft_toLeftOf="@id/currentOrderText1"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderText1"
+                app:layout_constraintTop_toTopOf="@+id/currentOrderOnlyDot1"
+                app:srcCompat="@drawable/ic_check_mark" />
+
+            <LinearLayout
+                android:id="@+id/currentOrderLine1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/background_grey"
+                android:elevation="-1dp"
+                android:orientation="horizontal"
+                android:stateListAnimator="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/currentOrderOnlyDot1"
+                app:layout_constraintLeft_toLeftOf="@+id/currentOrderOnlyDot1"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderOnlyDot2"
+                app:layout_constraintTop_toTopOf="@+id/currentOrderOnlyDot1" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/currentOrderText2"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="Accepted"
+                app:layout_constraintBottom_toTopOf="@+id/guide_horizontal"
+                app:layout_constraintLeft_toLeftOf="@+id/guide_vertical"
+                app:layout_constraintRight_toRightOf="@+id/guide_vertical" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/currentOrderOnlyDot2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="@color/green"
+                app:layout_constraintLeft_toLeftOf="@id/currentOrderText2"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderText2"
+                app:layout_constraintTop_toBottomOf="@+id/currentOrderText2"
+                app:srcCompat="@drawable/dots" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/currentOrderOnlyTick2"
+                android:layout_width="15dp"
+                android:layout_height="14dp"
+                android:layout_centerInParent="true"
+                app:layout_constraintBottom_toBottomOf="@+id/currentOrderOnlyDot2"
+                app:layout_constraintLeft_toLeftOf="@id/currentOrderText2"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderText2"
+                app:layout_constraintTop_toTopOf="@+id/currentOrderOnlyDot2"
+                app:srcCompat="@drawable/ic_check_mark" />
+
+            <LinearLayout
+                android:id="@+id/currentOrderLine2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/background_grey"
+                android:elevation="-1dp"
+                android:orientation="horizontal"
+                android:stateListAnimator="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/currentOrderOnlyDot1"
+                app:layout_constraintLeft_toLeftOf="@+id/currentOrderOnlyDot2"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderOnlyDot3"
+                app:layout_constraintTop_toTopOf="@+id/currentOrderOnlyDot1" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/currentOrderText3"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="Ready"
+                app:layout_constraintBottom_toTopOf="@+id/guide_horizontal"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/currentOrderOnlyDot3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="@color/green"
+                app:layout_constraintLeft_toLeftOf="@id/currentOrderText3"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderText3"
+                app:layout_constraintTop_toBottomOf="@+id/currentOrderText3"
+                app:srcCompat="@drawable/dots" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/currentOrderOnlyTick3"
+                android:layout_width="15dp"
+                android:layout_height="14dp"
+                android:layout_centerInParent="true"
+                app:layout_constraintBottom_toBottomOf="@+id/currentOrderOnlyDot3"
+                app:layout_constraintLeft_toLeftOf="@id/currentOrderText3"
+                app:layout_constraintRight_toRightOf="@+id/currentOrderText3"
+                app:layout_constraintTop_toTopOf="@+id/currentOrderOnlyDot3"
+                app:srcCompat="@drawable/ic_check_mark" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_qr"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_order_detail_qr"
+            android:layout_width="68dp"
+            android:layout_height="54dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:transitionName="qr_code"
+            app:srcCompat="@drawable/ic_viewqrcode">
+
+        </ImageView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_curved_border_primary"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/HeaderTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Settings" />
+
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        tools:context=".navmenu.activity.SettingsActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="How would you like us to notify you?"
+                android:textSize="@dimen/large_text" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/ctv_sms_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:padding="10dp"
+                android:text="SMS" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/ctv_notification_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:padding="10dp"
+                android:text="App Notifications" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="@color/light_grey" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/ctv_chat_head_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="See a active order head to quickly access your current order"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:alpha="0.5"
+        android:background="#000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorAccent" />
+    </RelativeLayout>
+</RelativeLayout>

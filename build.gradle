@@ -1,0 +1,63 @@
+ext.versionCodesAbi = ['armeabi-v7a': 1, 'arm64-v8a': 2, x86: 3, x86_64: 4]
+
+buildscript {
+    ext.kotlin_version = '1.3.41'
+    repositories {
+        jcenter()
+        google()
+
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.google.firebase:perf-plugin:1.3.1'
+        classpath 'com.github.triplet.gradle:play-publisher:2.2.0'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.1'
+
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath "io.realm:realm-gradle-plugin:4.3.0"
+    }
+}
+
+allprojects {
+    repositories {
+
+
+        maven {
+            url "http://phonepe.bintray.com/PhonePeThinAndroidSDK"
+            credentials {
+                username "phonepe_android_thinsdk_release_key@phonepe"
+                password "86d00df8714755cbfa84eb829f69c72fd6203c9c"
+            }
+        }
+
+        maven {
+            url "https://maven.google.com"
+        }
+
+        maven {
+            url  "https://phonepe.bintray.com/PhonePeIntentSDK"
+        }
+
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

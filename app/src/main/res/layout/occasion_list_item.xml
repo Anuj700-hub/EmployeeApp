@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_occasion"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/iv_occasion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:src="@drawable/lunch_active" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_occasion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_occasion"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|top"
+        android:lines="2"
+        android:text="Breakfast"
+        style="@style/MediumTextView"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="@dimen/xsmall_text" />
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_occasion_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_occasion"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Breakfast"
+        style="@style/SmallTextViewGrey"
+        android:textColor="@color/text_black_alpha_90"
+        android:textSize="9sp" />
+</RelativeLayout>

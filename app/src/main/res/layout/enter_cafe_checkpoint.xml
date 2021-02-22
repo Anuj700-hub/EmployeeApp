@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cp_enter_cafe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide5"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide6"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30"/>
+
+    <View
+        android:layout_width="@dimen/dimen_2"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/guide4"
+        app:layout_constraintRight_toLeftOf="@+id/guide5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guide2"/>
+
+    <View
+        android:id="@+id/iv_enter_cafe_line"
+        android:layout_width="@dimen/dimen_2"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/guide4"
+        app:layout_constraintRight_toLeftOf="@+id/guide5"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_enter_cafe_checkpoint"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        app:srcCompat="@drawable/hollow_tick"
+        app:layout_constraintLeft_toRightOf="@+id/guide4"
+        app:layout_constraintRight_toLeftOf="@+id/guide5"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guide2"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_guide2" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_4"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@+id/guide6"
+        app:layout_constraintStart_toStartOf="@+id/guide5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="@dimen/dimen_8dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/tv_enter_cafe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/groteskbold"
+                        android:text="Enter Cafe"
+                        android:textColor="@color/order_detail_text_black"
+                        android:textSize="@dimen/medium_text" />
+
+                    <View
+                        android:id="@+id/horizontal_line_2"
+                        android:layout_width="23dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tv_enter_cafe"
+                        android:layout_marginTop="@dimen/dimen_6"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/tv_timer_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/horizontal_line_2"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:fontFamily="@font/groteskreg"
+                        android:text="QR code available in"
+                        android:textColor="@color/order_detail_text_black"
+                        android:textSize="@dimen/small_text" />
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_timer_text"
+                        android:fontFamily="@font/grotesksemibold"
+                        android:text="24th Jan 2020, 03:30pm"
+                        android:visibility="gone"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/small_text" />
+
+                    <TextView
+                        android:id="@+id/tv_pre_order_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_time"
+                        android:layout_marginTop="@dimen/dimen_2"
+                        android:fontFamily="@font/groteskbold"
+                        android:text="05:18"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_welcome_cafe"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/horizontal_line_2"
+                        android:layout_marginTop="@dimen/dimen_18"
+                        android:fontFamily="@font/groteskreg"
+                        android:text="Welcome to"
+                        android:textColor="@color/order_detail_text_black"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cafe_name"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_welcome_cafe"
+                        android:layout_marginTop="@dimen/dimen_2"
+                        android:fontFamily="@font/groteskbold"
+                        android:text="Cafeteria Name"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_scan_qr"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/horizontal_line_2"
+                        android:layout_marginTop="@dimen/dimen_18"
+                        android:fontFamily="@font/groteskreg"
+                        android:text="Scan the QR now to enter the cafeteria."
+                        android:textColor="@color/order_detail_text_black"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_button_mark_in"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/horizontal_line_2"
+                        android:layout_marginTop="@dimen/dimen_18"
+                        android:fontFamily="@font/groteskreg"
+                        android:text="You can enter the cafeteria"
+                        android:textColor="@color/order_detail_text_black"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:gravity="center_vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.6"/>
+
+                    <ImageView
+                        android:id="@+id/iv_enter_qr"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50"
+                        app:layout_constraintLeft_toRightOf="@+id/guide7"
+                        app:layout_constraintRight_toLeftOf="@+id/guide7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/qr_disabled" />
+
+                    <TextView
+                        android:id="@+id/enter_tap_qr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/groteskreg"
+                        android:text="Tap to Zoom"
+                        android:visibility="gone"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/xxsmall_text"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        app:layout_constraintTop_toBottomOf="@id/iv_enter_qr"
+                        app:layout_constraintLeft_toRightOf="@+id/guide7"
+                        app:layout_constraintRight_toLeftOf="@+id/guide7"/>
+
+
+                    <Button
+                        android:id="@+id/bt_mark_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_24"
+                        android:background="@drawable/button_collect_order"
+                        android:enabled="false"
+                        android:fontFamily="@font/groteskbold"
+                        android:layout_marginRight="@dimen/dimen_12"
+                        android:visibility="gone"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_10"
+                        android:text="Mark Yourself In"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

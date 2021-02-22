@@ -1,0 +1,339 @@
+<resources>
+    <string name="title_activity_login">LoginActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="offers">Offers on <![CDATA[<b>Hatha Yoga</b>]]></string>
+
+    <string name="ruppes">\u20B9</string>
+    <string name="enter_amount_recharge">Enter Amount (\u20B9)</string>
+    <string name="drawer_close">close</string>
+    <string name="drawer_open">open</string>
+    <string name="checkout_trans">checkout_transition</string>
+    <string name="location">Cafe</string>
+    <string name="set_this_location_as_default">Set this location as your default cafeteria</string>
+    <string name="guest_selection_error">Please select atleast one of the guest type</string>
+    <string name="official_guest_text_msg">Please select this option for company sponsored guests.(Company will bear the cost)</string>
+    <string name="personal_guest_text_msg">You have to pay for these guests</string>
+    <string name="guest_ordering_text">To add a guest please use the + button</string>
+    <string name="guest_ordering_text_small">Tap to \nadd guest</string>
+    <string name="tap_on_back">Tap your NFC card on the back to login</string>
+    <string name="login_with_app">Skip the line &amp; save time \n\n1. Log onto the Mobile-friendly HungerBox website or \n2. Download our app &amp; start ordering</string>
+    <string name="employee_id_did_not_match">{1} did not match with the Card Tapped.\n\nPlease contact our Customer Support</string>
+
+    <string name="asset_statements">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://qbase.hungerbox.com\",\n  }\n}]</string>
+    <string name="server_client_id">415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com</string>
+
+    <string name="ob1">Order right from your seat</string>
+    <string name="ob2">Select from a curated list of vendors</string>
+    <string name="ob3">Pay using digital wallets</string>
+    <string name="ob4">Scan QR code and enjoy delicious food</string>
+    <string name="ob5">Use your digital wallets to pay for your order</string>
+
+    <string name="ob_body_1">Register yourself and open up to a hassle free ordering process.</string>
+    <string name="ob_body_2">We handpick the best vendors so you enjoy healthy and hygenic food.</string>
+    <string name="ob_body_3">All your favourite payment methods in one place. Order and pay with just a click.</string>
+    <string name="ob_body_4">Collect your delicious food by a unique QR code authentication process.</string>
+
+    <string name="workstation_address">Cabin/Workstation Address</string>
+    <string name="pickup_type">Pickup Type</string>
+
+    <string name="preorder_message">You are ordering for %1$s.Do you want to proceed?</string>
+    <string name="delivery_time_selection_error_msg">Please select the delivery time between %1$s to %2$s</string>
+    <string name="selected_delivery_time">Selected Delivery Time %1$s : %2$s</string>
+    <string name="preorder_delivery_time">Delivery Time - %1$s : %2$s</string>
+    <string name="signup_button_text">Sign Up</string>
+    <string name="signup_button_default_text">Sign Up</string>
+    <string name="trending"><i>Trending</i></string>
+    <string name="bookmarked_by_you"><i>Bookmarked Items</i></string>
+    <string name="book_mark_divided">book_mark_view_divided</string>
+    <string name="no_bookmark">Currently no bookmarked items are available</string>
+    <string name="suggested_for_you">Suggested for you: </string>
+    <string name="self_pickup">Eat at Cafe</string>
+    <string name="deliver_to_seat">Deliver to Desk</string>
+    <string name="medium_font">medium</string>
+    <string name="simpl_order_text">Place orders with <b>1 tap.</b>\nNo OTPs, no payment failures.</string>
+    <string name="simpl_deadline">Bills payable on the <b>1st and 16th.</b>\nNo extra charges.</string>
+    <string name="simpl_pay">Payable via <b>UPI, debit/credit cards\nor net banking.</b></string>
+
+    <!-- mswipe -->
+
+    <string name="waiting_for_card">Please insert or swipe card now.</string>
+    <string name="no_card_detected">No card detected. Please insert or swipe card again and press check card.</string>
+    <string name="card_inserted">Please use mag card</string>
+    <string name="pin_entered">PIN entered</string>
+    <string name="pin_canceled">PIN canceled</string>
+    <string name="pin_timeout">PIN timeout</string>
+    <string name="key_error">Key error</string>
+    <string name="pin_wrong_pin_length">Pin wrong length</string>
+
+    <string name="nfc_waiting_for_card">waiting for card</string>
+    <string name="nfc_waiting_for_card_removal">waiting for card removal</string>
+    <string name="nfc_card_removed">card removed</string>
+    <string name="nfc_timeout">timeout</string>
+    <string name="nfc_card_not_supported">card not supported</string>
+    <string name="nfc_multiple_card_detected">multiple card detected</string>
+    <string name="nfc_card_detected">card detected</string>
+
+    <string name="no_pin">No PIN</string>
+    <string name="bad_swipe">Bad Swipe. Please swipe again.</string>
+    <string name="mag_head_fail">Magnetic head fail</string>
+    <string name="enter_pin">Please enter PIN on WisePad</string>
+    <string name="please_select_app">Please select app</string>
+    <string name="transaction_terminated">Terminated</string>
+    <string name="transaction_declined">Offline Declined</string>
+    <string name="transaction_cancel">Cancel</string>
+    <string name="transaction_capk_fail">Fail (CAPK fail)</string>
+    <string name="transaction_not_icc">Please use Mag Card</string>
+    <string name="transaction_app_fail">Card Block</string>
+    <string name="transaction_device_error">Device Error</string>
+    <string name="transaction_application_blocked">transaction application blocked</string>
+    <string name="transaction_icc_card_removed">transaction icc card removed</string>
+    <string name="transaction_card_blocked">transaction card blocked</string>
+    <string name="transaction_condition_not_satisfied">transaction condition not satisfied</string>
+    <string name="transaction_invalid_icc_data">transaction invalid icc data</string>
+    <string name="transaction_card_not_supported">transaction card not supported</string>
+    <string name="transaction_missing_mandatory_data">transaction missing mandatory data</string>
+    <string name="transaction_no_emv_apps">transaction no emv apps</string>
+    <string name="call_your_bank">Please call your bank</string>
+    <string name="approved">Approved</string>
+    <string name="incorrect_pin">Incorrect PIN</string>
+    <string name="insert_card">Please insert card</string>
+    <string name="not_accepted">Not accepted</string>
+    <string name="pin_ok">PIN OK</string>
+    <string name="wait">Please wait&#8230;</string>
+    <string name="remove_card">Please remove card</string>
+    <string name="use_mag_stripe">Please use mag stripe</string>
+    <string name="try_again">Please try again</string>
+    <string name="refer_payment_device">Please refer to your payment device</string>
+    <string name="processing">Processing&#8230;</string>
+    <string name="last_pin_try">Last PIN try</string>
+    <string name="select_account">select account</string>
+    <string name="battery_low">Device battery low, please charge</string>
+    <string name="battery_critically_low">Device battery critically low and powered off</string>
+    <string name="command_not_available">Command not available</string>
+    <string name="device_no_response">Device no response</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="device_busy">Device Busy</string>
+    <string name="out_of_range">Input out of range.</string>
+    <string name="invalid_format">Input invalid format.</string>
+    <string name="input_invalid">Input invalid.</string>
+    <string name="cashback_not_supported">Cashback not supported.</string>
+    <string name="crc_error">CRC Error.</string>
+    <string name="comm_error">Communication Error.</string>
+    <string name="fail_to_start_bluetooth_v2">Failed to connect to the WisePad, please make sure the WisePad is switched on.</string>
+    <string name="comm_link_uninitialized">Comm link uninitialized</string>
+    <string name="fail_to_start_audio">Fail to start audio</string>
+    <string name="bluetooth_4_not_supported">Bluetooth 4 not supported</string>
+    <string name="cancel">Cancel</string>
+    <string name="bypass">PIN bypass</string>
+    <string name="decline">Decline</string>
+    <string name="ok">Okay</string>
+
+    <string name="canceled_please_try_again"> canceled, please try again</string>
+
+    <string name="bluetooth_permission_denied">bluetooth permission denied</string>
+    <string name="channel_buffer_full">channel buffer full permission denied</string>
+
+    <string name="swipe">swipe</string>
+    <string name="insert">insert</string>
+
+
+    <!-- Credit Sale View -->
+    <string name="processing_card_in_progress_press_back_key_twice_in_succession_to_terminate_the_transaction">processing card in progress&#8230; press back key twice in succession to terminate the transaction.</string>
+    <string name="connecting">connecting</string>
+    <string name="connect">connect</string>
+    <string name="connecting_device">connecting device</string>
+    <string name="device_connected">device connected</string>
+    <string name="no_paired_wisePad_found_please_pair_the_wisePad_from_your_phones_bluetooth_settings_and_try_again">no paired wisePad found !! please pair the wisePad from your phone\'s bluetooth settings and try again</string>
+    <string name="card_sale">card sale</string>
+    <string name="emi">emi</string>
+    <string name="preauth">preauth</string>
+    <string name="please_enter_pin_on_wisepad_or_press_enter_green_key_to_bypass_pin">please enter pin on wisepad or press enter (green key) to bypass pin</string>
+    <string name="device_not_found">device not found</string>
+    <string name="device_disconnected">device disconnected.</string>
+    <string name="next">NEXT</string>
+    <string name="card_holder">card holder</string>
+    <string name="sale_cash">sale cash</string>
+    <string name="close">close</string>
+    <string name="please_use_chip_card">please use chip card</string>
+    <string name="device_detected">device detected</string>
+
+
+    <string name="creditsaleswiperfragment_enable_bluetooth">enable bluetooth</string>
+    <string name="creditsaleswiperfragment_status">status</string>
+    <string name="creditsale_swiperview_lable_enter_pin">enter pin</string>
+    <string name="creditsale_swiperview_str_or">or</string>
+    <string name="creditsale_swiperview_pin_bypass_disabled">pin bypass disabled</string>
+
+    <!--MSWisepadView-->
+    <string name="mswisepadview_wisepad_not_connected_please_make_sure_that_the_wisepad_is_switched_on">device not connected. please make sure device is switched on.</string>
+    <string name="mswisepadview_connecting_to_wisepad_if_its_taking_longer_than_usual_please_restart_the_wisepad_and_try_reconnecting">connecting to device, if it\'s taking longer than usual, please restart the device and try re-connecting.</string>
+    <string name="mswisepadview_select_wisepad">select device</string>
+
+    <!--creditsale_cardholderdetailsview-->
+
+    <string name="creditsale_cardholderdetailsview_authorising">authorising</string>
+    <string name="creditsale_cardholderdetailsview_card_holder">card holder</string>
+    <string name="creditsale_cardholderdetailsview_expiry_date">expiry date</string>
+    <string name="creditsale_cardholderdetailsview_last_4_digits">last 4 digits</string>
+
+
+    <!--CreditSaleSaleCashFragment-->
+
+
+    <!--CreditSaleDeclineActivity-->
+    <string name="creditsaledeclineactivity_decline">declined</string>
+    <string name="mswipe">mswipe</string>
+
+    <!--creditsale_singnatureview-->
+
+    <!--CreditSaleSignatureActivity-->
+
+    <!--creditsale_amexcardpinentryview-->
+    <string name="creditsale_amexcardpinentryview_enter_pin_of_amex">please enter security pin of your amex card.</string>
+
+
+    <!--EmiOptionSelectionFragment-->
+    <string name="emioptionselectionfragment_bank_interest_rate">bank interest rate</string>
+    <string name="emioptionselectionfragment_total_payable_amount">total payable amt</string>
+    <string name="emioptionselectionfragment_cash_back_rate">cash back rate</string>
+    <string name="emioptionselectionfragment_cash_back_amt">cash back amt</string>
+
+    <!--emisale_amountview-->
+
+    <!--EmiSaleAmountFragment-->
+
+    <!--emi_termconditionview-->
+    <string name="emi_termconditionview_emi_term_condition">CUSTOMER CONSENT FOR EMI\n\n1.I have been offered the choice for normal as well as EMI for this purchase and I have chosen EMI\n2.I have understood and accept the terms of EMI scheme and applicable charges mentioned in this charge-slip\n3.EMI conversion subject to banks discretion\n4.Service Tax applicable on interest and processing fees</string>
+    <string name="emi_termconditionview_i_agree">i agree to pay as per card issuer agreement</string>
+    <string name="emi_termconditionview_emi">emi</string>
+
+
+    <!--LAST TRANSACTION-->
+
+    <!--lasttransaction_view-->
+
+
+    <!--LastTransactionActivity-->
+
+
+    <!--VOID SALE-->
+
+    <!--voidsale_amountview-->
+
+    <!--VoidSaleAmountFragment-->
+
+    <!--voidsale_transactionapprovalview-->
+
+    <!--voidsale_transactiondetailsview-->
+
+    <!--VoidSaleActivity-->
+
+    <!--GetVoidSaleDetailsController-->
+
+    <!--deviceinfo_view-->
+
+    <!--DeviceInfoActivity-->
+
+
+    <!-- PRINTER -->
+
+    <!--<string name="bootloader_version">bootloader version: </string>-->
+    <!--<string name="hardware_version">gardware version: </string>-->
+    <!--<string name="usb">USB: </string>-->
+    <!--<string name="charge">charge: </string>
+    <string name="battery_level">battery level: </string>-->
+
+
+    <!--PREAUTH COMPLETION-->
+
+
+    <!--preauthcompletion_inputdetailsview-->
+
+    <!--PreauthCompletionInputDetailsFragment-->
+
+    <!--preauthcompletion_txtapprovalview-->
+
+    <!--PreauthCompletionTxtApprovalFragment-->
+
+    <!--preauthcompletion_txtdetailsview-->
+
+    <!--PreauthCompletionTxtDetailsFragment-->
+
+    <!--PreauthCompletionActivity-->
+
+    <!--GetPreAuthDetailsController-->
+
+
+    <!-- CASH SALE or Banksale -->
+
+    <!--cashsale_singnature-->
+
+    <!--CashSaleSignatureActivity-->
+
+
+    <string name="cardsaleactivity_cardswiperead_msg_CreditSaleActivity">CreditSaleActivity Screen \n\n swipe card successfull, select ok to post the details online</string>
+    <string name="cardsaleactivity_cardinsertinsert_msg_CreditSaleActivity">CreditSaleActivity Screen \n\n card insert successfull, select ok to post the details online</string>
+
+    <string name="cardsaleactivity_cardswiperead_msg_CreditSaleSwiperFragment">CreditSaleSwiperFragment Screen \n\n swipe card successfull, select ok to post the details online</string>
+    <string name="cardsaleactivity_cardinsertinsert_msg_CreditSaleSwiperFragment">CreditSaleSwiperFragment Screen \n\n card insert successfull, select ok to post the details online</string>
+    <string name="view_more_payment_options"><u>View more payment options +</u></string>
+    <string name="current_cafe">Your Cafe</string>
+    <string name="loading_n_we_are_cooking_something_interesting_for_you">\n Loading… </string>
+    <string name="send_otp_to_link_simpl">Send otp to link simpl</string>
+    <string name="active_campaign">Active Campaign</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="total_reward_earned_worth">Total Rewards Worth</string>
+
+    <string name="clever_ac_id">8RK-7RW-945Z</string>
+    <string name="clever_token">02a-32b</string>
+    <string name="instructions">Special instructions</string>
+
+    <string name="offline_order_short_text">You will be charged for the amount later. You can proceed to place order request.</string>
+    <string name="offline_order_long_text">The final settlement amount can vary depending on the company policy. You can settle the dues later using your preferred mode of payment. Once you place the order request, you can proceed to scan the QR code at the vendor counter. </string>
+    <string name="new_update_available"><u>New Update Available</u></string>
+    <string name="payment_due_alert">Payment due alert</string>
+    <string name="bookmark_dialog_title">Add bookmark</string>
+    <string name="bookmark_dialog_message">Do you want to add %1$s to bookmark</string>
+    <string name="application_name">e\'Cafe</string>
+    <string name="byjus_app_name">T&amp;L Cafe</string>
+
+    <string name="lowes_app_name">Cafe Lowe\'s</string>
+
+    <string name="contest_toolbar_header">Order &amp; Win</string>
+    <string name="contest_text_header">Our way of saying thank you for using our app</string>
+    <string name="contest_first_box_text_header">Order. Order. Order!</string>
+    <string name="contest_first_box_text_body">Keep Ordering to reach milestones.</string>
+    <string name="contest_second_box_text_header">Reach Milestones</string>
+    <string name="contest_second_box_text_body">Unlock rewards when you reach a milestone.</string>
+    <string name="contest_third_box_text_header">Redeem Rewards</string>
+    <string name="contest_third_box_text_body">Redeem your unlocked rewards.</string>
+    <string name="please_wait_payment_processing">Please wait ....Payment Processing</string>
+    <string name="guest_order_print">  Please collect your order receipt below and proceed to the food counter.  </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="express_checkout">Express Checkout</string>
+    <string name="no_bookmarked_items">No Bookmarked Items</string>
+
+    <string name="why_am_i"><u>Why am I seeing this</u></string>
+    <string name="favourite_item">Favourite Items</string>
+    <string name="trending_item">Trending Items </string>
+
+    <string name="vending_trending_hint">Your Item will appear here</string>
+    <string name="vending_item_not_found">No item found / Invalid tray number</string>
+
+    <string name="no_vendor_found">No Food Partners Found </string>
+    <string name="no_vendor_found_refresh">No Food Partners Found \n Pull to Refresh</string>
+
+    <string name="slot_booking_title_inactive">Got food from home?</string>
+    <string name="slot_booking_sub_title_inactive">Book your entry slot for cafeteria here</string>
+    <string name="slot_booking_title_active">Entry booking confirmed</string>
+    <string name="slot_booking_sub_title_active">You can enter the cafe at :</string>
+    <string name="slot_booking_title_confirmed">You can enter the cafe now</string>
+    <string name="slot_booking_sub_title_confirmed">Scan QR code at entry</string>
+    <string name="slot_booking_button_active">Details</string>
+    <string name="slot_booking_button_inactive">Book</string>
+    <string name="slot_booking_enter_now">You can enter the cafe now</string>
+
+</resources>
+

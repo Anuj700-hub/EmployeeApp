@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dimen_10"
+    android:paddingBottom="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_30"
+    android:paddingLeft="@dimen/dimen_30"
+    android:elevation="@dimen/dimen_10">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.045" />
+
+    <ImageView
+        android:id="@+id/iv_veg_non"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:srcCompat="@drawable/ic_veg_icon"
+        app:layout_constraintTop_toTopOf="@+id/header_addButton"
+        app:layout_constraintBottom_toBottomOf="@+id/header_addButton"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/header_addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.045">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.655">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_product_name"
+                style="@style/MediumTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:padding="0dp"
+                android:textColor="@color/black_87"
+                android:textSize="@dimen/small_text"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Veg Burger" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3">
+
+            <LinearLayout
+                android:id="@+id/ll_add_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_30"
+                    android:background="@drawable/menu_add_back_rounded"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_4">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_add_card"
+                        style="@style/MediumTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_12"
+                        android:layout_marginRight="@dimen/dimen_12"
+                        android:clickable="true"
+                        android:paddingLeft="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_4"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingBottom="@dimen/dimen_4"
+                        android:text="ADD"
+                        android:textColor="@drawable/text_state_selector"
+                        android:textSize="@dimen/xsmall_text"
+                        android:visibility="visible" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_add"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_quantity"
+                        android:padding="@dimen/dimen_2"
+                        android:tint="?attr/colorAccent"
+                        app:srcCompat="@drawable/ic_add_accent_24dp" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_20"
+                        android:layout_toRightOf="@+id/iv_remove"
+                        android:enabled="false"
+                        android:paddingLeft="@dimen/dimen_6"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/dimen_6"
+                        android:text="20"
+                        android:textColor="?attr/colorAccent" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_remove"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignTop="@+id/iv_add"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_2"
+                        android:padding="@dimen/dimen_2"
+                        android:tint="?attr/colorAccent"
+                        app:srcCompat="@drawable/ic_remove_accent_24dp" />
+
+                </RelativeLayout>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_customize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_very_small"
+                    android:text="Customizable"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_description"
+        style="@style/NormalTextViewGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:textSize="@dimen/xsmall_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/header_addButton"
+        tools:text="Hyderabadi, Andhra" />
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_price"
+        style="@style/SmallTextViewBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="190dp"
+        android:text="\u20B9 120"
+        android:textColor="?attr/colorAccent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/out_of_stock_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        app:layout_constraintLeft_toRightOf="@id/tv_price"
+        />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:background="@color/colorAccent"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/dimen_16"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

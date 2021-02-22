@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guide2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_xpress_checkout_backdrop" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/dimen_24"
+        android:layout_height="@dimen/dimen_24"
+        android:padding="@dimen/dimen_4"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guide1"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guide1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_white_back_arrow" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_title"
+        style="@style/MediumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/express_checkout"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guide2"
+        app:layout_constraintTop_toTopOf="@+id/iv_back" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_message"
+        style="@style/LargeTextViewBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap To Checkout"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guide2"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="@dimen/dimen_20"
+        app:cardElevation="@dimen/dimen_10"
+        android:translationY="@dimen/dimen_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guide1"
+        app:layout_constraintRight_toRightOf="@+id/vertical_guide3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_background"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_bookmark_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_2"
+                android:paddingBottom="@dimen/dimen_2"
+                android:background="@drawable/curved_top_accent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/local_vertical_guide1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dimen_10"
+                    android:paddingBottom="@dimen/dimen_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/local_vertical_guide1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_yellow_bookmark" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_bookmark_title"
+                    style="@style/MediumTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Bookmarked Items"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_bookmark"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_bookmark"
+                    app:layout_constraintTop_toTopOf="@+id/iv_bookmark" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rl_menu_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_8"
+                android:paddingBottom="@dimen/dimen_10"
+                android:scrollbars="vertical"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/product_list_menuitem" />
+
+            <RelativeLayout
+                android:id="@+id/rl_no_bookmark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_30"
+                android:visibility="gone"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_no_bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_no_bookmark_item"
+
+                    />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    style="@style/MediumTextViewGrey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_no_bookmark"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/no_bookmarked_items"
+                    android:textColor="@color/black_40"
+                    android:textSize="18sp"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_trending"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dimen_8"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/dimen_20"
+        app:cardElevation="@dimen/dimen_10"
+        android:translationY="@dimen/dimen_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guide1"
+        app:layout_constraintRight_toRightOf="@+id/vertical_guide3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_background"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_trending_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_2"
+                android:paddingBottom="@dimen/dimen_2"
+                android:background="@drawable/curved_top_accent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/local_vertical_guide2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_trending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dimen_10"
+                    android:paddingBottom="@dimen/dimen_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/local_vertical_guide2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_trending" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_trending_title"
+                    style="@style/MediumTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="Trending Items"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_trending"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_trending"
+                    app:layout_constraintTop_toTopOf="@+id/iv_trending" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rl_trending_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_8"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/product_list_menuitem" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_company_only_logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        android:contentDescription="company_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_company_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="company_logo" />
+
+        <TextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</RelativeLayout>

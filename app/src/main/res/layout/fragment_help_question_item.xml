@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="?attr/marginSmall"
+    android:background="?attr/colorSurface"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        android:padding="20dp">
+
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_down_arrow" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/textItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="?attr/marginSmall"
+            android:layout_toLeftOf="@+id/next"
+            style="@style/NormalTextViewDark" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chat_icon"
+            android:layout_toLeftOf="@+id/next"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_chatbot"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:id="@+id/answerBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_32"
+        android:paddingRight="@dimen/dimen_32"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=""
+            style="@style/SmallTextViewGrey"
+            />
+
+        <Button
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="?attr/paddingLarge"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/chat"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingLeft="@dimen/dimen_60"
+            android:paddingRight="@dimen/dimen_60"
+            android:fontFamily="@font/groteskbold"
+            style="@style/NormalButton"/>
+    </LinearLayout>
+</LinearLayout>

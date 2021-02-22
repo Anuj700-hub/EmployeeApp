@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_curved_border_primary"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/MediumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Health Tracker"
+            />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="NEXT"
+        style="@style/LargeButton"
+        android:background="?attr/buttonCurvedTopBackground" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_bg">
+
+    </LinearLayout>
+
+    <com.hungerbox.customer.util.view.ViewPagerCustomDuration
+        android:id="@+id/vp_onboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_next"
+        android:layout_below="@id/layout_header"></com.hungerbox.customer.util.view.ViewPagerCustomDuration>
+</RelativeLayout>

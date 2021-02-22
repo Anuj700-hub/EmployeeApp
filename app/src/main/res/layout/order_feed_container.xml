@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="?attr/colorSurface"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_no_vendors_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/ic_no_vendor"
+            android:gravity="center"
+            android:text="@string/no_vendor_found_refresh"
+            style="@style/LargeTextView"
+            android:visibility="gone" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_vendorList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignWithParentIfMissing="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_order_feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="80dp"
+                android:background="@color/color_background"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+                <requestFocus />
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ProgressBar
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_order_status"
+            style="@style/LargeTextView"
+            android:textColor="@color/black_60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen_4"
+            app:cardElevation="@dimen/dimen_4"
+            android:text="Order Status"
+            android:visibility="gone"
+            android:layout_above="@+id/bottomBox"/>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottomBox"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/powered"
+                android:visibility="visible"
+                style="@style/NormalTextView"
+                android:textColor="?attr/textColorGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dimen_8"/>
+
+            <include
+                android:id="@+id/current_order_tracker"
+                android:visibility="gone"
+                layout="@layout/order_tracker"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/fl_cart_container"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:background="?attr/footerCurvedTopBackground"
+            android:gravity="center_vertical"
+            android:paddingTop="?attr/paddingSmall">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <Button
+                    android:id="@+id/bt_checkout"
+                    style="@style/NormalBorderlessButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="22dp"
+                    android:padding="3dp"
+                    android:text="VIEW CART"
+                    android:transitionName="@string/checkout_trans" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_vertical"
+                    android:tint="?attr/colorAccent"
+                    android:src="@drawable/orderhistory" />
+
+
+            </LinearLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:text="99"
+                style="@style/SmallTextView" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_order_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_cart"
+                android:padding="5dp"
+                android:text="Rs 123"
+                style="@style/SmallTextView"
+                android:textStyle="bold" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_extra_charge_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_cart"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:text="Extra Charges may apply"
+                style="@style/SmallTextView" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginLeft="@dimen/dimen_20"
+                style="@style/GreyCardView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_pager_height"
+                    android:layout_margin="@dimen/dimen_8">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="@dimen/dimen_16"
+                            android:layout_height="@dimen/dimen_16"
+                            android:layout_margin="@dimen/dimen_2"
+                            android:background="@drawable/pager_indicator_selector" />
+
+                        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="@dimen/dimen_16"
+                            android:layout_height="@dimen/dimen_16"
+                            android:layout_margin="@dimen/dimen_2"
+                            android:background="@drawable/pager_indicator_selector" />
+
+                        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="@dimen/dimen_16"
+                            android:layout_height="@dimen/dimen_16"
+                            android:layout_margin="@dimen/dimen_2"
+                            android:background="@drawable/pager_indicator_selector" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/a1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="@dimen/dimen_10"
+                style="@style/GreyCardView">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/dimen_4" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tv_v"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a1"
+                android:layout_marginTop="@dimen/dimen_10"
+                style="@style/GreyCardView">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/dimen_4" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/a2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_v"
+                android:layout_marginTop="@dimen/dimen_10"
+                style="@style/GreyCardView">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="@dimen/dimen_4" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/a3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a2"
+                android:layout_marginTop="@dimen/dimen_10"
+                style="@style/GreyCardView">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="@dimen/dimen_4" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/a4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a3"
+                android:layout_marginTop="@dimen/dimen_10"
+                style="@style/GreyCardView">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="@dimen/dimen_4" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</RelativeLayout>

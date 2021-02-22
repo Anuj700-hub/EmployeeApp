@@ -1,0 +1,81 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="@dimen/dimen_16"
+    app:cardCornerRadius="@dimen/dimen_10"
+    app:cardBackgroundColor="@color/transparent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tranparent"
+    tools:context="com.hungerbox.customer.util.view.ErrorPopFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_corner_white">
+
+        <RelativeLayout
+            android:id="@+id/ll_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_cancel_24_px" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/ll_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:src="@drawable/network_error" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_error_text"
+            style="@style/MediumTextViewGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_error"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center_horizontal"
+            tools:text="Poor Network connection.\nPlease check your connectivity." />
+
+
+        <Button
+            android:id="@+id/bt_positive"
+            style="@style/NormalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_below="@id/tv_error_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="?attr/marginMedium"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginRight="?attr/marginMedium"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:fontFamily="@font/groteskbold"
+            android:paddingLeft="@dimen/dimen_70"
+            android:paddingRight="@dimen/dimen_70"
+            android:text="OK" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

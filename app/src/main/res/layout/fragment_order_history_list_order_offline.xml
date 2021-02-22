@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/white_border"
+    android:elevation="0dp"
+    android:padding="12dp">
+
+    <com.hungerbox.customer.util.view.HBTextViewBold
+        android:id="@+id/tv_order_vendor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_booking"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_booking"
+        android:text="Vendor Name"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/medium_text" />
+
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_order_price"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/medium_text"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/tv_order_vendor_name"
+        android:text="Rs. 270" />
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="-10dp"
+        android:alpha="0.5"
+        android:layout_toRightOf="@+id/tv_order_price"
+        android:layout_alignTop="@+id/tv_order_price"
+        android:src="@drawable/right_arrow"
+        />
+
+    <ImageView
+        android:id="@+id/booking_separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_order_price"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/dotted_line"
+        android:layerType="software"/>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_order_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/booking_separator"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:text="Products"
+        android:textSize="@dimen/small_text" />
+
+
+    <ImageView
+        android:id="@+id/tv_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:alpha="0.5"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        android:layout_toRightOf="@+id/iv_booking" />
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_order_products"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/iv_booking"
+        android:text="21 November 2017"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text" />
+
+</RelativeLayout>

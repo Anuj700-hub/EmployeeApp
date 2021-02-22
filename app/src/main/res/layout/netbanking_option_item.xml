@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/colorSurface"
+    android:padding="?attr/paddingMedium">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dimen_50"
+        android:maxHeight="@dimen/dimen_50" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_option_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/NormalTextView"
+        android:textColor="?attr/textColorDark"
+        android:padding="1dp"
+        />
+
+    <CheckBox
+        android:id="@+id/cb_option_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CheckBoxStyle"/>
+</LinearLayout>

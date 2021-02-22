@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.hungerbox.customer.order.activity.DeclarationWebViewActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/paddingMedium"
+        android:paddingBottom="?attr/paddingMedium"
+        android:background="@color/white"
+        android:elevation="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:layout_marginLeft="@dimen/dimen_20" />
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_toRightOf="@+id/iv_back"
+            style="@style/NormalTextView"
+            android:textColor="@color/colorAccent"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wv_lowes"
+        android:layout_below="@id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

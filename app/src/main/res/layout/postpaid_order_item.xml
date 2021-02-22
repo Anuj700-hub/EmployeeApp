@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="8dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_order_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Order ID"
+                    android:textSize="12sp" />
+
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_date"
+                    tools:text="Date"
+                    android:textSize="12sp" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_amount"
+                    android:textSize="14sp"
+                    tools:text="Order Amount"
+                    android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+</androidx.cardview.widget.CardView>

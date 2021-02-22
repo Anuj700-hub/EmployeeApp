@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorSurface"
+    android:stateListAnimator="@null">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Vendor"
+            style="@style/NormalTextView"
+            />
+
+<!--        <com.hungerbox.customer.util.view.HbTextView-->
+<!--            android:id="@+id/tv_location"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:drawableRight="@drawable/dropdown_inactive"-->
+<!--            android:drawablePadding="5dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            style="@style/NormalTextViewDark"-->
+<!--            />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_location"
+            style="@style/NormalTextViewDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:drawablePadding="5dp"
+            app:drawableLeftCompat="@drawable/ic_location"
+            app:drawableRightCompat="@drawable/ic_dropdown"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:maxWidth="180dp"
+            android:maxEms="8"
+            tools:text="Eatgoodjfcijdwijwicjidcsejdsjc" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_wallet"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rs 247"
+            android:textSize="@dimen/small_text"
+            app:drawableLeftCompat="@drawable/ic_wallet_toolbar"
+            android:textColor="@color/colorAccent"
+            android:layout_toLeftOf="@+id/tv_occasion"
+            android:drawablePadding="@dimen/dimen_4"
+            android:layout_marginLeft="@dimen/dimen_4"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_centerVertical="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_occasion"
+            style="@style/NormalTextViewDark"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:drawablePadding="5dp"
+            app:drawableLeftCompat="@drawable/ic_clock"
+            app:drawableRightCompat="@drawable/ic_dropdown"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:maxWidth="180dp"
+            android:maxEms="8"
+            tools:text="occasion" />
+
+        <ImageView
+            android:id="@+id/iv_ocassion"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:layout_toLeftOf="@+id/iv_search"
+            app:srcCompat="@drawable/ic_clock"
+            android:visibility="gone"
+            android:padding="@dimen/dimen_2"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_search_new"
+            android:visibility="gone"
+            android:padding="@dimen/dimen_2"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/hb_logo_new"
+            android:visibility="gone" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            style="@style/NormalTextView"
+            />
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

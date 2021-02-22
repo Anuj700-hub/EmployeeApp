@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    cardBackgroundColor="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/buttonBackground"
+    android:clipChildren="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_vendor_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_v_rating"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/green_circle_back"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="4.5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_vendor_item"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_vendor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Vendor 1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_text"
+                android:textStyle="bold" />
+
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_vendor_cuisines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_vendor_name"
+                android:layout_marginTop="3dp"
+                android:maxLines="1"
+                android:text="north indian, south indian, pizza, italian, chiness, drinks"
+                android:textColor="@color/black"
+                android:textSize="@dimen/xsmall_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_min_order_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/xsmall_text"
+                    android:visibility="gone" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_vendor_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_vendor_cuisines"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="3dp"
+                    android:gravity="right"
+                    android:text="30mins"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="@dimen/xsmall_text" />
+            </LinearLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_vendor_timing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/bt_check_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="Show Menu"
+            android:textColor="?attr/colorPrimary"
+            style="@style/NormalTextView"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_alignTop="@+id/rll"
+        android:layout_alignBottom="@+id/rll"
+        android:layout_alignLeft="@+id/rll"
+        android:layout_alignRight="@+id/rll"
+        android:id="@+id/v_disabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/disabled"
+        android:visibility="gone" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

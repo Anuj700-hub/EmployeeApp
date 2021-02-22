@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:focusableInTouchMode="true"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorAccent"
+        android:padding="?paddingMedium">
+
+
+        <ImageView
+            android:id="@+id/iv_user_profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/welcome" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_nav_user_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_user_profile"
+            android:layout_marginBottom="?marginMedium"
+            android:layout_toEndOf="@+id/iv_user_profile"
+            android:layout_toRightOf="@+id/iv_user_profile"
+            android:paddingLeft="?paddingMedium"
+            android:text="Hi User"
+            style="@style/LargeTextView"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_wallet1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nav_user_message"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_wallet1_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                style="@style/NormalTextView" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_wallet1_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wallet1_name"
+                android:layout_marginTop="?paddingMedium"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text" />
+
+            <ProgressBar
+                android:id="@+id/pbWallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wallet1_name"
+                android:layout_alignTop="@+id/tv_wallet1_balance"
+                android:layout_alignBottom="@+id/tv_wallet1_balance"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_wallet1_balance"
+                android:indeterminateTint="?colorSurface" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/v_dotted_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_wallet1"
+            android:layerType="software"
+            android:padding="2dp"
+            android:src="@drawable/dotted_line"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_dotted_line"
+            android:layout_marginTop="?paddingMedium"
+            android:padding="?paddingMedium"
+            android:visibility="gone">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_wallet2_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Wallet 1"
+                style="@style/NormalTextView"/>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wallet2_name"
+                android:clickable="true"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Bangalore, India"
+                style="@style/NormalTextView"
+                android:textSize="?mediumLargeText" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_nav_header_container"
+        android:layout_marginTop="?marginSmall"
+        android:scrollIndicators="right"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:layout_above="@+id/company_logo"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tv_version"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/tv_version"
+        android:textColor="?colorAccent"
+        android:layout_marginLeft="?marginMedium"
+        android:layout_marginBottom="?marginMedium"
+        style="@style/NormalTextView"
+        android:text="@string/new_update_available" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        style="@style/NormalTextView"
+        android:textColor="?textColorDark"
+        android:text="v1.0.0" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_qa_test_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="?marginMedium"
+        android:layout_toRightOf="@+id/tv_version"
+        style="@style/NormalTextView"
+        android:textColor="?textColorDark"
+        android:text="QA/TEST BUILD" />
+</RelativeLayout>

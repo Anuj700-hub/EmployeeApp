@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_vendor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_20"
+    android:paddingLeft="@dimen/dimen_20"
+    android:elevation="@dimen/dimen_10"
+    android:layout_marginTop="@dimen/dimen_16">
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_vendor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MediumTextViewBold"
+        tools:text="Vijaylakshmi Amul Counter"
+        android:textColor="@color/black_87"
+        android:textSize="@dimen/medium_large_text"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:gravity="left"
+        app:layout_constraintRight_toLeftOf="@+id/iv_star"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_vendor_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/NormalTextViewGrey"
+        tools:text="Hyderabadi, Andhra"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_view_menu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vendor_name" />
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_view_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MediumTextViewBold"
+        app:layout_constraintTop_toTopOf="@+id/tv_vendor_description"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_description"
+        app:layout_constraintRight_toRightOf="@+id/tv_v_rating"
+        android:text="View Menu"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_star"
+        android:layout_width="@dimen/dimen_20"
+        android:layout_height="@dimen/dimen_20"
+        android:padding="@dimen/dimen_5"
+        app:srcCompat="@drawable/ic_star_filled"
+        app:layout_constraintTop_toTopOf="@+id/tv_vendor_name"
+        app:layout_constraintRight_toLeftOf="@+id/tv_v_rating" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_v_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        style="@style/MediumTextViewBold"
+        android:textSize="@dimen/xsmall_text"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_star"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_star"
+        tools:text="4.5" />
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:background="@color/colorAccent"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/dimen_10"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vendor_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_corona_safe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimen_4"
+        style="@style/SmallTextViewGrey"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/xsmall_text"
+        android:gravity="left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_tick"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:text="Corona Safe" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_tick"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:padding="@dimen/dimen_2"
+        app:srcCompat="@drawable/ic_accent_circle_tick"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_corona_safe"
+        app:layout_constraintTop_toTopOf="@+id/tv_corona_safe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_corona_safe"/>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_delivery_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MediumTextView"
+        android:gravity="right"
+        android:textSize="@dimen/xsmall_text"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        tools:text="Pickup/Delivery" />
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:background="@color/colorAccent"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

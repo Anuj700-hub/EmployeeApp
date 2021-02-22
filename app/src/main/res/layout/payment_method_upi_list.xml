@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:elevation="0dp"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:padding="0dp"
+    android:weightSum="20">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="19"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/iv_upi_app_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:contentDescription="icon"
+            android:elevation="0dp"
+            android:src="@drawable/hb_logo_new" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_upi_app_name"
+            style="@style/ExtraSmallTextViewDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_upi_app_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="2dp"
+            android:elevation="0dp"
+            android:text="Google Pay"
+            android:textColor="?textColorDark" />
+
+        <LinearLayout
+            android:id="@+id/ll_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_18"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_2"
+                android:src="@drawable/info_pending_icon" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_alert_message"
+                style="@style/ExtraSmallTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="Low Success"
+                android:textColor="@color/alert_color"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_offer_text"
+            style="@style/ExtraSmallTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:elevation="0dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="Offer text"
+            android:textColor="?textColorDark"
+            android:textStyle="italic"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/transparent_view"
+        android:visibility="gone"
+        android:elevation="@dimen/dimen_10"
+        android:background="@color/alphaBlackLight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_call_To_order"
+        style="@style/NormalCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_12">
+
+            <ImageView
+                android:id="@+id/iv_call_to_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="?attr/paddingSmall"
+                android:src="@android:drawable/ic_dialog_info"
+                android:tint="@color/black" />
+
+            <View
+                android:id="@+id/v_sep"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_toRightOf="@+id/iv_call_to_order"
+                android:background="?attr/colorSurface"
+                android:elevation="0dp"
+                android:stateListAnimator="@null" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/NormalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_call_to_order"
+                android:layout_toRightOf="@+id/v_sep"
+                android:padding="2dp"
+                android:text="You can call this vendor to place an order."
+                android:textColor="?attr/textColorDark" />
+
+            <Button
+                android:id="@+id/btn_call_to_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/primary_button_back"
+                android:backgroundTint="?attr/colorAccent"
+                android:drawableRight="@android:drawable/ic_menu_call"
+                android:drawablePadding="10dp"
+                android:elevation="2dp"
+                android:padding="12dp"
+                android:text="Call"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text"
+                android:transitionName="@string/checkout_trans" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/rl_base_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cv_call_To_order"
+        android:elevation="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/fl_cart_container"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/footerCurvedTopBackground"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:paddingTop="?attr/paddingSmall"
+        android:visibility="gone">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_checkout"
+            style="@style/NormalWhiteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="   VIEW CART  "
+            app:drawableRightCompat="@drawable/ic_cart"
+            android:textColor="@color/colorPrimary"
+            android:transitionName="@string/checkout_trans"
+            android:paddingRight="@dimen/dimen_16"
+            android:paddingLeft="@dimen/dimen_6"
+            />
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_cart"
+            style="@style/SmallTextViewBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_24"
+            android:text="99" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_order_amount"
+            style="@style/SmallTextViewBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_cart"
+            android:text="Rs 123" />
+
+        <TextView
+            android:id="@+id/tv_extra_charge_label"
+            style="@style/SmallTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_cart"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_24"
+            android:text="Extra Charges may apply"
+            android:textStyle="italic"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/filter_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <include layout="@layout/local_search_filter_bottom_sheet"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

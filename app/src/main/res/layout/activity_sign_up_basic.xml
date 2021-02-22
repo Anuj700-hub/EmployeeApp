@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/signupActivityParent">
+
+    <include
+        android:id="@+id/layout_header"
+        layout="@layout/toolbar_new" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen_8"
+                    android:paddingTop="@dimen/dimen_24"
+                    android:paddingRight="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_24"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:layout_marginRight="@dimen/dimen_30"
+                        android:hint="Name"
+                        style="@style/NormalTextInputLayout"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tet_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:drawablePadding="@dimen/dimen_4"
+                            android:maxLines="1"
+                            android:imeOptions="actionGo"
+                            android:nextFocusDown="@+id/tet_email"
+                            style="@style/NormalTextInputEditText"
+                            android:textColor="@color/colorAccent"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:hint="Email"
+                        style="@style/NormalTextInputLayout"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:layout_marginRight="@dimen/dimen_30"
+                        app:errorTextAppearance="@style/errorAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tet_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="@dimen/dimen_4"
+                            android:contentDescription="user email"
+                            android:inputType="textEmailAddress|textNoSuggestions"
+                            android:maxLines="1"
+                            android:imeOptions="actionGo"
+                            android:nextFocusDown="@+id/tet_phone"
+                            style="@style/NormalTextInputEditText"
+                            android:textColor="@color/colorAccent"
+                            android:backgroundTint="@color/black_40"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:hint="Phone No."
+                        style="@style/NormalTextInputLayout"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:layout_marginRight="@dimen/dimen_30"
+                        app:errorTextAppearance="@style/errorAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tet_phone"
+                            android:layout_width="match_parent"
+                            android:drawablePadding="@dimen/dimen_4"
+                            android:layout_height="match_parent"
+                            android:digits="0123456789"
+                            android:inputType="phone"
+                            android:maxLines="1"
+                            android:imeOptions="actionGo"
+                            android:nextFocusDown="@+id/tet_password"
+                            style="@style/NormalTextInputEditText"
+                            android:backgroundTint="@color/black_40"
+                            android:textColor="@color/colorAccent"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:layout_marginRight="@dimen/dimen_30"
+                        android:layout_marginTop="@dimen/dimen_12"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/cb_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="33.33"
+                            app:buttonTint="@color/black_40"
+                            android:textColor="@color/black_40"
+                            android:text="Male" />
+
+                        <CheckBox
+                            android:id="@+id/cb_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="33.33"
+                            app:buttonTint="@color/black_40"
+                            android:textColor="@color/black_40"
+                            android:text="Female" />
+
+                        <CheckBox
+                            android:id="@+id/cb_non_binary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="33.34"
+                            app:buttonTint="@color/black_40"
+                            android:textColor="@color/black_40"
+                            android:text="Non-Binary" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:hint="Password"
+                        style="@style/NormalTextInputLayout"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        app:passwordToggleEnabled="true"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:layout_marginRight="@dimen/dimen_30">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tet_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="textPassword"
+                            android:drawablePadding="@dimen/dimen_4"
+                            android:maxLines="1"
+                            android:imeOptions="actionGo"
+                            android:nextFocusDown="@+id/tet_password_again"
+                            style="@style/NormalTextInputEditText"
+                            android:backgroundTint="@color/black_40"
+                            android:textColor="@color/colorAccent"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_password_again"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:hint="Confirm Password"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        style="@style/NormalTextInputLayout"
+                        app:passwordToggleEnabled="true"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:layout_marginRight="@dimen/dimen_30">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tet_password_again"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="@dimen/dimen_4"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:imeOptions="actionDone"
+                            style="@style/NormalTextInputEditText"
+                            android:backgroundTint="@color/black_40"
+                            android:textColor="@color/colorAccent"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Minimum 8 characters"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:layout_marginRight="@dimen/dimen_30"
+                        style="@style/NormalTextViewGrey"
+                        android:textSize="@dimen/small_text"
+                        android:layout_marginTop="@dimen/dimen_6"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/cb_terms"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/dimen_8"
+                            android:layout_marginLeft="@dimen/dimen_30"
+                            android:checked="true"
+                            android:background="@android:color/transparent"/>
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/tv_terms"
+                            android:fontFamily="@font/groteskreg"
+                            android:layout_marginTop="@dimen/dimen_8"
+                            android:padding="@dimen/dimen_5"
+                            android:textSize="@dimen/small_text"
+                            android:visibility="gone"
+                            android:textColor="@color/black_60"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="?attr/paddingLarge"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginRight="?attr/paddingLarge"
+                android:layout_marginBottom="?attr/paddingLarge"
+                android:stateListAnimator="@null"
+                android:text="Sign Up"
+                style="@style/ButtonStateSelector"
+                android:paddingLeft="@dimen/dimen_70"
+                android:paddingRight="@dimen/dimen_70"
+                />
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/rl_progress"
+        layout="@layout/progress_bar_generic"
+        android:visibility="gone"
+        />
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minWidth="400dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="@dimen/dimen_16"
+    app:cardCornerRadius="@dimen/dimen_10"
+    app:cardBackgroundColor="@color/transparent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="400dp"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface"
+    android:weightSum="1">
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/popup_header"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="@dimen/dimen_16"
+        android:text="Popup Header"
+        android:background="@color/colorAccent"
+        style="@style/NormalTextView"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/dimen_24"
+        android:paddingRight="@dimen/dimen_24"
+        android:text="Your order could not be placed.
+        In case money has been deducted from your account,
+        it will be refunded in 5 to 15 days."
+        style="@style/NormalTextView"
+        android:textColor="?attr/textColorDark"/>
+
+    <TextView
+        android:id="@+id/tv_privacy_policy"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        style="@style/SmallTextView"
+        android:text="Privacy Policy" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_title"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="@dimen/dimen_32"/>
+
+    <LinearLayout
+        android:id="@+id/ll_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_curved_border"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="100"
+        android:layout_below="@id/divider">
+
+        <Button
+            android:id="@+id/bt_no_exit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_weight="50"
+            android:background="@color/white"
+            android:text="Cancel"
+            android:textColor="?attr/colorAccent" />
+
+        <Button
+            android:id="@+id/tv_ok_exit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="50"
+            android:background="?attr/buttonBackground"
+            android:text="RETRY"
+            android:textColor="?attr/textColor" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/neutral_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.01"
+        android:background="?attr/buttonBackground"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="?attr/textColor"
+        android:visibility="gone" />
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

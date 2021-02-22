@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/feedback_background"
+            android:padding="1dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:weightSum="1">
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10"
+                android:background="@drawable/feedback_header_background"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:padding="@dimen/dimen_4"
+                    app:srcCompat="@drawable/ic_cancel_white"
+                    android:visibility="visible"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_order_status"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="-10dp"
+                    app:srcCompat="@drawable/ic_feedback_food_logo"
+                    android:layout_gravity="center_horizontal"/>
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_order_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MediumTextView"
+                    android:textSize="@dimen/small_text"
+                    android:layout_marginTop="@dimen/dimen_2"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Your order is successfully delivered"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimen_4"
+                android:paddingTop="@dimen/dimen_32"
+                android:paddingRight="@dimen/dimen_4"
+                android:paddingBottom="@dimen/dimen_32">
+
+
+
+                <ScrollView
+                    android:id="@+id/sv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dimen_12">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_marginBottom="@dimen/dimen_20"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dimen_24"
+                        android:paddingRight="@dimen/dimen_24"
+                        android:text="Feedback description"
+                        android:textColor="?attr/textColorDark"
+                        style="@style/LargeTextViewDark" />
+                </ScrollView>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_feedback_query"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_24"
+                    android:paddingRight="@dimen/dimen_24"
+                    android:text="How was your food "
+                    android:textColor="@color/black_87"
+                    style="@style/SmallTextView"/>
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_vendor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_24"
+                    android:paddingRight="@dimen/dimen_24"
+                    tools:text="Shri VijayLakshmi Amul Counter"
+                    android:textColor="@color/black_87"
+                    style="@style/MediumTextViewDark"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_emoji"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10" />
+
+                <RatingBar
+                    android:id="@+id/rb_feedback_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:theme="@style/RatingBarYellow"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"
+                    android:stepSize="1" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_what_went_wrong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:paddingLeft="@dimen/dimen_24"
+                    android:paddingRight="@dimen/dimen_24"
+                    android:visibility="gone"
+                    android:textColor="@color/black_60"
+                    android:text="Could you please tell us what was wrong? "
+                    style="@style/SmallTextViewGrey"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_mood_rating_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/iv_bad"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="33"
+                        android:src="@drawable/sad" />
+
+                    <ImageView
+                        android:id="@+id/iv_neutral"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="33"
+                        android:src="@drawable/netural" />
+
+                    <ImageView
+                        android:id="@+id/iv_happy"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="33"
+                        android:src="@drawable/smiling" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_form_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                </LinearLayout>
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_feedback_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/SmallTextView"
+                    android:textColor="@color/colorAccent"
+                    android:text="Thank you for your time"/>
+
+                <!--<com.hungerbox.customer.util.view.HbTextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:text="Leave Comments (if Any)"-->
+                <!--android:textSize="@dimen/small_text"-->
+                <!--android:gravity="left"-->
+                <!--android:paddingLeft="25dp"-->
+                <!--android:paddingRight="25dp"-->
+                <!--/>-->
+                <!--<EditText-->
+                <!--android:id="@+id/et_feedback_comments"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:hint="Comments"-->
+                <!--android:textSize="@dimen/medium_text"-->
+                <!--android:gravity="left"-->
+                <!--android:layout_marginLeft="24dp"-->
+                <!--android:layout_marginRight="24dp"-->
+                <!--/>-->
+
+                <Button
+                    android:id="@+id/btn_submit_feeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:layout_weight="0.01"
+                    android:gravity="center"
+                    android:text="SUBMIT"
+                    style="@style/NormalButtonNoPadding"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07"/>
+    <ImageView
+        android:id="@+id/iv_reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/contest_reward"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_guide"/>
+    <com.hungerbox.customer.util.view.HBTextViewBold
+        android:id="@+id/tv_cashback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SmallTextViewGrey"
+        android:text="Get cashback of Rs 100"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/iv_reward"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_reward"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_terms"
+        android:padding="10dp"
+        style="@style/NormalTextView"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_and_conditions"
+        android:textColor="?attr/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_reward"/>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_terms_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        style="@style/NormalTextView"
+        android:paddingRight="10dp"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guide"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_terms" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

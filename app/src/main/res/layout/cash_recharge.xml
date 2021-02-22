@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/crdl"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_pay"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:elevation="8dp"
+            android:stateListAnimator="@null"
+            android:background="@drawable/button_curved_border_primary">
+            <RelativeLayout
+                android:id="@+id/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_curved_border_primary"
+                android:gravity="center_vertical">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    style="@style/HeaderTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Cash Recharge" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/initiateLayout"
+            android:layout_below="@+id/tb_pay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/current_balance_header"
+                android:layout_marginTop="60dp"
+                android:textSize="26sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Current Balance"/>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/currentBalance"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="#E6E6E6"
+                android:padding="20dp"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:text="Rs 3000.00"
+                android:background="@drawable/progress_drawable_less_consume"
+                android:layout_marginTop="60dp"
+                android:layout_below="@+id/current_balance_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel"
+                android:layout_alignParentBottom="true"
+                android:text="CANCEL"
+                android:textColor="@color/white"
+                android:background="@drawable/button_state_selector" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_below="@+id/currentBalance"
+                android:layout_above="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:gravity="center"
+                    android:textSize="32sp"
+                    android:text="INSERT CASH TO RECHARGE"
+                    android:layout_marginTop="60dp"
+                    android:layout_below="@+id/current_balance_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:padding="50dp"
+                    android:background="@drawable/accent_border"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="26sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cashpos_11"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/successRechargeLayout"
+            android:layout_below="@+id/tb_pay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/current_balance_header1"
+                android:layout_marginTop="60dp"
+                android:textSize="26sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Updated Balance"/>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/currentBalance1"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="#E6E6E6"
+                android:padding="20dp"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:background="@drawable/progress_drawable_less_consume"
+                android:layout_marginTop="60dp"
+                android:layout_below="@+id/current_balance_header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"/>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:id="@+id/cancelBox"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="LOGOUT"
+                    android:textColor="@color/white"
+                    android:background="@color/blue" />
+                <Button
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/blue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="PRINT RECEIPT"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_below="@+id/currentBalance1"
+                android:layout_above="@+id/cancelBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:gravity="center"
+                    android:textSize="32sp"
+                    android:text="INSERT CASH TO RECHARGE"
+                    android:layout_marginTop="60dp"
+                    android:layout_below="@+id/current_balance_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:padding="50dp"
+                    android:background="@drawable/accent_border"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="26sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cashpos_11"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/pb"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_loading"
+                android:textSize="32sp"
+                android:text="Connecting..."
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:src="@drawable/gif"
+            android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

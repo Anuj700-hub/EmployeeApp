@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/small_text"
+        android:layout_marginRight="@dimen/small_text">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.mswipetech.wisepos.demo.sdk.customviews.CustomTextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="emi tenure"
+                android:textColor="@color/light_grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emi_list_txt_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/text_color_grey_selector"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emioptionselectionfragment_bank_interest_rate"
+                android:textColor="@color/light_grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emi_list_txt_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/text_color_grey_selector"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emioptionselectionfragment_total_payable_amount"
+                android:textColor="@color/light_grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emi_list_txt_monthly_installment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/text_color_grey_selector"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emioptionselectionfragment_cash_back_rate"
+                android:textColor="@color/light_grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emi_list_txt_cashbackrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/text_color_grey_selector"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emioptionselectionfragment_cash_back_amt"
+                android:textColor="@color/light_grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emi_list_txt_cashbackamt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/text_color_grey_selector"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <CheckBox
+        android:id="@+id/emi_list_checkbox"
+        android:layout_width="wrap_content"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/checkbox_img_selector"
+        android:checked="false" />
+</RelativeLayout>

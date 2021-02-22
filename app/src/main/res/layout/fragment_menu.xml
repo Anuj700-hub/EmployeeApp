@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/transparent_view"
+        android:visibility="gone"
+        android:elevation="@dimen/dimen_6"
+        android:background="@color/alphaBlackLight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/my_appbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorAccent"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:id="@+id/ll_vendor_info_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp"
+                android:paddingTop="?attr/actionBarSize"
+                app:layout_collapseMode="parallax"
+                android:visibility="invisible"
+                app:layout_collapseParallaxMultiplier="1">
+                <ImageView
+                    android:id="@+id/vendor_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    tools:src="@drawable/menu_vendor_error"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/blackTransparent" />
+
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_vendor_rating"
+                    style="@style/RatingCircle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_6"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="visible"
+                    android:text="3.5" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_vendor_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_vendor_rating"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="?attr/paddingSmall"
+                    android:text="Fast Food,Burger,Healthy Food"
+                    style="@style/NormalTextView"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_vendor_desc"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_vendor_serve_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="On Campus"
+                        style="@style/MediumTextView"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_menu"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="0dp"
+                app:contentInsetLeft="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dimen_12"
+                        app:srcCompat="@drawable/ic_accent_back_arrow" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_back"
+                        android:text="Vendor Name"
+                        style="@style/NormalTextView"
+                        android:textColor="?attr/colorAccent"
+                        android:textSize="?attr/mediumLargeText"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:maxWidth="220dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_search"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/dimen_24"
+                        android:layout_height="@dimen/dimen_24"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="@dimen/dimen_2"
+                        app:srcCompat="@drawable/ic_search_new" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:clipChildren="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:paddingRight="@dimen/dimen_10"
+            android:background="@drawable/search_background_three_rounded"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/bt_filter">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_search_bar"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_8"
+                android:layout_marginRight="@dimen/dimen_6"
+                android:layout_marginLeft="@dimen/dimen_6"
+                app:srcCompat="@drawable/ic_search_small"/>
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:hint="Find Items, Food Categories"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/grotesksemibold"
+                android:textSize="@dimen/medium_large_text"
+                android:textColor="@color/black_40"
+                android:textColorHint="@color/black_40"
+                android:layout_toRightOf="@+id/iv_search_bar"
+                android:layout_toLeftOf="@+id/iv_clear"
+                android:background="@color/white"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_clear"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_4"
+                app:srcCompat="@drawable/ic_search_cross"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bt_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_search_filter"
+            android:background="@drawable/card_back_frgament"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:visibility="visible"
+            android:layout_alignTop="@+id/rl_search"
+            android:layout_alignParentRight="true"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tl_menu_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            android:layout_below="@+id/cv_vending_list"
+            style="@style/NormalCardView">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_menu"
+                android:paddingTop="@dimen/dimen_6"
+                android:paddingBottom="@dimen/dimen_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorSurface"
+                app:tabIndicatorColor="?attr/colorAccent"
+                app:tabIndicatorHeight="0dp"
+                app:tabSelectedTextColor="?attr/colorAccent"
+                app:tabMode="scrollable"
+                app:tabRippleColor="@null"
+                app:tabTextColor="?attr/colorAccent"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_vending_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_search"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_medium"
+                >
+
+                <EditText
+                    android:id="@+id/et_tray_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Tray #"
+                    android:background="@drawable/accent_border_light_grey"
+                    android:padding="@dimen/dimen_10"
+                    android:inputType="text"
+                    style="@style/NormalEditTextDark"
+                    android:textColor="?attr/colorPrimary"
+                     />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_vending_tray_item"
+                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/et_tray_no"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"
+                    android:layout_toEndOf="@id/et_tray_no" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_tray_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vending_trending_hint"
+                    style="@style/SmallTextView"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_toRightOf="@id/et_tray_no"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_centerVertical="true"
+                     />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu_list"
+            android:layout_width="match_parent"
+            android:background="?attr/colorSurface"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tl_menu_card" />
+
+        <LinearLayout
+            android:id="@+id/serach_list_conatiner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/cv_call_To_order"
+            android:background="?attr/colorSurface"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="65dp"
+                android:background="?attr/colorSurface"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_no_menu_items_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/hb_logo_new"
+            android:text="No Menu Items Found"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/filter_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="@dimen/dimen_10"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <include layout="@layout/local_search_filter_bottom_sheet"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

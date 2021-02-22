@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorSurface"
+    android:stateListAnimator="@null"
+    android:contentInsetLeft="0dp"
+    android:contentInsetStart="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    android:contentInsetRight="0dp"
+    android:contentInsetEnd="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetEnd="0dp"
+    android:elevation="@dimen/dimen_8"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="?attr/paddingSmall"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Order Details"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/tv_order_detail_title"
+
+            android:layout_centerVertical="true"/>
+
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:drawableTop="@drawable/ic_cancel_24_px"
+            android:text="Cancel Order"
+            android:textColor="@color/red"
+            android:visibility="visible"
+            style="@style/NormalTextView"
+            android:textSize="@dimen/small_text"
+            android:padding="@dimen/dimen_8"
+            />
+
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

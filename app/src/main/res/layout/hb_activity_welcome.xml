@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_header"
+            android:padding="16dp">
+
+            <WebView
+                android:id="@+id/ssoLogout"
+                android:layout_width="1dp"
+                android:layout_height="1dp"></WebView>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_onboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_onboarding_indicators"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_onboarding_indicators"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_above="@id/ll_login_buttons"
+                android:stateListAnimator="@null" />
+
+            <LinearLayout
+                android:id="@+id/tv_term_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dimen_16"
+                android:orientation="horizontal"
+                >
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Terms of Use"
+                    android:textSize="@dimen/small_text"
+                    android:textColor="?attr/colorAccent"
+                    style="@style/NormalTextView"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_policy_divider"
+                    android:layout_width="@dimen/dimen_1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/padding_extra_small"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:visibility="gone"
+                    />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Privacy Policy"
+                    android:textSize="@dimen/small_text"
+                    android:textColor="?attr/colorAccent"
+                    style="@style/NormalTextView"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_login_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_term_policy"
+                android:layout_marginBottom="10dp"
+                android:padding="@dimen/dimen_16"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btn_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/signup_button_text"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        style="@style/NormalButton"
+                        android:visibility="gone" />
+                    <Button
+                        android:id="@+id/btn_sso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="sso login"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        style="@style/NormalButton"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_4"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/btn_otp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="Log in with otp"
+                    android:textColor="?attr/colorAccent"
+                    style="@style/NormalWhiteButton"
+                    android:visibility="visible" />
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Log in"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textColor="?attr/colorAccent"
+                    style="@style/NormalWhiteButton" />
+
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_nfc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_guest_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_guest_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hungerbox_big_logo"
+                    android:layout_margin="@dimen/margin_large"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:id="@+id/iv_guest_image"
+                    android:src="@drawable/guest_image_big"
+                    android:layout_below="@id/iv_guest_logo"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_cafe_view">
+
+                <ImageView
+                    android:id="@+id/iv_cafe_orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rect"
+                    android:visibility="visible"
+                    />
+
+                <ImageView
+                    android:id="@+id/nfc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="105dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    android:src="@drawable/nfc_group" />
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_nfc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nfc"
+                android:layout_centerHorizontal="true"
+                android:padding="?attr/paddingMedium"
+                style="@style/MediumTextView"
+                android:textColor="?attr/textColorDark"
+                android:text="Ready to Scan"
+                android:textSize="@dimen/xlarge_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_nfc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_nfc"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="?attr/paddingMedium"
+                style="@style/MediumTextView"
+                android:textColor="?attr/textColorDark"
+                android:text="Tap your NFC Card to \n start ordering"
+                android:textSize="@dimen/margin_xxlarge" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_below="@+id/tv_nfc_text"
+                android:layout_centerHorizontal="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/pulse" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="60dp"
+                >
+                <Button
+                    android:id="@+id/btn_hide_nfc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_curved_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:text="Log In with Credentials"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/padding_normal"
+                    android:textSize="16sp"
+                    />
+
+                <Button
+                    android:id="@+id/bt_guest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_hide_nfc"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_curved_border"
+                    android:text="ORDER AS GUEST"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    />
+            </LinearLayout>
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_peripheral_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_peripheral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_medium"
+                />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_company_only_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_company_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_company_logo"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:textColor="?attr/textColorDark"
+            style="@style/LargeTextView"
+           />
+
+        <RelativeLayout
+            android:id="@+id/sso_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="-10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
+

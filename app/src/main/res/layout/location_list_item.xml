@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_location"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:textColor="@color/white">
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_location_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ll_density"
+        android:text="location"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_default_location"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/tv_location_change"
+        android:background="@drawable/capsule_shape_accent"
+        android:gravity="center"
+        android:text="Default"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small_text" />
+
+    <LinearLayout
+        android:id="@+id/ll_density"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/iv_selected"
+        android:orientation="horizontal"
+        android:visibility="invisible" />
+
+    <CheckBox
+        android:id="@+id/cb_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentEnd="true"
+        android:checked="false"
+        android:theme="@style/WhiteCheck"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:id="@+id/iv_selected"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/green_arrow"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

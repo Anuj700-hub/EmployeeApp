@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="true"
+    card_view:cardBackgroundColor="@android:color/transparent"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_curved_border_transparent">
+
+        <ImageView
+            android:id="@+id/iv_offers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:scaleType="fitXY" />
+
+        <Button
+            android:id="@+id/btn_offers"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/capsule_button"
+            android:elevation="4dp"
+            android:stateListAnimator="@null"
+            android:text=" View "
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_offers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/gradient"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="13dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="52dp"
+            android:scrollbars="vertical"
+            android:text="@string/offers"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

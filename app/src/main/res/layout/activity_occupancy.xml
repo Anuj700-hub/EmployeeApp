@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srl_occupancy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="com.hungerbox.customer.occupancy.OccupancyActivity">
+
+        <include
+            android:id="@+id/tb_occupancy"
+            layout="@layout/toolbar_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tb_global"
+            android:background="@color/colorSurface"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/pb_order_details"
+                android:layout_width="@dimen/dimen_40"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/NormalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pb_order_details"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:text="Fetching Occupancy details.."
+                android:textColor="?attr/textColorDark" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tb_occupancy">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_24">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guideline_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.28" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guideline_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.55" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/rl_gauge"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/occupancy_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:fontFamily="@font/grotesksemibold"
+                            android:text="Washroom Occupancy"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_washroom_feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4"
+                            android:layout_weight="0.1"
+                            android:padding="@dimen/dimen_4"
+                            app:srcCompat="@drawable/ic_washroom_feedback" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_24"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_select_heading"
+                            style="@style/NormalTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_8"
+                            android:text="Select Lift Lobby"
+                            android:textColor="@color/light_black" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_12"
+                            android:background="@drawable/spinner_border_grey">
+
+                            <Spinner
+                                android:id="@+id/sp_occupancy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:dropDownWidth="match_parent"
+                                android:dropDownSelector="@color/colorAccentLight"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_gauge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_40"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/ll_bottom"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_spinner">
+
+                    <FrameLayout
+                        android:id="@+id/rl_ga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <com.github.anastr.speedviewlib.SpeedView
+                            android:id="@+id/congestion_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:sv_endDegree="390"
+                            app:sv_indicator="NormalSmallIndicator"
+                            app:sv_indicatorColor="@color/colorAccent"
+                            app:sv_marksNumber="0"
+                            app:sv_speedTextColor="@color/white"
+                            app:sv_startDegree="150"
+                            app:sv_textColor="@color/white"
+                            app:sv_unitTextColor="@color/white"
+                            app:sv_unitUnderSpeedText="false"
+                            app:sv_withTremble="false" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/circle_indicator" />
+
+                        <TextView
+                            android:id="@+id/congestion_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/groteskbold"
+                            android:text="Low"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="35sp" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_live_occupancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:elevation="@dimen/dimen_50"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:elevation="@dimen/dimen_50">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:clipToPadding="false"
+                            android:elevation="@dimen/dimen_40"
+                            app:srcCompat="@drawable/gauge_bottom" />
+
+                        <TextView
+                            style="@style/MediumTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:elevation="@dimen/dimen_50"
+                            android:text="Live Congestion"
+                            android:textColor="@color/colorAccent" />
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="-50dp"
+                        android:background="@color/accent_color_light_alpha" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/accent_color_light_alpha"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_gauge">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_50"
+                        android:layout_marginRight="@dimen/dimen_50"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/congestion_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_24"
+                            android:textSize="@dimen/text_size_12sp"
+                            style="@style/LightButton"
+                            android:background="@drawable/button_curved_border_white"
+                            android:textColor="@color/colorAccent"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Yay! It's safe to take the lift"
+                            android:textStyle="italic"
+                            android:clickable="false"
+                            android:paddingLeft="@dimen/dimen_50"
+                            android:minHeight="28sp"
+                            android:paddingRight="@dimen/dimen_50"
+                            android:fontFamily="@font/grotesksemibold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                app:srcCompat="@drawable/ic_congestion" />
+
+                            <TextView
+                                style="@style/SmallTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:text="Get real time congestion in the common spaces in your office premise"
+                                android:textColor="@color/black_87" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/dimen_30"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                app:srcCompat="@drawable/ic_social_distancing" />
+
+                            <TextView
+                                style="@style/SmallTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:text="Helps in maintaining social distance by monitoring congestion &amp; saves time "
+                                android:textColor="@color/black_87" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dimen_30"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dimen_30"
+                            android:background="@color/colorAccent" />
+
+                        <TextView
+                            style="@style/MediumTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_20"
+                            android:text="How it works"
+                            android:textColor="@color/colorAccent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.05"
+                                app:srcCompat="@drawable/ic_green_triangle" />
+
+                            <TextView
+                                style="@style/SmallTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.95"
+                                android:text="Select the common space you want to access"
+                                android:textColor="@color/black_87" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.05"
+                                app:srcCompat="@drawable/ic_green_triangle" />
+
+                            <TextView
+                                style="@style/SmallTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.95"
+                                android:text="Check the congestion level &amp; move accordingly"
+                                android:textColor="@color/black_87" />
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ll_bottom_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:background="@color/tranparent"
+                            android:minWidth="@dimen/dimen_50"
+                            app:layout_constraintBottom_toTopOf="@id/ll_bottom" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardElevation="@dimen/dimen_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_12"
+                android:paddingTop="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_12"
+                android:paddingBottom="@dimen/dimen_10">
+
+                <Button
+                    android:id="@+id/bt_lift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_36"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/button_curved_border"
+                    android:text="Lift Lobby"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_lift"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/grotesksemibold"
+                    android:gravity="center"
+                    android:text="Lift Lobby"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/medium_large_text"
+                    android:visibility="gone" />
+
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginRight="@dimen/dimen_12"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/tv_washroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/grotesksemibold"
+                    android:gravity="center"
+                    android:text="Washroom"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/medium_large_text" />
+
+                <Button
+                    android:id="@+id/bt_washroom"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_36"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/button_curved_border"
+                    android:text="Washroom"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/MediumTextViewGrey"
+            android:visibility="gone"
+            tools:text="Something went wrong"
+            />
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungerbox.customer.order.activity.SendInvoiceActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:tint="@color/textColor"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <com.hungerbox.customer.util.view.HBTextViewBold
+            style="@style/HeaderTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Logout"
+            android:textColor="@color/textColor" />
+    </RelativeLayout>
+
+    <com.hungerbox.customer.util.view.HBTextViewBold
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:textSize="@dimen/medium_large_text"
+        android:text="Order details and order status will be sent to the number below"
+        android:textColor="@color/dark_grey" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        app:errorTextAppearance="@style/error_appearance">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="5dp"
+            android:hint="Mobile Number"
+            android:imeOptions="actionGo"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLines="1"
+            android:nextFocusRight="@+id/et_password"
+            android:nextFocusDown="@+id/et_password"
+            android:nextFocusForward="@+id/et_password"
+            android:singleLine="true"
+            android:textColor="@color/text_dark"
+            android:textColorHint="@color/text_dark">
+
+            <requestFocus />
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_phone"
+        android:layout_margin="@dimen/margin_large"
+        android:background="@drawable/button_state_selector_bookmark"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_submit"
+        android:layout_margin="@dimen/margin_large"
+        android:textSize="@dimen/medium_large_text"
+        android:text="Note: The phone number will be used only for order processing and will not be used for any marketing activity." />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

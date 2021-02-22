@@ -1,0 +1,675 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <declare-styleable name="creditcard">
+        <attr name="cvv" format="integer" />
+        <attr name="card_holder_name" format="string" />
+        <attr name="card_expiration" format="string" />
+        <attr name="card_number" format="string" />
+        <attr name="card_side" format="enum">
+            <enum name="front" value="1" />
+            <enum name="back" value="0" />
+        </attr>
+
+
+    </declare-styleable>
+
+
+    <!-- Base application theme. -->
+    <style name="AppThemes" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="alertDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+    <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@drawable/color_switch</item>
+        <item name="trackTint">@drawable/color_switch</item>
+    </style>
+
+
+
+    <style name="dialoge" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/alertDialogStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="AppThemes.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MenuAppTheme" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">?attr/colorAccent</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="InputLayoutTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Theme.AppCompat.Transparent.NoActionBar" parent="CustomTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#90000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="WhiteCheck">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="colorAccent">?attr/colorPrimary</item>
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="ContentMainTextLabel">
+        <item name="android:textColor">@color/text_darker</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="ContentMainTextLabelDark" parent="ContentMainTextLabel">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ContentMainTextLabelAccent" parent="ContentMainTextLabelDark">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
+    <style name="ContentMainText">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ContentSecondaryTextLabel">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ContentSecondaryTextLabelLight">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ContentSecondaryTextLabelMedium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ContentSecondaryTextLabelSelect" parent="ContentSecondaryTextLabelLight">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="HeaderTextWhite">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="TransAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <style name="styleCustDlg" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Transparent.NoActionBar.Full" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#90000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--rebranding-->
+
+    <style name="CustomTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccentLight">@color/colorAccentLight</item>
+        <item name="colorAccentLightAlpha">@color/colorAccentLightAlpha</item>
+        <item name="tabColor">@color/colorAccentLight</item>
+        <item name="cartFooterColor">@color/colorAccentLight</item>
+
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/light_grey</item>
+        <item name="colorError">@color/red</item>
+        <item name="alertColor">@color/alert_color</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="blackTransparent">@color/black_transparent</item>
+        <item name="colorBackgroundGrey">@color/card_shadow_2</item>
+        <item name="iconTintLight">@color/green</item>
+        <item name="colorPrimaryBlue">@color/colorPrimaryBlue</item>
+        <item name="colorGreen">@color/green</item>
+        <item name="colorGreenContest">@color/contest_green</item>
+        <item name="colorAccentVeryLight">@color/accent_color_light_alpha</item>
+
+        <item name="textColor">@color/white</item>
+        <item name="textColorGrey">@color/black_60</item>
+        <item name="textColorDark">@color/black_87</item>
+        <item name="extraSmallTextSize">@dimen/xsmall_text</item> <!-- 10sp -->
+        <item name="smallTextSize">@dimen/small_text</item> <!-- 12sp -->
+        <item name="mediumTextSize">@dimen/medium_text</item> <!-- 14sp -->
+        <item name="mediumLargeText">@dimen/medium_large_text</item> <!-- 16sp -->
+        <item name="largeTextSize">@dimen/large_text</item> <!-- 20sp -->
+        <item name="superLargeTextSize">@dimen/super_large_text</item> <!-- 40sp -->
+        <item name="largerText">@dimen/larger_text</item> <!--25sp -->
+
+        <item name="paddingTextView">@dimen/padding_small</item> <!-- 4dp -->
+        <item name="paddingExtraSmall">@dimen/padding_extra_small</item> <!-- 2dp -->
+        <item name="paddingSmall">@dimen/padding_small</item> <!-- 4dp -->
+        <item name="paddingMedium">@dimen/padding_normal</item> <!-- 12dp -->
+        <item name="paddingLarge">@dimen/padding_large</item> <!-- 16dp -->
+
+        <item name="marginSmall">@dimen/margin_small</item> <!-- 4dp -->
+        <item name="marginMedium">@dimen/margin_medium</item> <!-- 16dp -->
+        <item name="marginLarge">@dimen/margin_large</item> <!-- 35dp -->
+
+        <item name="radiusExtraSmall">@dimen/radius_extra_small</item> <!-- 4dp -->
+        <item name="radiusSmall">@dimen/radius_small</item> <!-- 8dp -->
+        <item name="radiusMedium">@dimen/radius_medium</item> <!-- 12dp -->
+        <item name="radiusLarge">@dimen/radius_large</item> <!-- 16dp -->
+
+        <item name="buttonBackground">@drawable/button_curved_border_primary</item>
+        <item name="buttonCurvedBackground">@drawable/button_curved_border</item>
+        <item name="buttonCurvedRadiusSmall">@drawable/button_curved_low_radius</item>
+        <item name="buttonBorderedBackground">@drawable/button_curved_border_accent</item>
+        <item name="buttonWhiteBackground">@drawable/button_curved_border_white</item>
+        <item name="buttonCurvedTopBackground">@drawable/button_curved_border_top_accent</item>
+        <item name="footerCurvedTopBackground">@drawable/button_curved_border_top_accent</item>
+        <item name="buttonStateSelector">@drawable/button_state_selector_bookmark</item>
+        <item name="whiteCurvedBorder">@drawable/white_curved_border</item>
+        <item name="BottomRoundedAccentAlpha">@drawable/bottom_rounded_accent_alpha</item>
+
+
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+
+
+    </style>
+
+
+    <style name="ExtraSmallTextView" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/extraSmallTextSize</item><!-- 10sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="ExtraSmallTextViewGrey" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorGrey</item>
+        <item name="android:textSize">?attr/extraSmallTextSize</item><!-- 10sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="ExtraSmallTextViewDark" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">?attr/extraSmallTextSize</item><!-- 10sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="SmallTextView" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/smallTextSize</item><!-- 12sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="SmallTextViewMedium" parent="CustomTheme">
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/smallTextSize</item><!-- 12sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="SmallTextViewBold" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskbold</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/smallTextSize</item><!-- 12sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+
+    <style name="SmallTextViewGrey" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorGrey</item>
+        <item name="android:textSize">?attr/smallTextSize</item><!-- 12sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="SmallTextViewDark" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">?attr/smallTextSize</item><!-- 12sp -->
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="NormalTextView" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="NormalTextViewGrey" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorGrey</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+    </style>
+
+    <style name="NormalTextViewDark" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="MediumTextView" parent="CustomTheme">
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">?attr/paddingTextView</item>
+    </style>
+
+    <style name="MediumTextViewGrey" parent="CustomTheme">
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+        <item name="android:textColor">?attr/textColorGrey</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">?attr/paddingTextView</item>
+    </style>
+
+    <style name="MediumTextViewDark" parent="CustomTheme">
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">?attr/paddingTextView</item>
+    </style>
+
+    <style name="HeaderTextView">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumLargeText</item><!-- 16sp -->
+    </style>
+
+    <style name="LargeTextView" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/largeTextSize</item><!-- 16sp -->
+        <item name="android:padding">?attr/paddingTextView</item>
+    </style>
+
+    <style name="LargeTextViewGrey" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorGrey</item>
+        <item name="android:textSize">?attr/largeTextSize</item><!-- 16sp -->
+        <item name="android:padding">?attr/paddingTextView</item>
+    </style>
+
+    <style name="SuperLargeTextViewGrey" parent="CustomTheme">
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+        <item name="android:textColor">?attr/textColorGrey</item>
+        <item name="android:textSize">?attr/largeTextSize</item><!-- 16sp -->
+        <item name="android:padding">?attr/paddingTextView</item>
+    </style>
+
+    <style name="LargeTextViewDark" parent="CustomTheme">
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">?attr/largeTextSize</item><!-- 16sp -->
+        <item name="android:padding">?attr/paddingTextView</item>
+    </style>
+
+    <style name="MediumTextViewBold" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskbold</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+    <style name="MediumTextViewBoldNoPadding" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskbold</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+        <item name="android:padding">0dp</item>
+        <item name="android:minHeight">2dp</item>
+    </style>
+    <style name="LargeTextViewBold" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskbold</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/largeTextSize</item><!-- 16sp -->
+        <item name="android:padding">?attr/paddingExtraSmall</item>
+    </style>
+
+    <style name="SmallButton" parent="CustomTheme">
+        <item name="android:background">?attr/buttonCurvedBackground</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/smallTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="NormalButton" parent="CustomTheme">
+        <item name="android:background">?attr/buttonCurvedBackground</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+    <style name="NormalButtonNoPadding" parent="CustomTheme">
+        <item name="android:background">?attr/buttonCurvedBackground</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">@dimen/dimen_4</item>
+        <item name="android:paddingBottom">@dimen/dimen_4</item>
+        <item name="android:minHeight">@dimen/dimen_20</item>
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+    </style>
+
+    <style name="WhiteButton" parent="CustomTheme">
+        <item name="android:background">@drawable/button_curved_complete_white</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">@dimen/dimen_4</item>
+        <item name="android:paddingBottom">@dimen/dimen_4</item>
+        <item name="android:paddingRight">@dimen/dimen_8</item>
+        <item name="android:paddingLeft">@dimen/dimen_8</item>
+        <item name="android:minHeight">@dimen/dimen_20</item>
+        <item name="android:minWidth">@dimen/dimen_30</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+
+
+    <style name="PaymentButton" parent="CustomTheme">
+        <item name="android:background">@drawable/button_square</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="NormalButtonMargin" parent="CustomTheme">
+        <item name="android:background">?attr/buttonCurvedBackground</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_margin">@dimen/margin_small</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="NormalBorderedButton" parent="CustomTheme">
+        <item name="android:background">?attr/buttonBorderedBackground</item>
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="LargeButton" parent="CustomTheme">
+        <item name="android:background">?attr/buttonCurvedBackground</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/largeTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+    <style name="NormalBorderlessButton" parent="android:Widget.Holo.Button.Borderless">
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="NormalWhiteButton" parent="CustomTheme">
+        <item name="android:background">?attr/buttonWhiteBackground</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_margin">@dimen/margin_small</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="LightButton" parent="CustomTheme">
+        <item name="android:background">@drawable/button_curved_light</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="ButtonStateSelector" parent="CustomTheme">
+        <item name="android:background">?attr/buttonStateSelector</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/groteskbold</item>
+    </style>
+
+    <style name="NormalTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="hintTextAppearance">@style/HintTextInputLayout</item>
+    </style>
+
+    <style name="HintTextInputLayout" parent="CustomTheme">
+        <item name="android:textColor">@color/black_60</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+    </style>
+
+    <style name="HintTextInputLayoutSmall" parent="CustomTheme">
+        <item name="android:textColor">@color/black_40</item>
+        <item name="android:textSize">@dimen/xsmall_text</item>
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+    </style>
+
+    <style name="NormalTextInputEditText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">?attr/mediumLargeText</item>
+        <item name="android:padding">?attr/paddingLarge</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColorHint">?attr/textColorGrey</item>
+        <item name="android:fontFamily">@font/groteskreg</item>
+    </style>
+
+    <style name="BoarderEditText" parent="CustomTheme">
+        <item name="android:textSize">?attr/mediumLargeText</item>
+        <item name="android:padding">?attr/paddingLarge</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textColorHint">?attr/textColorGrey</item>
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+    </style>
+    <style name="NormalEditTextDark" parent="CustomTheme">
+        <item name="android:textSize">?attr/mediumLargeText</item>
+        <item name="android:padding">?attr/paddingMedium</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textColorHint">?attr/textColorGrey</item>
+        <item name="colorControlNormal">@color/spinner_border_grey</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <style name="errorAppearance" parent="CustomTheme">
+        <item name="android:textColor">?attr/colorError</item>
+        <item name="android:textSize">?attr/smallTextSize</item>
+    </style>
+
+    <style name="SmallCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="cardCornerRadius">?attr/radiusExtraSmall</item><!-- 4dp -->
+        <item name="cardElevation">?attr/radiusExtraSmall</item><!-- 4dp -->
+    </style>
+
+    <style name="NormalCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="cardCornerRadius">?attr/radiusSmall</item>
+        <item name="cardElevation">?attr/radiusSmall</item>
+    </style>
+
+    <style name="RecyclerView" parent="CustomTheme">
+        <item name="android:padding">?attr/paddingLarge</item>
+        <item name="android:background">?attr/colorSurface</item>
+    </style>
+
+    <style name="GreyCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/colorBackgroundGrey</item>
+        <item name="cardCornerRadius">?attr/radiusSmall</item>
+        <item name="cardElevation">?attr/radiusSmall</item>
+    </style>
+
+    <style name="NormalSwitch" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">?attr/paddingMedium</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+    </style>
+
+    <style name="NormalSwitchGreen" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
+    <style name="NormalSwitchGreenNew" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorControlActivated">@color/green</item>
+        <item name="colorControlHighlight">@color/green</item>
+    </style>
+
+    <style name="NormalSwitchAccent" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskbold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">?attr/paddingMedium</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
+    <style name="RatingBarAccent" parent="CustomTheme">
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="RatingCircle" parent="CustomTheme">
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">?attr/mediumLargeText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/green_circle_back</item>
+        <item name="android:padding">?attr/paddingSmall</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="CustomTheme">
+        <item name="colorAccent">?attr/textColorGrey</item>
+        <item name="colorControlNormal">?attr/textColorGrey</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CheckBoxAccent" parent="CustomTheme">
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="colorControlNormal">?attr/colorAccent</item>
+        <item name="colorControlActivated">?attr/colorAccent</item>
+        <item name="textColor">@color/black_87</item>
+    </style>
+
+    <style name="NormalSwitchGrey" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">?attr/paddingMedium</item>
+        <item name="android:textColor">@color/text_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="RadioTextViewDark" parent="CustomTheme">
+        <item name="android:fontFamily">@font/groteskreg</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">?attr/mediumTextSize</item><!-- 14sp -->
+    </style>
+
+    <style name="RatingBarYellow" parent="CustomTheme">
+        <item name="colorControlNormal">@color/contest_grey</item>
+        <item name="colorControlActivated">@color/rating_yellow</item>
+    </style>
+
+</resources>

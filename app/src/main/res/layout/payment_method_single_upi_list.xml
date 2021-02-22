@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:elevation="0dp"
+    android:focusable="true"
+    android:orientation="vertical"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_offers_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_offer_badge" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_6"
+        android:paddingRight="@dimen/dimen_6">
+
+        <ImageView
+            android:id="@+id/iv_upi_app_icon"
+            android:layout_width="@dimen/dimen_36"
+            android:layout_height="@dimen/dimen_36"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:contentDescription="icon"
+            android:elevation="0dp"
+            android:padding="5dp"
+            android:src="@drawable/hb_logo_new" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_offer_text"
+            style="@style/ExtraSmallTextViewDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_upi_app_name"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/iv_upi_app_icon"
+            android:layout_toRightOf="@+id/iv_upi_app_icon"
+            android:elevation="0dp"
+            android:ellipsize="marquee"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="Offer text"
+            android:textStyle="italic"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_upi_app_name"
+            android:layout_toRightOf="@+id/iv_upi_app_icon"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_18"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_2"
+                android:src="@drawable/info_pending_icon" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_alert_message"
+                style="@style/ExtraSmallTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="Low Success"
+                android:textColor="@color/alert_color"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_upi_app_name"
+            style="@style/ExtraSmallTextViewDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_upi_app_icon"
+            android:layout_alignBottom="@+id/iv_upi_app_icon"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/iv_upi_app_icon"
+            android:elevation="0dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Google Pay" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_payment_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_upi_app_icon"
+            android:layout_alignBottom="@+id/iv_upi_app_icon"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:theme="@style/RadioSelector"
+            android:visibility="visible"
+            android:scaleX="0.70"
+            android:scaleY="0.70"/>
+    </RelativeLayout>
+
+</RelativeLayout>

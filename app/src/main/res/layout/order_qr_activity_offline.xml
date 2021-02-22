@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_state_selector_payment"
+        android:text="PLACE NEW ORDER REQUEST"
+        android:textColor="@color/white" />
+
+    <ScrollView
+        android:layout_above="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:id="@+id/iv_green_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:src="@drawable/ic_check_circle_24_px" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_order_requested"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_green_tick"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Order Requested "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_barcode"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@id/tv_order_requested"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_medium" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_barcode"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Scan this QR code within 30 mins at OvenFresh"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_num_of_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_description"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="3 Items"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_description"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:text="Rs 100"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

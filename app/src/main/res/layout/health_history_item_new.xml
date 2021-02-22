@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="5dp"
+        android:clipChildren="true"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_health_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Yesterday"
+                style="@style/SuperLargeTextViewGrey" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_health_date"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:text="Link device to view your progress"
+                android:textColor="@color/defaultError"
+                style="@style/LargeTextView"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/progressBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/link"
+                android:layout_alignLeft="@+id/link"
+                android:layout_alignRight="@+id/link"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_cals_consumed"
+                    tools:text="123 cals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calories Consumed"
+                    style="@style/SmallTextViewDark" />
+
+                <LinearLayout
+                    android:id="@+id/pb_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_cals_consumed"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/pb_cals_consumed_less_consume"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="5dp"
+                        android:indeterminate="false"
+                        android:indeterminateTint="@color/colorAccent"
+                        android:indeterminateTintMode="src_atop"
+                        android:progress="70"
+                        android:progressDrawable="@drawable/progress_drawable_less_consume"
+                        android:progressTint="?attr/colorAccent"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_cals_consumed_over_consume"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/tv_cals_consumed"
+                        android:layout_marginTop="5dp"
+                        android:indeterminate="false"
+                        android:indeterminateTint="@color/colorAccent"
+                        android:indeterminateTintMode="src_atop"
+                        android:progress="70"
+                        android:progressDrawable="@drawable/progress_drawable_over_consume"
+                        android:progressTint="?attr/colorAccent"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_cals_consumed_start_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_cals_consumed_end_label"
+                    style="@style/SmallTextViewDark" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_cals_consumed_end_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/pb_box"
+                    style="@style/SmallTextViewDark" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/connectDeviceBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progressBox"
+                android:layout_alignLeft="@+id/progressBox"
+                android:visibility="visible">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/burnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:drawableLeft="@drawable/fire"
+                    android:gravity="center_vertical"
+                    style="@style/SmallTextViewDark" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp">
+
+
+                    <ImageView
+                        android:id="@+id/foot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/foot" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@+id/foot">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <com.hungerbox.customer.util.view.HbTextView
+                                android:id="@+id/stepsTaken"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="0"
+                                style="@style/NormalTextViewGrey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:background="@drawable/divider"
+                                android:layerType="software" />
+
+                            <com.hungerbox.customer.util.view.HbTextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_horizontal"
+                                android:text="10000"
+                                style="@style/SmallTextViewGrey" />
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/circularbackground"
+                            android:max="10000"
+                            android:progressDrawable="@drawable/circular" />
+
+                    </RelativeLayout>
+
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/rlbox"
+                        android:layout_alignRight="@+id/rlbox"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Steps Taken"
+                        style="@style/SmallTextViewDark" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/viewDishes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBox"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/accent_border_health"
+                android:fontFamily="sans-serif"
+                android:padding="10dp"
+                android:text="VIEW DISHES"
+                android:textColor="?attr/colorAccent"
+                style="@style/NormalTextView" />
+
+            <RelativeLayout
+                android:id="@+id/dishBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBox"
+                android:background="#FFE5CF"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="Dishes"
+                        style="@style/SmallTextViewGrey" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="Calories"
+                        style="@style/SmallTextViewGrey" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dishRecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/addDishes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dishRecycle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_curved_border"
+                    android:padding="5dp"
+                    android:text="ADD DISHES"
+                    style="@style/SmallTextView" />
+
+
+                <ProgressBar
+                    android:id="@+id/pb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:progressDrawable="?attr/colorAccent" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

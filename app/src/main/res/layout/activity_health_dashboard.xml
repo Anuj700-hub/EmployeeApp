@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.hungerbox.customer.health.HealthDashboardActivity">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginTop="-10dp"
+        android:background="?attr/colorSurface">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipChildren="true"
+                android:clipToPadding="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                app:titleEnabled="false"
+                card_view:cardBackgroundColor="@android:color/transparent">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="234dp"
+                    android:background="?attr/colorSurface">
+
+                    <ImageView
+                        android:id="@+id/healthBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/fitness2"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_health_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="?attr/colorSurface" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/notfound"
+            android:drawablePadding="5dp"
+            android:text="Health Info Unavailable"
+            style="@style/NormalTextViewDark" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/buttonBackground"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/HeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Health Tracker" />
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/profile_health"
+            android:textColor="@color/white"
+            android:tint="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>

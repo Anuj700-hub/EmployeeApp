@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.hungerbox.customer.prelogin.activity.SendOtpActivity"
+    android:id="@+id/sendOtpParent">
+
+    <include
+        layout="@layout/toolbar_new"
+        android:id="@+id/layout_header"/>
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We will send you One Time Password (OTP)"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginTop="@dimen/dimen_50"
+        android:id="@+id/tv_new_title"
+        style="@style/NormalTextViewGrey"
+        android:textSize="@dimen/small_text"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_username"
+                style="@style/NormalTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Enter Employee ID"
+                android:layout_marginTop="@dimen/dimen_50"
+                app:errorTextAppearance="@style/errorAppearance"
+                android:layout_below="@+id/tv_new_title"
+                android:layout_marginLeft="@dimen/dimen_50"
+                android:layout_marginRight="@dimen/dimen_50"
+                android:layout_centerHorizontal="true"
+                >
+                <requestFocus />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tet_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    style="@style/NormalTextInputEditText"
+                    android:textColor="@color/colorAccent"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_username"
+        android:layout_marginLeft="?paddingLarge"
+        android:layout_marginTop="@dimen/dimen_32"
+        android:layout_marginRight="?paddingLarge"
+        android:paddingLeft="@dimen/dimen_60"
+        android:paddingRight="@dimen/dimen_60"
+        android:text="GET OTP"
+        android:layout_centerHorizontal="true"
+        style="@style/ButtonStateSelector"/>
+    <include
+        android:id="@+id/rl_progress"
+        layout="@layout/progress_bar_generic"
+        android:visibility="gone"
+        />
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_4"
+            android:background="@color/colorOccasionBar"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_title"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_weight="1"
+                android:padding="?attr/paddingSmall"
+                android:text="Paid Via"
+                android:textSize="@dimen/small_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_method_name"
+                style="@style/SmallTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:padding="?attr/paddingSmall"
+                android:text="--"
+                android:visibility="visible"
+                android:textColor="?attr/textColorDark" />
+
+            <ImageView
+                android:id="@+id/tv_method_image"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:maxHeight="@dimen/text_size_12sp"
+                android:visibility="gone"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="?attr/paddingSmall"
+                android:layout_below="@id/tv_title"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_amount_title"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_weight="1"
+                android:padding="?attr/paddingSmall"
+                android:text="Amount"
+                android:textSize="@dimen/small_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_amount"
+                style="@style/MediumTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:padding="?attr/paddingSmall"
+                android:text="rs 100"
+                android:textColor="?attr/textColorDark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_transaction_id_title"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_4"
+                android:layout_below="@id/tv_title"
+                android:padding="?attr/paddingSmall"
+                android:layout_weight="1"
+                android:text="Trans ID"
+                android:textSize="@dimen/small_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_transaction_id"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:layout_below="@id/tv_title"
+                android:padding="?attr/paddingSmall"
+                android:text="rs 100" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_status_title"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_transaction_id_title"
+                android:layout_weight="1"
+                android:padding="?attr/paddingSmall"
+                android:text="Status"
+                android:textSize="@dimen/small_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_status"
+                style="@style/MediumTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_transaction_id_title"
+                android:layout_alignParentRight="true"
+                android:padding="?attr/paddingSmall"
+                android:text="rs 100"
+                android:textColor="?attr/colorAccent"
+                android:textSize="?attr/smallTextSize" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_transaction_type_title"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_transaction_id_title"
+                android:layout_weight="1"
+                android:padding="?attr/paddingSmall"
+                android:text="Transaction Type"
+                android:textSize="@dimen/small_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_transaction_type"
+                style="@style/NormalTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_status_title"
+                android:layout_marginLeft="?attr/paddingSmall"
+                android:padding="2dp"
+                android:text=""
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

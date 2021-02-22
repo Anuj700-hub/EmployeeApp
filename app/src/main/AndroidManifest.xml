@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hungerbox.customer">
+
+    <uses-sdk tools:overrideLibrary="com.shashank.sony.fancytoastlib" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.RECEIVE_SMS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_SMS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_CONTACTS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        tools:node="remove" />
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="${appIcon}"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="${appIcon}"
+        android:supportsRtl="true"
+        android:theme="@style/CustomTheme"
+        tools:node="merge"
+        tools:replace="android:allowBackup, android:name, android:theme, android:icon, android:roundIcon">
+        <activity android:name=".spaceBooking.SpaceBookingDashboard"/>
+        <activity android:name=".spaceBooking.SpaceBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".spaceBooking.SpaceGuestActivity" />
+        <activity android:name=".order.activity.OrderCancellationChatActivity" />
+        <activity android:name=".order.activity.DeclarationWebViewActivity" />
+        <activity android:name=".occupancy.OccupancyActivity" />
+        <activity
+            android:name=".contest.activity.RewardViewActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity android:name=".order.activity.DynamicQrPaytmTransactionUpi" />
+        <activity android:name=".order.activity.DynamicQrPaytmTransaction" />
+        <activity android:name=".order.activity.SendInvoiceActivity" />
+        <activity
+            android:name=".order.activity.GlobalSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.GuestOrderSuccess"
+            android:resizeableActivity="false" />
+        <activity
+            android:name=".order.activity.OrderDetailNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.PineLabTransactionStatus"
+            android:resizeableActivity="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service
+            android:name="com.example.logcatviewer.service.LogcatViewerService"
+            android:label="LogcatLoggerService" />
+        <service
+            android:name="com.example.logcatviewer.service.LogcatViewerFloatingView"
+            android:label="LogcatLoggerFloatingView" />
+
+        <activity android:name=".order.activity.PostPaidActivity" />
+        <activity
+            android:name=".order.activity.PaytmRechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contest.activity.TermsAndCondition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.activity.ManualURLActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.NotificationHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".navmenu.activity.MoreNavigation"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".contest.activity.RewardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contest.activity.ContestDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.activity.SplashScreenActivity" />
+
+        <meta-data
+            android:name="com.phonepe.android.sdk.MerchantId"
+            android:value="HUNGERBOX" />
+        <meta-data
+            android:name="com.phonepe.android.sdk.AppId"
+            android:value="4f8e7a72873348af9de738e207414db1" />
+        <meta-data
+            android:name="com.phonepe.android.sdk.Debuggable"
+            android:value="false" />
+        <meta-data
+            android:name="com.phonepe.android.sdk.isUAT"
+            android:value="false" />
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="@string/clever_ac_id" />
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="@string/clever_token" />
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="1" />
+
+        <activity android:name=".prelogin.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".prelogin.activity.LoginActivity"
+            android:configChanges=""
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".prelogin.activity.SignUpActivityBasic"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".cashrecharge.CashRecharge"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderQrActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity android:name=".prelogin.activity.AutoLoginActivity" />
+        <activity
+            android:name=".prelogin.activity.QRScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.activity.PreLaunchActivity" />
+        <activity
+            android:name=".prelogin.activity.CustomScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.GlobalActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="open_location" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".order.activity.MenuActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".order.activity.OrderReviewActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".order.activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.HelpQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.fragment.ForgotPasswordActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".order.activity.LocationChangeActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".booking.EventsBaseActivity" />
+        <activity
+            android:name=".order.activity.PaymentActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".order.activity.OrderSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.activity.HBWelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".booking.MeetingBaseActivty" />
+        <activity android:name=".health.HealthHomeActivity" />
+        <activity
+            android:name=".booking.BookingDetailActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderDetailActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".navmenu.activity.HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".offline.activityOffline.HistoryActivityOffline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".health.HealthDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".offline.activityOffline.OrderDetailActvityOffline"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".health.HealthOnBoarding"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".health.HealthDashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".health.ConnectDeviceActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*.hungerbox.com"
+                    android:pathPrefix="/api/validateoauth"
+                    android:scheme="http" />
+                <data
+                    android:host="*.hungerbox.com"
+                    android:pathPrefix="/api/validateoauth"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".health.AddHealthItemActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".pockets.PocketsBaseActivity" />
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".social.ChatBotActivity" />
+        <activity
+            android:name=".health.WeightHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvvm.view.MyAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvvm.view.UpdateAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.PaymentMethodHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.VendorSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.MenuSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".navmenu.activity.RechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".booking.GenericBannerItemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.activity.OtpVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".navmenu.activity.WalletHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.SimplOtpVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.activity.SendOtpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".prelogin.activity.CustomSetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".navmenu.activity.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.activity.OTPPasswordSetActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".receiver.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".navmenu.activity.SuccesFailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.AddGuestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.GuestOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderWebPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.JPOtpverificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cooltechworks.creditcarddesign.CardEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.NetbankingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.JPWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".marketing.RedeemPointsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".marketing.OfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.activity.SSOLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.JuspayWebview"
+            android:screenOrientation="portrait" />
+        <activity android:name=".cardsaleactivityintegration.PaymentActivityTypeIntegration" />
+        <activity android:name=".cardsaleactivityintegration.CreditSaleActivity" />
+        <activity android:name=".cardsaleactivityintegration.CardSaleTransactionView" />
+        <activity android:name=".order.activity.JPWebViewActivityNew" />
+        <activity
+            android:name=".navmenu.activity.Link"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prelogin.activity.EmailActivationRequired"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".util.ChatBoatScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.clevertap.android.sdk.InAppNotificationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver android:name=".receiver.NotificationReciever" />
+
+        <meta-data
+            android:name="CLEVERTAP_INAPP_EXCLUDE"
+            android:value="com.hungerbox.customer.prelogin.activity.MainActivity, com.hungerbox.customer.prelogin.activity.SplashScreenActivity, com.hungerbox.customer.prelogin.activity.HBWelcomeActivity, com.hungerbox.customer.prelogin.activity.LoginActivity, com.hungerbox.customer.prelogin.activity.SignUpActivityBasic, com.hungerbox.customer.prelogin.fragment.ForgotPasswordActivity" />
+
+        <receiver
+            android:name=".util.SmsRetrieverReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".bluetooth.BluetoothInformationActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity android:name=".bluetooth.NearbyDeviceActivity" />
+        <activity
+            android:name=".bluetooth.BluetoothDeviceCheckActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+
+        <service
+            android:name=".bluetooth.BluetoothAlertService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <receiver android:name=".bluetooth.BluetoothDeviceReceiver" />
+
+        <activity
+            android:name=".navmenu.activity.BookMarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.BookmarkPaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".contest.activity.ContestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".offline.activityOffline.GlobalActivityOffline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".offline.activityOffline.LocationChangeActivityOffline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".offline.activityOffline.MenuActivityOffline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".offline.activityOffline.OrderReviewActivtyOffline"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".offline.activityOffline.OrderSuccessActivityOffline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".offline.activityOffline.OrderQrCodeActivityOffline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".printerUtils.ConnectUSBActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".bluetooth.BluetoothViolationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".navmenu.activity.AboutUsActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/providerpath" />
+        </provider>
+    </application>
+
+</manifest>

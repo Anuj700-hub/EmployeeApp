@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- This is for the info image -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@android:drawable/ic_menu_info_details" />
+            <!-- Title -->
+
+            <TextView
+                android:id="@+id/customwisepadconnectiondlg_TXT_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Message"
+                android:textColor="#343434"
+                android:textSize="22dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom" android:layout_marginTop="6dp"
+        android:orientation="vertical" >
+
+        <!-- Underline with this bluish color -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#0000ff" />
+        <!-- The message -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+        android:background="#f5f5f5"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Select device"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:text="Last remembered device"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:text="Paired devices"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:text="Devices"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="6dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="0.3dp"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:text="Auto connect"
+            android:textColor="#000000"
+            android:checked="true"
+            android:textSize="18dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:text="CheckCard"
+            android:textColor="#000000"
+            android:checked="true"
+            android:textSize="18dp" />
+
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"
+            android:text="ok"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+   
+</LinearLayout>

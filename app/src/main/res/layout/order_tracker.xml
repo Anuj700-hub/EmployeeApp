@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:layout_marginRight="@dimen/dimen_10"
+    android:layout_marginBottom="@dimen/dimen_8"
+    app:cardElevation="@dimen/dimen_10"
+    app:cardCornerRadius="14dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_rectangle_round_blue"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dimen_4"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.68"
+                android:orientation="vertical">
+
+                <include layout="@layout/order_item_status_view"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/qr_button_section"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.32"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_id_ot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/xxsmall_text"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/groteskreg"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Item Id" />
+
+                <Button
+                    android:id="@+id/bt_qr_button_ot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_24"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    android:background="@drawable/button_collect_order_enabled"
+                    android:fontFamily="@font/groteskbold"
+                    android:paddingLeft="@dimen/dimen_5"
+                    android:paddingRight="@dimen/dimen_5"
+                    android:text="VIEW QR"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+</androidx.cardview.widget.CardView>

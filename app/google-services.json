@@ -1,0 +1,1760 @@
+{
+  "project_info": {
+    "project_number": "415614188967",
+    "firebase_url": "https://hungerbox-93978.firebaseio.com",
+    "project_id": "hungerbox-93978",
+    "storage_bucket": "hungerbox-93978.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:5ae0559c97dd93ba",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-njm4qqp5ek8hhldiima6477gt461d145.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-nddp3dr403dgt927dgllqnlbg3norolc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer",
+            "certificate_hash": "cd10e8ccbe96c6aade5d37bc4e8fb732a02691d3"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:75b2ffd103de7485",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.abb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:000cc98be3d4d3dd",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.accenture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:5b640869885801cf",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.airbus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:d348e61894e56d91",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.ansr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:f3086e09bf6357d0",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.britannia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:98a7b0a3c7ec18de",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.bt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-53f2qqdp1cp06hql5608vbpt88v5864f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.bt",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:6e60b68dfb592c8d",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.byjus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-5o0aham7ctgikpnsfufk066bb0jmkujg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.byjus",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:39fd7200c06dff0f",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.cafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-24tclenj521egjrpferd92ppsr2uo9hs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.cafe",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:301708c2888d2801",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.capgemini"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:ec2633489e64332b",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.cerner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:895f99c140e7362e",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.common"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:05ed001bc6e4a7cf",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.concentrix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:fb40d12c46d25bdc",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.demo2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-j2sskm0j515goicrijqr0v77dqr040s3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.demo2",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:a66875cf406c7835",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.dxc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:ccb6b145d037a728",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.eatgood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:264f13c394ed3723",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.epicore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-6k729ko3qjh4erno91af3l7866kp8l7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.epicore",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:9622bed3b533ca8f",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.firstsource"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-pvh0bnm022m9ek7s77na7hrlgp5runt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.firstsource",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-breb7n9381ghgkqt5vl8l8a82enlpsbo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.firstsource",
+            "certificate_hash": "cd10e8ccbe96c6aade5d37bc4e8fb732a02691d3"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:abdc77546af29c6e",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.ge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-kti55bieblncda52ljen792i4o3arf34.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.ge",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:dc248f9f163be184",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.genpact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:e5e4bceba15e97ea",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.hbc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:659cba7654122322",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.hgs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:7a94b9c02a7a0410",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.ilab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-s6n3icl8744fg8meb5mctigc3a06iedl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.ilab",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:319f516f0c044dfc",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.infinera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-s3306ek7h2mq171rnqhfhg00nq1l34d7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.infinera",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:6c515c28b1438747",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.infosys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:4ac77731704b34cc",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.intuit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:9fded3b654376024",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.lowes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:0a4af07978d2cb00",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.merc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-0uvceo5gnquh4qdm0kq947mt2ecqqgu0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.merc",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:57cd31fe5f252720",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.ms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:3913c941c68b66d6",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.mystifly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-nlumvn898qca89har9h8hh2l28e5q1ef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.mystifly",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:d57fa502127bb22d",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.northerntrust"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-kukrl7hk5qacfr2l606b294n2ccp9eh1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.northerntrust",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:30e665937e7baf1d",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.paladion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-knot8bcpujdapq0k26kp3s3dsom872m3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.paladion",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:d23d0ecc3f9f15c3",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.pramata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:0f1e8ab769623abe",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.qc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:02ed718f58ad837d",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.realpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:3c71a0918065c922",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.sandisk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-ppd819nt50rej2d8ckmp75vs3sp80va7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.sandisk",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:de438006c4d289c6",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.sasken"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-cpd9s5jm1bodfng6mr0niemcmv3bteiq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.sasken",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:d59236e59fffb323",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.sattva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-p0ek6so56u8lb343h0duqd46b2i6ukpf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.sattva",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:fb0337d12d6b7b68",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.ss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:36aec87d8cb91eb2",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.utc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:1cfd4883167e6dfc",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.verifone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-iq8pcjf3prdh6q1vb440g57is5qj3v6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.verifone",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:097e41f70a45cf47",
+        "android_client_info": {
+          "package_name": "com.hungerbox.customer.vodafone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-oihenssg1n5hdhnuu9d470jqqj0d5tlo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungerbox.customer.vodafone",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415614188967:android:8df521587396628c",
+        "android_client_info": {
+          "package_name": "com.threeplate.customer.qualcomm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415614188967-nhhkohka3a2bvf3bdu5u9ku6c5po7ihl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.threeplate.customer.qualcomm",
+            "certificate_hash": "b5e5f0822112342a68b17905daf688c21d4c2c68"
+          }
+        },
+        {
+          "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDEB7kjyU4WKumzBhjdz88XlRIdKEKMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415614188967-8b040d23fdflccek1jke29u7i8cemcfg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415614188967-gfu6vce8t45odvckhgh3c3766h381mai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungerbox.customer.ms"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

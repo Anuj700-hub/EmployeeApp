@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background">
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_marginLeft="@dimen/dimen_12"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+        android:elevation="@dimen/dimen_4"
+        android:background="@drawable/search_background_three_rounded"
+        android:layout_toLeftOf="@id/bt_filter">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_search"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:padding="@dimen/dimen_4"
+            app:srcCompat="@drawable/ic_search_new"/>
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="Find Food Partners and Dishes"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:fontFamily="@font/grotesksemibold"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/black_40"
+            android:textColorHint="@color/black_40"
+            android:layout_toRightOf="@+id/iv_search"
+            android:background="@color/white"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_clear"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_4"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_search_cross"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bt_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_search_filter"
+        android:elevation="@dimen/dimen_4"
+        android:background="@drawable/card_back_frgament"
+        android:layout_margin="@dimen/dimen_10"
+        android:visibility="visible"
+        android:layout_alignParentRight="true"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_express_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_search"
+        android:paddingLeft="10dp"
+        android:src="@drawable/xpress_gif" />
+
+    <include
+        layout="@layout/view_slot_booking"
+        android:id="@+id/cv_slot"
+        android:layout_below="@id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10"
+        />
+    <include
+        layout="@layout/space_booking_dashboard"
+        android:id="@+id/cv_space_booking"
+        android:layout_below="@id/cv_slot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10"
+        />
+
+    <include
+        layout="@layout/vending_list_header"
+        android:id="@+id/cv_vending_list_header"
+        android:layout_below="@id/cv_space_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_12"
+        android:layout_marginRight="@dimen/dimen_12"
+        />
+
+    <include
+        android:id="@+id/favourite_items"
+        android:visibility="gone"
+        layout="@layout/horizontal_favourite_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_vending_list_header"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginLeft="@dimen/dimen_12"
+        android:layout_marginRight="@dimen/dimen_12"
+     />
+    <include
+        android:id="@+id/trending_items"
+        android:visibility="gone"
+        layout="@layout/horizontal_trending_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favourite_items"
+        android:layout_marginLeft="@dimen/dimen_12"
+        android:layout_marginRight="@dimen/dimen_12"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        />
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/vendor_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_centerVertical="true"
+        android:text="Food Partners"
+        android:layout_below="@id/trending_items"
+        style="@style/MediumTextViewGrey"
+        android:visibility="gone"/>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@id/gif_express_checkout"
+        android:text="VIEW ALL"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/medium_text"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cp_pickup_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide8"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide9"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide10"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="38dp"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="@dimen/dimen_2"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/guide8"
+        app:layout_constraintRight_toLeftOf="@+id/guide9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guide3"/>
+
+    <View
+        android:id="@+id/pickup_line"
+        android:layout_width="@dimen/dimen_2"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/guide8"
+        app:layout_constraintRight_toLeftOf="@+id/guide9"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide3"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_pickup_order_checkpoint"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        app:srcCompat="@drawable/hollow_tick"
+        app:layout_constraintLeft_toRightOf="@+id/guide8"
+        app:layout_constraintRight_toLeftOf="@+id/guide9"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guide3"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_guide3"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_4"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@+id/guide10"
+        app:layout_constraintStart_toStartOf="@+id/guide9"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="@dimen/dimen_8dp">
+
+            <LinearLayout
+                android:id="@+id/ll_pickup_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_pickup_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/groteskbold"
+                            android:text="Pickup Order"
+                            android:textColor="@color/order_detail_text_black"
+                            android:textSize="@dimen/medium_text" />
+
+                        <View
+                            android:id="@+id/horizontal_line_3"
+                            android:layout_width="23dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_pickup_order"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            android:background="@color/colorAccent" />
+
+
+                        <TextView
+                            android:id="@+id/tv_pickup_cafe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/horizontal_line_3"
+                            android:layout_marginTop="@dimen/dimen_18"
+                            android:fontFamily="@font/groteskreg"
+                            android:text="Scan QR to collect Ready Items"
+                            android:textColor="@color/order_detail_text_black"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pickup_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.62" />
+
+                        <ImageView
+                            android:id="@+id/iv_pickup_qr"
+                            android:layout_width="@dimen/dimen_50"
+                            android:layout_height="@dimen/dimen_50"
+                            app:layout_constraintLeft_toRightOf="@+id/guide17"
+                            app:layout_constraintRight_toLeftOf="@+id/guide17"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/qr_disabled" />
+
+                        <TextView
+                            android:id="@+id/pickup_tap_qr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:fontFamily="@font/groteskreg"
+                            android:text="Tap to Zoom"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/xxsmall_text"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toRightOf="@+id/guide17"
+                            app:layout_constraintRight_toLeftOf="@+id/guide17"
+                            app:layout_constraintTop_toBottomOf="@id/iv_pickup_qr" />
+
+                        <Button
+                            android:id="@+id/bt_collect_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_24"
+                            android:background="@drawable/button_collect_order"
+                            android:enabled="false"
+                            android:fontFamily="@font/groteskbold"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:paddingRight="@dimen/dimen_10"
+                            android:text="Collect Order"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="@dimen/dimen_12"
+                            android:textSize="@dimen/text_size_12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="92dp"
+                android:layout_height="23dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/title_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_20"
+                app:layout_constraintEnd_toStartOf="@+id/parent"
+                app:layout_constraintStart_toStartOf="@+id/parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_pickup_top">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/groteskreg"
+                        android:text="Ordered Items"
+                        android:textColor="@color/black_87"
+                        android:textSize="@dimen/xsmall_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.20" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.50" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent=".80" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/groteskreg"
+                            android:text="Accepted"
+                            android:textColor="@color/black_87"
+                            android:textSize="@dimen/xsmall_text"
+                            app:layout_constraintLeft_toRightOf="@+id/guide11"
+                            app:layout_constraintRight_toLeftOf="@+id/guide11"
+                            app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/groteskreg"
+                            android:text="Ready"
+                            android:textColor="@color/black_87"
+                            android:textSize="@dimen/xsmall_text"
+                            app:layout_constraintLeft_toRightOf="@+id/guide12"
+                            app:layout_constraintRight_toLeftOf="@+id/guide12"
+                            app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/groteskreg"
+                            android:text="Delivered"
+                            android:textColor="@color/black_87"
+                            android:textSize="@dimen/xsmall_text"
+                            app:layout_constraintLeft_toRightOf="@+id/guide13"
+                            app:layout_constraintRight_toLeftOf="@+id/guide13"
+                            app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pickup_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/title_row">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

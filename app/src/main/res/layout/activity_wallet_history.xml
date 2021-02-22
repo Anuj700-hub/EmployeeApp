@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.hungerbox.customer.navmenu.activity.WalletHistoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_curved_border_primary_white"
+        android:gravity="center_vertical"
+        android:elevation="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:padding="@dimen/dimen_8"
+            android:layout_marginLeft="@dimen/dimen_12"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/NormalTextView"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Wallet History"
+            android:layout_marginLeft="@dimen/dimen_8"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:padding="@dimen/dimen_6"
+            android:visibility="invisible"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_recharge_icon_wallet_history_oage"
+                />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/LargeTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:text="Recharge"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/small_text"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_header"
+        android:orientation="vertical"
+        android:layout_above="@+id/view_more_wallet_history">
+
+        <Spinner
+            android:background="@drawable/wallet_spinner_background"
+            android:id="@+id/sp_wallets"
+            android:layout_margin="?attr/marginMedium"
+            android:padding="@dimen/dimen_8"
+            android:paddingBottom="@dimen/dimen_8"
+            android:paddingTop="@dimen/dimen_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_18"
+            android:paddingStart="@dimen/dimen_18"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_wallet_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_grey"/>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/view_more_wallet_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_grey"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:id="@+id/older_history_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See Older History"
+            android:padding="10dp"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_no_transactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/no_transactions"
+        android:text="No Transactions Available"
+        style="@style/LargeTextViewDark"
+        android:visibility="gone" />
+
+</RelativeLayout>

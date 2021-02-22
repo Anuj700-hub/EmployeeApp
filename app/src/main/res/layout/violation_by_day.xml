@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_18"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:id="@+id/ll_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_total_violations"
+            style="@style/LargeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/grotesksemibold"
+            android:text="12"
+            android:textColor="@color/colorAccent" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:layout_toRightOf="@id/tv_total_violations"
+            android:layout_weight="1"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/violation_text"
+                style="@style/LargeTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_down_arrow"
+                android:drawablePadding="@dimen/dimen_8"
+                android:fontFamily="@font/grotesksemibold"
+                android:padding="@dimen/dimen_2"
+                android:text="Violations" />
+
+            <TextView
+                android:id="@+id/tv_day"
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/violation_text"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:padding="@dimen/dimen_2"
+                android:text="Today"
+                android:textSize="@dimen/text_size_12sp" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/better_than_text"
+                style="@style/MediumTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Better than"
+                android:textColor="@color/violation_better_than"
+                android:textSize="@dimen/text_size_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_user_percentage"
+                style="@style/LargeTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:text="73% Users"
+                android:textColor="@color/green"
+                android:textSize="@dimen/medium_extra_large_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/better_than_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_violation_hour"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_text_container"
+        android:layout_marginLeft="@dimen/dimen_36"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_8"
+        android:visibility="gone" />
+
+</RelativeLayout>

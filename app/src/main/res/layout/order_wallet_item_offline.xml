@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardElevation="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Paid By"
+            android:textSize="@dimen/small_text" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_method_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/tv_title"
+            android:text="--"
+            style="@style/ContentSecondaryTextLabel"
+            android:textSize="@dimen/small_text" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_amount_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_method_name"
+            android:padding="5dp"
+            android:text="Transaction Amount:"
+            android:textSize="@dimen/small_text" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_amount_title"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="rs 100"
+            style="@style/ContentSecondaryTextLabel"
+            android:textStyle="bold"
+            android:textSize="@dimen/small_text" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_amount"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_transaction_id_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Txn ID:"
+                    android:textSize="@dimen/small_text" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_transaction_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:padding="5dp"
+                    android:text="rs 100"
+                    style="@style/ContentSecondaryTextLabel"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/small_text" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_status_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_transaction_id_title"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Status:"
+                    android:textSize="@dimen/small_text" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_transaction_id_title"
+                    android:layout_alignParentRight="true"
+                    android:text="rs 100"
+                    style="@style/ContentSecondaryTextLabel"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textSize="@dimen/small_text" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_transaction_type_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_transaction_id_title"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Transaction Type:"
+                    android:textSize="@dimen/small_text" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    style="@style/ContentSecondaryTextLabel"
+                    android:id="@+id/tv_transaction_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_status_title"
+                    android:layout_marginLeft="5dp"
+                    android:padding="2dp"
+                    android:text=""
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

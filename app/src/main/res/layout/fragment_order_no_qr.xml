@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_corner_white">
+
+
+            <RelativeLayout
+                android:id="@+id/ll_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="@dimen/dimen_20"
+                    android:layout_height="@dimen/dimen_20"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_cancel_24_px" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ll_qr_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <LinearLayout
+                    android:id="@+id/ll_order_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/accent_border_1dp"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_8">
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_order_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Type : Eat at Cafe"
+                        style="@style/MediumTextViewBold"
+                        android:textSize="@dimen/large_text"
+                        android:layout_marginRight="@dimen/dimen_4"
+                        android:layout_marginLeft="@dimen/dimen_4"/>
+                </LinearLayout>
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QR generated at : 9 AM"
+                    style="@style/MediumTextViewGrey"
+                    android:textColor="@color/black_87"
+                    android:textSize="@dimen/medium_large_text"
+                    android:layout_marginRight="@dimen/dimen_4"
+                    android:layout_marginLeft="@dimen/dimen_4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ll_order_type"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/ic_green_tick"
+                    android:visibility="invisible"/>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_order_place_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_check"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Order Placed"
+                    android:visibility="invisible"
+                    style="@style/NormalTextViewDark"/>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_title"
+                    style="@style/MediumTextViewBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_order_place_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="6sp"
+                    android:padding="5dp"
+                    android:text="Your Order ID : TT123"
+                    android:textColor="@color/black_87"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_dotted_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/dotted_separator_line"
+                    android:layerType="software" />
+
+
+
+
+            </RelativeLayout>
+
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_order_pin_title"
+                style="@style/MediumTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_qr_container"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="21sp"
+                android:text="Order Reference"
+                android:textColor="@color/black_87"
+                android:textSize="@dimen/larger_text" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_order_pin"
+                style="@style/MediumTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_order_pin_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="3560"
+                android:textSize="@dimen/super_large_text"
+
+                />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_restaurant_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_pin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Use this Order Reference \n to collect your order at"
+                style="@style/NormalTextViewGrey" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_vendor_name"
+                style="@style/LargeTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_restaurant_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="@dimen/dimen_12"
+                android:text="Sri Ram krishna Sagar krishna"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@drawable/card_corner_white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/dotted_separator_line"
+                android:layerType="software" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:visibility="visible">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_order_quantity"
+                    style="@style/NormalTextViewGrey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="2 Items"
+
+                    />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_order_price"
+                    style="@style/NormalTextViewGrey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text="RS 250" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

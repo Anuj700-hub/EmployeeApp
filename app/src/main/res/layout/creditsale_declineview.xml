@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/top_bar" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topbar"
+        android:keepScreenOn="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/medium_text"
+                android:layout_marginTop="@dimen/medium_text"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/small_text"
+                    android:background="@drawable/declined"
+                    android:clickable="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/creditsaledeclineactivity_decline"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/large_text"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/small_text"
+                android:layout_marginBottom="@dimen/medium_text"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/creditsale_decline_TXT_redceiptdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/medium_text"
+                    android:layout_marginLeft="@dimen/medium_text"
+                    android:text="@string/mswipe"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/creditsale_decline_LBL_declinederror"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="@string/mswipe"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/large_text" />
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/creditsale_decline_BTN_submitsignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_next_active"
+                android:enabled="false" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

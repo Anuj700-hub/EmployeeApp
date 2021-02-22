@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungerbox.customer.order.activity.PineLabTransactionStatus">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:tint="@color/textColor"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <com.hungerbox.customer.util.view.HBTextViewBold
+            style="@style/HeaderTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Back"
+            android:textColor="@color/textColor" />
+    </RelativeLayout>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/layout_header"
+        android:id="@+id/tv_amount"
+        android:textSize="20sp"
+        app:textFontType="@string/medium_font"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="@dimen/margin_large"
+        />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/iv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="payment_process.json"
+        app:lottie_loop="true" />
+
+    <com.hungerbox.customer.util.view.HBTextViewBold
+        android:id="@+id/tv_wait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_status"
+        android:layout_centerHorizontal="true"
+        android:text="@string/please_wait_payment_processing"
+        android:textColor="@color/textColor" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_wait"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/colorAccent" />
+
+</RelativeLayout>

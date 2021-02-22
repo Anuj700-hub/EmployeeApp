@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="?paddingMedium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="?paddingMedium">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="?paddingMedium"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_item_name"
+            style="@style/MediumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khazana Restaurant"
+            android:textColor="?textColorDark"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/transparent_dark" />
+
+
+</LinearLayout>

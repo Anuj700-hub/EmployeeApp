@@ -1,0 +1,477 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+
+    configurations.all {
+        resolutionStrategy {
+            force 'net.sf.proguard:proguard-gradle:5.3.3'
+        }
+    }
+
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+
+
+ext {
+    supportLibraryVersion = '28.0.0'
+    playServicesVersion = '16.0.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.triplet.play'
+
+
+
+repositories {
+    mavenCentral()
+    maven { url "https://s3-ap-southeast-1.amazonaws.com/jp-build-packages/ec-android-sdk" }
+    maven { url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/" }
+    maven { url "http://maven.getsimpl.com" }
+    maven { url "https://s3-ap-southeast-1.amazonaws.com/jp-build-packages/release/" }
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+
+apply plugin: 'realm-android'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+android {
+
+    dataBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    signingConfigs {
+        config {
+            keyAlias 'hungerbox'
+            keyPassword 'hungerbox'
+            storeFile file('customer_demo.jks')
+            storePassword 'hungerbox'
+        }
+    }
+    defaultConfig {
+        applicationId "com.hungerbox.customer"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 237
+        versionName "5.22.0"
+        resConfig "en"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        archivesBaseName = "["+versionName+"]["+versionCode+"]"
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.versionCodeOverride = (3000000
+                    + android.defaultConfig.versionCode
+            )
+        }
+    }
+    dexOptions {
+        preDexLibraries false
+        maxProcessCount 8
+    }
+    buildTypes {
+
+        qa {
+            debuggable true
+            minifyEnabled false
+            versionNameSuffix "_debug"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            aaptOptions {
+                cruncherEnabled false
+            }
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+
+        flavorDimensions "default"
+//        qual {
+//            applicationId "com.threeplate.customer.qualcomm"
+//            resValue "string", "app_name", "Qualcomm Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/qual_launcher"
+//            ]
+//        }
+
+//        paladion {
+//            applicationIdSuffix ".paladion"
+//            resValue "string", "app_name", "HungerBox Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        acn {
+//            applicationIdSuffix ".accenture"
+//            resValue "string", "app_name", "ACN Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        airbus {
+//            applicationIdSuffix ".airbus"
+//            resValue "string", "app_name", "Airbus Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        ansr {
+//            applicationIdSuffix ".ansr"
+//            resValue "string", "app_name", "Ansr Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        bt {
+//            applicationIdSuffix ".bt"
+//            resValue "string", "app_name", "BT Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        ge {
+//            applicationIdSuffix ".ge"
+//            resValue "string", "app_name", "Cafe GE"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        lowes {
+//            applicationIdSuffix ".lowes"
+//            resValue "string", "app_name","@string/lowes_app_name"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/launcher_lowes"
+//            ]
+//        }
+//
+//        capgemini {
+//            applicationIdSuffix ".capgemini"
+//            resValue "string", "app_name", "Capgemini Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        firstsource {
+//            applicationIdSuffix ".firstsource"
+//            resValue "string", "app_name", "Firstsource-Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        genpact {
+//            applicationIdSuffix ".genpact"
+//            resValue "string", "app_name", "Genpact Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        ms {
+//            applicationIdSuffix ".ms"
+//            resValue "string", "app_name", "MS Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//
+//
+//        nt {
+//            applicationIdSuffix ".northerntrust"
+//            resValue "string", "app_name", "Northerntrust Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        pramata {
+//            applicationIdSuffix ".pramata"
+//            resValue "string", "app_name", "Pramata Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        rp {
+//            applicationIdSuffix ".realpage"
+//            resValue "string", "app_name", "Relapage Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        sattva {
+//            applicationIdSuffix ".sattva"
+//            resValue "string", "app_name", "Sattva Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/logo_sattva"
+//            ]
+//        }
+//
+//        byjus {
+//            applicationIdSuffix ".byjus"
+//            resValue "string", "app_name", "@string/byjus_app_name"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        utc {
+//            applicationIdSuffix ".utc"
+//            resValue "string", "app_name", "UTC Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+//
+//        verifone {
+//            applicationIdSuffix ".verifone"
+//            resValue "string", "app_name", "Verifone Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+
+//        namma {
+//            applicationIdSuffix ".eatgood"
+//            resValue "string", "app_name", "Namma Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+
+//        intuit {
+//            applicationIdSuffix ".intuit"
+//            resValue "string", "app_name", "Intuit Cafe"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/mipmap_intuit_launcher"
+//            ]
+//        }
+
+
+//        abb {
+//            applicationIdSuffix ".abb"
+//            resValue "string", "app_name", "@string/application_name"
+//            manifestPlaceholders = [
+//                    appIcon: "@mipmap/ic_launcher"
+//            ]
+//        }
+
+        common {
+            applicationIdSuffix ".common"
+            resValue "string", "app_name", "HungerBox Cafe"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+        }
+
+        cafe {
+            applicationIdSuffix ".cafe"
+            resValue "string", "app_name", "Cafe"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+        }
+
+        guest {
+            applicationIdSuffix ".cafe"
+            resValue "string", "app_name", "Cafe"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+        }
+
+    }
+    sourceSets {
+//        paladion.java.srcDir 'src/employee/java'
+//        acn.java.srcDir 'src/employee/java'
+//        airbus.java.srcDir 'src/employee/java'
+//        ansr.java.srcDir 'src/employee/java'
+//        bt.java.srcDir 'src/employee/java'
+//        ge.java.srcDir 'src/employee/java'
+//        lowes.java.srcDir 'src/employee/java'
+//        capgemini.java.srcDir 'src/employee/java'
+//        firstsource.java.srcDir 'src/employee/java'
+//        genpact.java.srcDir 'src/employee/java'
+//        ms.java.srcDir 'src/employee/java'
+//        nt.java.srcDir 'src/employee/java'
+//        pramata.java.srcDir 'src/employee/java'
+//        rp.java.srcDir 'src/employee/java'
+//        sattva.java.srcDir 'src/employee/java'
+//        byjus.java.srcDir 'src/employee/java'
+//        utc.java.srcDir 'src/employee/java'
+//        verifone.java.srcDir 'src/employee/java'
+//        namma.java.srcDir 'src/employee/java'
+        common.java.srcDir 'src/employee/java'
+//        intuit.java.srcDir 'src/employee/java'
+//        abb.java.srcDir 'src/employee/java'
+
+//        qual.java.srcDir 'src/employee/java'
+        cafe.java.srcDir 'src/cafe/java'
+        guest.java.srcDir 'src/cafe/java'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+}
+
+play {
+    track = 'alpha'
+    serviceAccountCredentials = file('play-store-key.json')
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    cafeImplementation files('libs/sspcoms.jar')
+    cafeImplementation files('libs/d2xx.jar')
+    implementation files('libs/printerlibs.jar')
+
+
+    implementation "com.google.android.gms:play-services-auth:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-gcm:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-base:$playServicesVersion"
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.1.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.mediarouter:mediarouter:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'in.juspay:ec-android-sdk:1.2.4'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.mcxiaoke.volley:library:1.0.17'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0@aar'
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation 'com.j256.ormlite:ormlite-core:4.48'
+    implementation 'com.j256.ormlite:ormlite-android:4.48'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.12'
+    implementation 'com.facebook.shimmer:shimmer:0.2.0'
+    implementation 'com.romandanylyk:pageindicatorview:0.2.0'
+    cafeImplementation project(':MswipeWseriesUniversalDRDSDKVer1.0.10v3.4.2')
+    guestImplementation project(':MswipeWseriesUniversalDRDSDKVer1.0.10v3.4.2')
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    implementation 'phonepe.thinsdk.android.release:merchantsdk:1.0.5.5-1427-fk'
+    androidTestImplementation 'junit:junit:4.12'
+    implementation project(':creditcarddesign')
+    implementation project(':logcatviewer')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(':spotlight')
+    implementation 'com.scottyab:rootbeer-lib:0.0.7'
+    implementation 'com.google.android.play:core:1.6.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation project(':app-release')
+    implementation project(':app-prod-release-bb')
+    implementation project(':rusk-debug')
+    implementation project(':plower-debug')
+    implementation project(':Kapchat_SDK_BB_Instant_new')
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.simpl.android:zeroClicksdk:1.1.3'
+    implementation 'com.koushikdutta.async:androidasync:2.+'
+    implementation 'com.koushikdutta.ion:ion:2.+'
+    implementation 'com.moengage:moe-android-sdk:9.4.02'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.github.medyo:dynamicbox:1.2@aar'
+    implementation 'com.facebook.network.connectionclass:connectionclass:1.0.1'
+    implementation 'com.snowplowanalytics:snowplow-android-tracker:0.6.2@aar'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.6.0"
+    implementation "com.squareup.okhttp3:okhttp:3.12.0"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:3.0.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.9.1"
+
+    //analytics
+
+    implementation 'com.google.firebase:firebase-analytics:16.4.0'
+    implementation 'com.google.firebase:firebase-appindexing:17.1.0'
+    //implementation 'com.google.firebase:firebase-storage:16.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-messaging:20.0.1'
+    implementation 'com.google.firebase:firebase-perf:16.1.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:19.0.5'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+
+    implementation 'com.clevertap.android:clevertap-android-sdk:3.4.2'
+    implementation 'com.github.anastr:speedviewlib:1.5.3'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    //date picker
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+
+    //local unit tests
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:3.5.13'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+}
+
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'

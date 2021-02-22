@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_no_bookings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/no_orders"
+        android:text="No Orders Yet"
+        style="@style/LargeTextViewDark"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pb_history"
+        android:layout_width="@dimen/dimen_40"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@+id/view_more_order_history">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:name="com.hungerbox.customer.navmenu.fragment.HistoryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_marginRight="@dimen/dimen_12"
+            tools:listitem="@layout/fragment_history" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_more_order_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_grey"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:id="@+id/older_order_history_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See Older History"
+            android:padding="10dp"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+</RelativeLayout>

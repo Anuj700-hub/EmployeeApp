@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="chip_color">#d4edfa</color>
+    <color name="chip_inner_color">#e0e4e4</color>
+    <color name="chip_yellow_color">#fbe191</color>
+    <color name="chip_yellow_inner_color">#eed280</color>
+    <color name="colorPrimary">#F35434</color>
+    <color name="colorPrimaryLight">#ffccbc</color>
+    <color name="colorPrimaryDark">#b91a07</color>
+    <color name="colorAccent">#F35434</color>
+    <color name="purple_color">#5515a9</color>
+    <color name="colorPrimaryBlue">#00b0bd</color>
+    <color name="purple_color_gradient">#651dc4</color>
+    <color name="transBGG">#aa000000</color>
+    <color name="green_color">#108b4c</color>
+    <color name="green_color_gradient">#1caf57</color>
+    <color name="green_light">#18db27</color>
+    <color name="blue_color">#5D8BF2</color>
+    <color name="blue_color_gradient">#3545AE</color>
+    <color name="button_blue">#00519f</color>
+    <color name="contest_background">#f7fafc</color>
+    <color name="theme_colorAccent">#3a1593</color>
+    <color name="default_text_color">#cc707070</color>
+
+
+
+    <color name="pink_color">#d04c84</color>
+    <color name="pink_color_gradient">#d04882</color>
+
+    <color name="default_color">#363434</color>
+    <color name="default_color_gradient">#434141</color>
+
+    <color name="brown_color">#800000</color>
+    <color name="brown_color_gradient">#A52A2A</color>
+    <color name="payment_btn_color">#ed5f0c</color>
+    <color name="off_white">#fafafa</color>
+
+
+
+    <color name="colorBG">#eee</color>
+    <color name="colorAccentLight">#ccbff2</color>
+    <color name="primary_light">#3c0593</color>
+    <color name="help_background_color">#f9faff</color>
+    <color name="colorGrey_Dot">#BBBBBB</color>
+    <color name="colorLightGrey_Dot">#BBB8B8</color>
+    <color name="action">#08B0CE</color>
+    <color name="text_dark">#1D1D1D</color>
+    <color name="text_darker">#2b2b2c</color>
+    <color name="text_medium">#5B5B5B</color>
+    <color name="alphaBlackLight">#76000000</color>
+    <color name="blue">#3d579b</color>
+    <color name="white">#ffffff</color>
+    <color name="tranparent">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="bg">#dedede</color>
+    <color name="light_grey">#e7e7e7</color>
+    <color name="green">#90C73A</color>
+    <color name="dark_grey">#4b4b4b</color>
+    <color name="red">#FF5148</color>
+    <color name="gray">#e9e9e9</color>
+    <color name="warm_grey">#9b9b9b</color>
+    <color name="yellow">#FFCE1A</color>
+    <color name="disabled">#aff2f2f2</color>
+    <color name="transparent_dark">#817c7c7c</color>
+    <color name="alert_color">#FFCD1A</color>
+    <color name="contest_grey_light">#f7f7f7</color>
+    <color name="underline_color">#d9d9d9</color>
+    <color name="button_disabled_color">#ccbff2</color>
+    <color name="health_device_background">#f4f4f4</color>
+
+    <color name="black_87">#1D1D1D</color>
+    <color name="black_60">#5B5B5B</color>
+    <color name="black_40">#898989</color>
+    <color name="black_alpha_30">#33000000</color>
+    <!--    <color name="text_black_alpha_90">#99000000</color>-->
+    <color name="text_black_alpha_90">#5B5B5B</color>
+    <color name="colorAccentLightAlpha">#38ccbff2</color>
+    <color name="colorOccasionBar">#ede7fa</color>
+    <color name="grey_alpha">#24707070</color>
+    <color name="grey70">#707070</color>
+    <color name="menuTextGrey">#a7000000</color>
+    <color name="accent_color_light_alpha">#38ccbff2</color>
+    <color name="dotted_line_gray">#A0A0A0</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_background">#F4F6FF</color>
+    <color name="black_transparent">#A6000000</color>
+    <color name="light_black">#99000000</color>
+    <color name="colorSurface">#F4F6FF</color>
+    <color name="background_grey">#F0F0F0</color>
+    <color name="background_color">#FBFAFF</color>
+    <!-- card colors -->
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow_1">#d4d4d4</color>
+    <color name="card_shadow_2">#dddddd</color>
+
+    //rating color
+    <color name="rating_sad">#ce2828</color>
+    <color name="rating_neutral">#f1c40f</color>
+    <color name="rating_happy">#81c784</color>
+    <color name="rating_yellow">#fdd218</color>
+    <!--contest status-->
+    <color name="contest_status_yellow">#f8773e</color>
+    <color name="contest_red">#e00d0d</color>
+    <color name="contest_green">#13b50d</color>
+    <color name="contest_yellow">#ffff00</color>
+    <color name="contest_orange_dot">#ff9a34</color>
+    <color name="contest_blue">#FF0492AC</color>
+    <color name="light_pink">#fdf1ef</color>
+    <color name="contest_grey">#a7a7a7</color>
+    <color name="spinner_border_grey">#e9e9e9</color>
+
+    <color name="transparent_b">#50000000</color>
+    <color name="spinner_border">#cc707070</color>
+
+
+
+
+    <!--for second theme colors  -->
+    <color name="_colorPrimary">#009688</color>
+    <color name="_colorPrimaryDark">#00695c</color>
+    <color name="_colorAccent">#009688</color>
+    <color name="_colorBG">#eee</color>
+    <color name="_colorAccentLight">#b2dfdb</color>
+    <color name="_colorPrimaryLight">#b2dfdb</color>
+    <color name="_button_disabled_color">#b2dfdb</color>
+
+
+</resources>

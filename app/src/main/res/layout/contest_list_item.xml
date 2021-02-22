@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:layout_marginTop="@dimen/dimen_8"
+    android:layout_marginBottom="@dimen/dimen_8">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/marginSmall"
+        android:layout_marginTop="?attr/marginSmall"
+        android:layout_marginRight="?attr/marginSmall"
+        style="@style/NormalCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_8">
+
+            <LinearLayout
+                android:id="@+id/ll_logo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="?attr/paddingSmall"
+                    android:contentDescription="logo"
+                    android:scaleType="centerInside"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_offer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="5sp"
+                        android:textColor="?attr/textColorDark"
+                        style="@style/NormalTextView"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_logo_container"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="?attr/paddingSmall"
+                android:orientation="horizontal">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_expiry_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/NormalTextView"/>
+
+                <com.hungerbox.customer.util.view.HBTextViewBold
+                    android:id="@+id/tv_reward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="?attr/marginMedium"
+                    android:layout_toRightOf="@id/tv_expiry_date"
+                    android:textColor="?attr/textColorDark"
+                    style="@style/NormalTextView"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_16"
+                    android:layout_height="@dimen/dimen_16"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_container"
+        android:layout_marginLeft="?attr/marginMedium"
+        android:layout_marginTop="-8dp"
+        android:layout_marginRight="?attr/marginMedium"
+        android:layout_marginBottom="@dimen/dimen_12"
+        android:padding="?attr/paddingSmall"
+        style="@style/NormalCardView"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_marginBottom="?attr/paddingSmall"
+            android:gravity="center"
+            android:padding="@dimen/dimen_8">
+
+            <LinearLayout
+                android:id="@+id/ll_timeline_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

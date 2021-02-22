@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideA"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideC"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".80" />
+
+        <ImageView
+            android:id="@+id/bt_left_ot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_16"
+            android:paddingRight="@dimen/dimen_16"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_10"
+            app:srcCompat="@drawable/ic_blue_left_arrow"
+            app:layout_constraintLeft_toRightOf="@+id/guideA"
+            app:layout_constraintRight_toLeftOf="@+id/guideA"
+            app:layout_constraintTop_toBottomOf="@+id/parent"/>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_item_name_ot"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/medium_large_text"
+            android:layout_marginTop="@dimen/dimen_10"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toStartOf="@+id/bt_right_ot"
+            app:layout_constraintStart_toEndOf="@+id/bt_left_ot"
+            app:layout_constraintTop_toTopOf="parent" >
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <ImageView
+            android:id="@+id/bt_right_ot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_16"
+            android:paddingRight="@dimen/dimen_16"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_10"
+            app:srcCompat="@drawable/ic_blue_right_arrow"
+            app:layout_constraintLeft_toRightOf="@+id/guideC"
+            app:layout_constraintRight_toLeftOf="@+id/guideC"
+            app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.hungerbox.customer.util.view.TrackerItemStatusView
+        android:id="@+id/item_status_view_ot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.hungerbox.customer.util.view.TrackerItemStatusView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_6">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideD"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideE"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideF"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".80" />
+
+        <TextView
+            android:id="@+id/tv_ot_accepted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accepted"
+            android:textSize="10sp"
+            android:fontFamily="@font/groteskreg"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintLeft_toRightOf="@+id/guideD"
+            app:layout_constraintRight_toLeftOf="@+id/guideD"
+            app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+        <TextView
+            android:id="@+id/tv_ot_ready"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ready"
+            android:textSize="10sp"
+            android:fontFamily="@font/groteskreg"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintLeft_toRightOf="@+id/guideE"
+            app:layout_constraintRight_toLeftOf="@+id/guideE"
+            app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+        <TextView
+            android:id="@+id/tv_ot_delivered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivered"
+            android:textSize="10sp"
+            android:fontFamily="@font/groteskreg"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintLeft_toRightOf="@+id/guideF"
+            app:layout_constraintRight_toLeftOf="@+id/guideF"
+            app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.hungerbox.customer.bluetooth.NearbyDeviceActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/button_curved_border_primary_white"
+        android:gravity="center_vertical"
+        android:elevation="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/NormalTextView"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Nearby Devices"
+            android:layout_marginLeft="@dimen/dimen_12"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:padding="@dimen/dimen_6">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bt_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_share_nearby"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_share"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/dimen_50"
+            android:padding="@dimen/dimen_6"
+            android:visibility="visible"
+            >
+            <Switch
+                android:id="@+id/nearby_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textColor="@color/colorAccent"
+                android:layout_centerHorizontal="true"/>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/LargeTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Nearby Alert"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/small_text"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_header"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/dimen_5"
+            android:id="@+id/rv_devices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_grey"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

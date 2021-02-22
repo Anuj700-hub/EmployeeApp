@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorSurface"
+    android:elevation="@dimen/dimen_4"
+    app:contentInsetStart="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStartWithNavigation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_ocassion"
+            android:gravity="center_vertical"
+            android:text="Vendor"
+            style="@style/NormalTextView"
+            android:textColor="@color/colorAccent" />
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

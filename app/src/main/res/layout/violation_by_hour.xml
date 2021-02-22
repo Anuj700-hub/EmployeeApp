@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_16">
+
+    <TextView
+        android:id="@+id/tv_violation_count"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="2 Violations"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_time_range"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="12:00 PM - 01:00 PM"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_size_14" />
+</LinearLayout>

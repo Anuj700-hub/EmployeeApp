@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.hungerbox.customer.order.activity.OrderReviewActivity">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tb_pay"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/dimen_8"
+        android:stateListAnimator="@null">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dimen_12"
+                app:srcCompat="@drawable/ic_accent_back_arrow" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_toolbar_title"
+                style="@style/NormalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_back"
+                android:gravity="center_vertical"
+                android:text="Vendor"
+                android:textColor="?attr/colorAccent"
+                android:textSize="?attr/mediumLargeText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pay"
+                style="@style/NormalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="View History"
+                android:textColor="?attr/colorAccent"
+                android:textSize="?attr/mediumLargeText"
+
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include
+        android:id="@+id/tv_header"
+        layout="@layout/payment_header_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_pay"
+        android:layout_marginBottom="-10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_header"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginBottom="-10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingBottom="10dp" />
+
+
+        <ProgressBar
+            android:id="@+id/pb_order_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_container"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/ll_view_bill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_square_white"
+            android:elevation="@dimen/dimen_12"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/bt_grand_total"
+                style="@style/LargeTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:textColor="@color/black_87"
+                android:padding="0dp"
+                android:text="Rs 100"
+                android:visibility="gone" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_view_detail_bill"
+                style="@style/SmallTextViewMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_marginTop="-4dp"
+                android:text="VIEW DETAILED BILL"
+                android:textColor="?attr/colorAccent"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/bt_pay"
+            style="@style/PaymentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="@dimen/dimen_12"
+            android:text="PROCEED TO PAY" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pb_pay"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/ll_bt"
+        android:layout_alignEnd="@+id/ll_bt"
+        android:layout_alignRight="@+id/ll_bt"
+        android:layout_alignBottom="@+id/ll_bt"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:elevation="@dimen/dimen_4"
+        android:indeterminateTint="?attr/textColor"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/pb_wallet_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/xml_progress"
+            android:indeterminateDuration="2000"
+            android:padding="@dimen/dimen_4" />
+    </RelativeLayout>
+
+</RelativeLayout>

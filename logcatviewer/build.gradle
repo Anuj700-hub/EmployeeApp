@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        rc {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        releaseprod {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        qa {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            aidl.srcDirs = ['src']
+        }
+    }
+
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

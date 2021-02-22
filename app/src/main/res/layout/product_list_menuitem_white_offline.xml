@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="15dp"
+    app:cardElevation="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_bookmark"
+                    android:layout_width="18dp"
+                    android:layout_height="29dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_bookmark_grey" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_veg_non"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/rl_bookmark"
+                app:srcCompat="@drawable/ic_veg_icon" />
+
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_name"
+                style="@style/ContentMainTextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_veg_non"
+                android:textColor="@color/white"
+                android:maxWidth="170dp"
+                android:text="product name"
+                android:textSize="@dimen/medium_text" />
+
+            <LinearLayout
+                android:id="@+id/ll_add_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rl_add_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/menu_add_back"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_add_card"
+                        style="@style/ContentMainTextLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="5dp"
+                        android:text="ADD"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_add"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/tv_quantity"
+                        android:padding="5dp"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/ic_add_accent_24dp" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/iv_remove"
+                        android:enabled="false"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_remove"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignTop="@+id/iv_add"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="8dp"
+                        android:padding="5dp"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/ic_remove_accent_24dp" />
+
+                </RelativeLayout>
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_customize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customizable"
+                    android:layout_marginTop="@dimen/margin_very_small"
+                    android:layout_gravity="center"
+                    android:textSize="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_add_container"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/secondBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_description"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toRightOf="@id/iv_veg_non"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_price"
+                    style="@style/ContentSecondaryTextLabelLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@id/tv_name"
+                    android:layout_alignLeft="@id/tv_name"
+                    android:maxWidth="190dp"
+                    android:text="\u20B9 120"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_cal"
+                    style="@style/ContentSecondaryTextLabelSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:visibility="gone"
+                    android:text="120 cal" />
+            </LinearLayout>
+
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_description"
+                style="@style/ContentSecondaryTextLabelLight"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toRightOf="@id/iv_veg_non"
+                android:ellipsize="end"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:text="Description"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/description_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_description"
+                android:layout_below="@+id/tv_name"
+                android:layout_toLeftOf="@+id/ll_add_container"
+                android:tint="@color/black"
+                android:src="@drawable/ic_keyboard_arrow_down"/>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_vendor_name"
+                style="@style/ContentSecondaryTextLabelLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_description"
+                android:layout_toRightOf="@id/iv_veg_non"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_submit_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_description"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/blue"
+                    android:padding="12dp"
+                    android:text="ADD REVIEW"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_review_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_description"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="12dp"
+                    android:text="Review Submitted"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/iv_inactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/disabled"
+            android:layout_alignTop="@+id/rl"
+            android:layout_alignBottom="@+id/rl"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

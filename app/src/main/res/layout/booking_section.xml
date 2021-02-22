@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_booking_section"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/dimen_10"
+    android:layout_below="@+id/cv_order_status"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_4"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:paddingLeft="@dimen/dimen_16"
+            android:paddingRight="@dimen/dimen_16"
+            android:paddingTop="@dimen/dimen_8"
+            android:paddingBottom="@dimen/dimen_8"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_booking_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MediumTextView"
+                    android:textColor="@color/colorAccent"
+                    android:padding="1dp"
+                    android:text="Wish to book a table?" />
+
+                <TextView
+                    android:id="@+id/tv_booking_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="0sp"
+                    style="@style/SmallTextView"
+                    android:textColor="@color/light_black"
+                    android:text="Book your table for cafeteria here" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/bt_book"
+                    android:layout_width="@dimen/dimen_70"
+                    android:layout_height="@dimen/size_26sp"
+                    android:fontFamily="@font/groteskbold"
+                    android:textSize="@dimen/text_size_14"
+                    android:background="@drawable/book_button"
+                    android:textColor="@color/white"
+                    android:text="Book">
+
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

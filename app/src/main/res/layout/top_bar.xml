@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_bar_REL_content"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/topbar_LNR_topbar_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="2dp"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/topbar_img_menu"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/topbar_LNR_topbar_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="2dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/topbar_img_cancel" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/topbar_LBL_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="29sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/topbar_IMG_position1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/topbar_IMG_position2"
+            android:src="@drawable/topbar_img_bluetooth_inactive"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/topbar_IMG_position2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/topbar_img_host_inactive"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:elevation">3dp</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <style name="TransAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <style name="Theme.AppCompat.Transparent.NoActionBar" parent="CustomTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#90000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="MenuAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <style name="NormalTextInputEditText" parent="CustomTheme">
+        <item name="android:backgroundTint">@color/black_40</item>
+        <item name="android:textSize">?attr/mediumLargeText</item>
+    </style>
+    <style name="HintTextInputLayout" parent="CustomTheme">
+        <item name="android:textColor">@color/black_60</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:fontFamily">@font/grotesksemibold</item>
+    </style>
+
+    <style name="NormalTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="hintTextAppearance">@style/HintTextInputLayout</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">?attr/colorPrimary</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+        <item name="android:buttonTint">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CustomTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccentLight">@color/colorAccentLight</item>
+        <item name="colorAccentLightAlpha">@color/colorAccentLightAlpha</item>
+        <item name="tabColor">@color/colorAccentLight</item>
+        <item name="cartFooterColor">@color/colorAccentLight</item>
+        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorAccent</item>
+
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/light_grey</item>
+        <item name="colorError">@color/red</item>
+        <item name="alertColor">@color/alert_color</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="blackTransparent">@color/black_transparent</item>
+        <item name="colorBackgroundGrey">@color/card_shadow_2</item>
+        <item name="iconTintLight">@color/green</item>
+        <item name="colorPrimaryBlue">@color/colorPrimaryBlue</item>
+        <item name="colorGreen">@color/green</item>
+        <item name="colorGreenContest">@color/contest_green</item>
+        <item name="colorAccentVeryLight">@color/accent_color_light_alpha</item>
+
+        <item name="textColor">@color/white</item>
+        <item name="textColorGrey">@color/text_medium</item>
+        <item name="textColorDark">@color/black</item>
+        <item name="extraSmallTextSize">@dimen/xsmall_text</item> <!-- 10sp -->
+        <item name="smallTextSize">@dimen/small_text</item> <!-- 12sp -->
+        <item name="mediumTextSize">@dimen/medium_text</item> <!-- 14sp -->
+        <item name="mediumLargeText">@dimen/medium_large_text</item> <!-- 16sp -->
+        <item name="largeTextSize">@dimen/large_text</item> <!-- 20sp -->
+        <item name="superLargeTextSize">@dimen/super_large_text</item> <!-- 40sp -->
+        <item name="largerText">@dimen/larger_text</item> <!--25sp -->
+
+        <item name="paddingTextView">@dimen/padding_small</item> <!-- 4dp -->
+        <item name="paddingExtraSmall">@dimen/padding_extra_small</item> <!-- 2dp -->
+        <item name="paddingSmall">@dimen/padding_small</item> <!-- 4dp -->
+        <item name="paddingMedium">@dimen/padding_normal</item> <!-- 12dp -->
+        <item name="paddingLarge">@dimen/padding_large</item> <!-- 16dp -->
+
+        <item name="marginSmall">@dimen/margin_small</item> <!-- 4dp -->
+        <item name="marginMedium">@dimen/margin_medium</item> <!-- 16dp -->
+        <item name="marginLarge">@dimen/margin_large</item> <!-- 35dp -->
+
+        <item name="radiusExtraSmall">@dimen/radius_extra_small</item> <!-- 4dp -->
+        <item name="radiusSmall">@dimen/radius_small</item> <!-- 8dp -->
+        <item name="radiusMedium">@dimen/radius_medium</item> <!-- 12dp -->
+        <item name="radiusLarge">@dimen/radius_large</item> <!-- 16dp -->
+
+        <item name="buttonBackground">@drawable/button_curved_border_primary</item>
+        <item name="buttonCurvedBackground">@drawable/button_curved_border</item>
+        <item name="buttonCurvedRadiusSmall">@drawable/button_curved_low_radius</item>
+        <item name="buttonBorderedBackground">@drawable/button_curved_border_accent</item>
+        <item name="buttonWhiteBackground">@drawable/button_curved_border_white</item>
+        <item name="buttonCurvedTopBackground">@drawable/button_curved_border_top_accent</item>
+        <item name="footerCurvedTopBackground">@drawable/button_curved_border_top_accent</item>
+        <item name="buttonStateSelector">@drawable/button_state_selector_bookmark</item>
+        <item name="whiteCurvedBorder">@drawable/white_curved_border</item>
+        <item name="BottomRoundedAccentAlpha">@drawable/bottom_rounded_accent_alpha</item>
+
+
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+
+
+    </style>
+
+    <style name="RadioSelector" parent="CustomTheme">
+        <item name="android:colorControlNormal">@color/black_alpha_30</item>
+        <item name="android:colorControlActivated">@color/colorAccent</item>
+    </style>
+
+</resources>

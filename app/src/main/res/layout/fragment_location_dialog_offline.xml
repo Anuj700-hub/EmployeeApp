@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:minWidth="350dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_toolbar_title"
+                style="@style/HeaderTextWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Locations"
+                android:textColor="@color/text_dark"
+                app:textFontType="@string/medium_font" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_cafe_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb"
+        android:layout_centerHorizontal="true"
+        android:text="@string/current_cafe"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/large_text"
+        app:textFontType="@string/medium_font" />
+
+    <TextView
+        android:id="@+id/tv_cart_clear_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="*Any items in your existing cart will be discarded when you change your location."
+        android:textColor="@color/red"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_cafe"
+        android:layout_width="@dimen/cafe_image_width"
+        android:layout_height="@dimen/cafe_image_height"
+        android:layout_below="@+id/tv_cafe_title"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        app:srcCompat="@drawable/ic_cafe" />
+
+    <com.hungerbox.customer.util.view.HBTextViewBold
+        android:id="@+id/tv_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_cafe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="32dp"
+        android:text="@string/location"
+        android:textColor="@color/text_dark"
+        android:textSize="16sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_login"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/card_curved_border_top_white"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="-8dp"
+        app:cardElevation="@dimen/card_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_location_change_buttons"
+            android:layout_below="@+id/iv_cafe"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_sp_city_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select City"
+                android:textColor="@color/text_dark"
+                android:visibility="gone" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+                android:layout_marginTop="6dp"
+                >
+                <Spinner
+                    android:id="@+id/sp_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_select_cafe_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Select New Cafe"
+                android:textColor="@color/text_dark" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+                android:layout_marginTop="6dp"
+                >
+                <Spinner
+                    android:id="@+id/sp_cafe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_location_positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_state_selector_bookmark"
+                android:text="Change"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pb_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

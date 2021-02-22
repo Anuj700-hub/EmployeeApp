@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorSurface">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_tb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_8"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cafe_title">
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            app:contentInsetStartWithNavigation="0dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_toolbar_title"
+                    style="@style/NormalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Select Cafeteria"
+                    android:textColor="?attr/colorAccent" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_cafe_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_tb"
+        android:layout_centerHorizontal="true"
+        android:text="@string/current_cafe"
+        android:visibility="invisible"
+        android:textColor="?attr/textColorDark"
+        style="@style/SmallTextViewGrey"
+        android:textSize="?attr/largeTextSize"
+        app:layout_constraintTop_toBottomOf="@+id/cv_tb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_cart_clear_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="*Any items in your existing cart will be discarded when you change your location."
+        android:textColor="?attr/colorError"
+        style="@style/NormalTextView"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/iv_cafe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:minWidth="100dp"
+        android:minHeight="120dp"
+        android:layout_below="@+id/tv_cafe_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:src="@drawable/location_illustration"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cafe_title"
+        app:layout_constraintBottom_toTopOf="@+id/tv_current_location"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_current_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_cafe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:layout_marginLeft="?attr/marginMedium"
+        android:layout_marginRight="?attr/marginMedium"
+        android:text="@string/location"
+        style="@style/LargeTextViewBold"
+        android:textColor="?attr/colorAccent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cafe"
+        app:layout_constraintBottom_toTopOf="@+id/cv_login"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_8"
+        app:cardCornerRadius="@dimen/dimen_16"
+        android:background="@drawable/button_curved_border_top_white"
+        android:translationY="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_current_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_location_change_buttons"
+            android:layout_below="@+id/iv_cafe"
+            android:layout_marginLeft="?attr/marginMedium"
+            android:layout_marginRight="?attr/marginMedium"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_sp_city_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:text="Select City"
+                style="@style/NormalTextViewGrey"
+                android:textColor="@color/text_black_alpha_90"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <RelativeLayout
+                android:id="@+id/rv_sp_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border_grey"
+                android:layout_marginTop="@dimen/dimen_8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sp_city_title"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:dropDownSelector="@color/colorAccentLight"
+                    android:spinnerMode="dropdown"
+                    android:gravity="top"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_select_cafe_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:text="Select Cafe"
+                style="@style/NormalTextViewGrey"
+                android:textColor="@color/text_black_alpha_90"
+                app:layout_constraintTop_toBottomOf="@+id/rv_sp_city"
+                />
+            <RelativeLayout
+                android:id="@+id/rv_sp_cafe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border_grey"
+                android:layout_marginTop="@dimen/dimen_8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_select_cafe_title"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+                <Spinner
+                    android:id="@+id/sp_cafe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownSelector="@color/colorAccentLight"
+                    />
+            </RelativeLayout>
+            <CheckBox
+                android:id="@+id/cb_location_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:text="@string/set_this_location_as_default"
+                android:textColor="@color/text_black_alpha_90"
+                android:theme="@style/NormalSwitchGrey"
+                app:layout_constraintTop_toBottomOf="@+id/rv_sp_cafe"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                android:id="@+id/bt_location_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/marginMedium"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:text="Confirm"
+                android:visibility="visible"
+                style="@style/ButtonStateSelector"
+                android:paddingRight="@dimen/dimen_60"
+                android:paddingLeft="@dimen/dimen_60"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/cb_location_default"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <ProgressBar
+        android:id="@+id/pb_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

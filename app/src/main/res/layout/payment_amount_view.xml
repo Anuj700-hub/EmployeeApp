@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2f2f2" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/top_bar" />
+
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topbar"
+        android:background="#f2f2f2"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" >
+
+                <!-- the widgets for the Amount -->
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fadeScrollbars="false" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+
+                        <LinearLayout
+                            android:id="@+id/payment_LNR_amount"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <com.hungerbox.customer.cardsaleactivityintegration.DecAmtEditText
+                                android:id="@+id/payment_TXT_amount"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="amount"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/payment_LNR_salecashamount"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.hungerbox.customer.cardsaleactivityintegration.DecAmtEditText
+                                android:id="@+id/payment_TXT_salecashamount"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="amount"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/payment_LNR_first6digits"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.mswipetech.wisepos.demo.sdk.customviews.CustomEditTextView
+                                android:id="@+id/payment_TXT_first6digits"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="First 6 Digits"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="6"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <com.hungerbox.customer.cardsaleactivityintegration.DecAmtEditText
+                                android:id="@+id/payment_TXT_tip_amount"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="tip"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:paddingRight="6dp"
+                                android:visibility="gone"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:text="(+91)"
+                                android:textColor="#777777"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </TextView>
+
+                            <EditText
+                                android:id="@+id/payment_TXT_mobileno"
+                                android:layout_width="160dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:ellipsize="start"
+                                android:hint="Mobile No."
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_receipt"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:ellipsize="start"
+                                android:gravity="center_vertical"
+                                android:hint="Invoice No."
+                                android:imeOptions="actionNext"
+                                android:maxLength="30"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_notes"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="center_vertical"
+                                android:hint="Notes"
+                                android:imeOptions="actionNext"
+                                android:maxLength="2000"
+                                android:minLines="1"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_email"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:ellipsize="start"
+                                android:gravity="center_vertical"
+                                android:hint="Email Id"
+                                android:imeOptions="actionDone"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="30"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_one"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra1(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_two"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra2(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_three"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra3(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_four"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra4(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_five"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra5(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_six"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra6(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_seven"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra7(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_eight"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra8(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_nine"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra9(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/payment_TXT_extra_ten"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittext_modified_states"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra10(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans" >
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal" >
+
+                            <Button
+                                android:id="@+id/payment_BTN_amt_next"
+                                android:layout_width="100dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/roundrectblue"
+                                android:gravity="center"
+                                android:text="pay"
+                                android:textColor="#ffffff"
+                                android:textSize="25dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

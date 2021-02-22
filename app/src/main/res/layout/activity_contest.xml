@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.hungerbox.customer.contest.activity.ContestActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/marginMedium"
+        android:layout_marginTop="?marginMedium"
+        android:layout_marginBottom="?marginMedium"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/dimen_12">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/MediumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="?attr/marginMedium"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="All contests"
+            android:textColor="@color/text_dark" />
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_contest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_below="@+id/layout_header"
+        app:tabBackground="@drawable/tab_background_selector"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="0dp"
+        android:layout_margin="@dimen/dimen_8"
+        app:tabMinWidth="100dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="?attr/colorPrimary"
+        app:tabTextAppearance="@style/ContentSecondaryTextLabelMedium"
+        app:tabTextColor="@color/text_medium" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_contest_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tl_contest"
+        android:background="@color/contest_background" />
+
+</RelativeLayout>

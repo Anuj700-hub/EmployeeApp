@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tranparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/tranparent"
+        android:padding="10dp">
+
+        <ProgressBar
+            android:id="@+id/pb_setup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_setup_dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/pb_setup"
+            android:layout_alignBottom="@+id/pb_setup"
+            android:layout_toRightOf="@+id/pb_setup"
+            android:gravity="center_vertical"
+            android:text="Setting up Vendors..." />
+    </RelativeLayout>
+</LinearLayout>

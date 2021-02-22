@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/title_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/dimen_12"
+    app:layout_constraintEnd_toStartOf="@+id/parent"
+    app:layout_constraintStart_toStartOf="@+id/parent"
+    app:layout_constraintTop_toBottomOf="@+id/ll_pickup_top">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.30"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/grotesksemibold"
+            android:text="Ordered Items"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.70"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.hungerbox.customer.util.view.OrderItemStatusView
+            android:id="@+id/item_status_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

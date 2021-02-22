@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.hungerbox.customer.order.activity.OrderReviewActivity">
+
+    <include
+        android:id="@+id/tb_order_review"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_amount_detail_base_container"
+        android:layout_below="@id/tb_order_review"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/ll_review"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_order_review"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="10dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layerType="software"
+                        android:src="@drawable/grey_line" />
+
+                    <TextView
+                        android:id="@+id/preorderTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layerType="software"
+                        android:src="@drawable/grey_line" />
+
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_order_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="250dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_small"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_wallet"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toLeftOf="@+id/tv_amount_label"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <com.hungerbox.customer.util.view.HBTextViewBold
+                        android:id="@+id/tv_amount_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Grand Total "
+                        card_view:layout_constraintLeft_toRightOf="@+id/iv_wallet"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <com.hungerbox.customer.util.view.HBTextViewBold
+                        android:id="@+id/tv_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 400.00 "
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <com.hungerbox.customer.util.view.HBTextViewBold
+                        android:id="@+id/tv_pay_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="EAT NOW, PAY LATER"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/iv_wallet" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_pay_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/offline_order_short_text"
+                        card_view:layout_constraintTop_toBottomOf="@+id/tv_pay_header" />
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/help_open"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/tv_pay_details" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_amount_detail_base_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_location_container"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:visibility="gone">
+            <requestFocus/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_desk_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_dark"
+                android:textSize="@dimen/medium_text"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_payment_amount_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_location_container"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="-10dp"
+            android:background="@drawable/button_curved_border_top_white"
+            android:elevation="3dp"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_total_amount_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Total Order Amount"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/medium_text" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=""
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/medium_text" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_order_details_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_total_amount_container"
+                android:background="@color/white"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order Amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_total_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/ll_delivery_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delivery Charges"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_container_charge_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Container Charges"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_vat_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VAT"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_vat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sgst_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SGST"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_sgst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cgst_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CGST"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_cgst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_st_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Service Tax"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_st"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_order_details_container"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/white"
+                android:elevation="3dp"
+                android:padding="5dp"
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_convenience_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Convenience Fee"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+
+                    <com.hungerbox.customer.util.view.HbTextView
+                        android:id="@+id/tv_convenience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_closed_amount_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_location_container"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_curved_border_top_white"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:visibility="visible">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/ContentMainTextLabelDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_drop_up"
+                android:text="DETAILED BILL" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_amount_header_total"
+                style="@style/ContentMainTextLabelAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/ContentMainTextLabelDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@id/tv_amount_header_total"
+                android:layout_toLeftOf="@id/tv_amount_header_total"
+                android:text="To Pay" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_location_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_pay"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:visibility="gone"></RelativeLayout>
+
+
+    <Button
+        android:id="@+id/bt_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_curved_border_top_accent"
+        android:stateListAnimator="@null"
+        android:text="PAY"
+        android:textColor="@color/white" />
+
+
+    <ProgressBar
+        android:id="@+id/pb_place_order"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/bt_pay"
+        android:layout_alignEnd="@+id/bt_pay"
+        android:layout_alignRight="@+id/bt_pay"
+        android:layout_alignBottom="@+id/bt_pay"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:elevation="5dp"
+        android:visibility="gone" />
+</RelativeLayout>

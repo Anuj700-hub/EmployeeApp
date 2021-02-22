@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungerbox.customer.health.WeightHistoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_curved_border_primary"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/HeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Weight Log" />
+
+        <Button
+            android:id="@+id/btn_update_health"
+            style="@style/NormalBorderlessButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Update Health" />
+    </RelativeLayout>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_cur_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Current Weight :"
+        android:textColor="?attr/colorAccent"
+        style="@style/LargeTextView" />
+
+    <RelativeLayout
+        android:id="@+id/rv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_cur_weight"
+        android:background="@color/gray"
+        android:padding="4dp">
+
+        <com.hungerbox.customer.util.view.HBTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="Date"
+            style="@style/SmallTextViewDark" />
+
+        <com.hungerbox.customer.util.view.HBTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="Weight (in kgs)"
+            style="@style/SmallTextViewDark" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_weight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rv_header"
+        android:background="?attr/colorSurface"/>
+
+</RelativeLayout>

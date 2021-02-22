@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.hungerbox.customer.order.activity.OrderSuccessActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_high"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_12"
+            android:src="@drawable/big_tick" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_message"
+            style="@style/MediumTextViewDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_high"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:maxWidth="220dp"
+            android:text="High Five! \nYour order has been placed."
+             />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/bt_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/buttonCurvedTopBackground"
+        android:stateListAnimator="@null"
+        android:text="Continue"
+        android:textColor="@color/white" />
+</RelativeLayout>

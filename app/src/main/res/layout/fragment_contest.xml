@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_contest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_activity_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Image"
+                    android:minHeight="120dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/error_image"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_banner"
+                    android:layout_margin="@dimen/dimen_12">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_reward_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <com.hungerbox.customer.util.view.HBTextViewBold
+                            android:id="@+id/tv_active_campaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Ongoing contests"
+                            android:textColor="?attr/textColorDark"
+                            style="@style/LargeTextViewBold"
+                            android:textSize="?attr/mediumTextSize"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/iv_rewards"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/my_rewards"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rl_active_contest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_reward_container" />
+
+
+                </RelativeLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/pb_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="?attr/marginMedium"
+        android:layout_marginTop="@dimen/dimen_32"
+        android:layout_marginRight="?attr/marginMedium"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_container_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_shadow_2"
+                    android:contentDescription="Image"
+                    android:minHeight="220dp"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_container_shimmer"
+                android:layout_margin="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/ll_reward_container_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hungerbox.customer.util.view.HBTextViewBold
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@color/card_shadow_2"
+                        android:textColor="@color/text_dark"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_rewards_shimmer"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/card_shadow_2" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_reward_container_shimmer"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        app:cardBackgroundColor="@color/card_shadow_2"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="4dp"
+                        app:cardBackgroundColor="@color/card_shadow_2"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="4dp"
+                        app:cardBackgroundColor="@color/card_shadow_2"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_active_contest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.hungerbox.customer.util.view.HBTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No Active Campaigns "
+            android:textColor="?attr/colorError"
+            style="@style/LargeTextViewBold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

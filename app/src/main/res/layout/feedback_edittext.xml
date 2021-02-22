@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_rounded_feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/feedbackTextView"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/dimen_24"
+        android:layout_height="match_parent"
+        android:singleLine="false"
+        android:scrollbars="vertical"
+        android:textSize="@dimen/xsmall_text"
+        android:minLines="6"
+        android:maxLines="6"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_6"
+        android:background="@color/tranparent"
+        android:topLeftRadius="@dimen/dimen_10"
+        android:topRightRadius="@dimen/dimen_10"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/feedback_edittext_background">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chat_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_chat_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

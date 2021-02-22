@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_parent"
+    app:cardCornerRadius="@dimen/dimen_16"
+    android:layout_margin="@dimen/dimen_10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guide_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guide_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_reward_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:maxHeight="@dimen/dimen_60"
+            android:maxWidth="@dimen/dimen_60"
+            app:srcCompat="@drawable/ic_rewards_trophy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_guide"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_reward_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/NormalTextViewGrey"
+            android:textSize="@dimen/xsmall_text"
+            android:maxLines="2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_reward_logo"
+            app:layout_constraintBottom_toTopOf="@+id/tv_reward"
+            app:layout_constraintLeft_toLeftOf="@+id/vertical_guide_left"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide_right"
+            android:text="You won "/>
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_reward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/MediumTextViewBold"
+            android:textSize="@dimen/medium_text"
+            android:maxLines="2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reward_label"
+            app:layout_constraintBottom_toTopOf="@+id/tv_date"
+            app:layout_constraintLeft_toLeftOf="@+id/vertical_guide_left"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide_right"
+            android:text="Rs 50"/>
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/NormalTextViewGrey"
+            android:textSize="@dimen/xsmall_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/vertical_guide_left"
+            app:layout_constraintRight_toRightOf="@+id/vertical_guide_right"
+            android:maxLines="1"
+            tools:text="1 March 2020"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.hungerbox.customer.navmenu.activity.HistoryActivity">
+
+    <include
+        android:id="@+id/tb_history"
+        layout="@layout/toolbar_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_history"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tb_history"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextAppearance="@style/ContentSecondaryTextLabelMedium"
+        app:tabTextColor="@color/text_medium"
+        app:tabMinWidth="100dp"
+        app:tabGravity="center"
+        app:tabBackground="@drawable/tab_background_selector"
+        android:paddingBottom="3dp"
+        android:elevation="4dp"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_history_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tl_history"
+        android:background="#f0f0f0"/>
+</RelativeLayout>

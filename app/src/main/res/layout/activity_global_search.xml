@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungerbox.customer.order.activity.GlobalSearchActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+        <View
+            android:id="@+id/transparent_view"
+            android:visibility="gone"
+            android:elevation="@dimen/dimen_10"
+            android:background="@color/alphaBlackLight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="@dimen/dimen_10"
+            app:layout_collapseMode="pin"
+            app:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dimen_12"
+                    app:srcCompat="@drawable/ic_accent_back_arrow" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_back"
+                    android:text="Search"
+                    style="@style/NormalTextView"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="?attr/mediumLargeText"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:maxWidth="220dp"
+                    />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_24"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:elevation="@dimen/dimen_10"
+            android:background="@drawable/search_background_three_rounded"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_menu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bt_filter">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_search"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_marginRight="@dimen/dimen_17"
+                android:padding="@dimen/dimen_4"
+                app:srcCompat="@drawable/ic_search_new"/>
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:hint="Find Food Partners and Dishes"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/grotesksemibold"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/black_40"
+                android:textColorHint="@color/black_40"
+                android:layout_toRightOf="@+id/iv_search"
+                android:layout_toLeftOf="@+id/iv_clear"
+                android:background="@color/white"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_clear"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_4"
+                app:srcCompat="@drawable/ic_search_cross"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bt_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_search_filter"
+            android:elevation="@dimen/dimen_10"
+            android:background="@drawable/card_back_frgament"
+            android:layout_margin="@dimen/dimen_10"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="@+id/rl_search"
+            app:layout_constraintBottom_toBottomOf="@id/rl_search"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_empty_search"
+            android:layout_margin="@dimen/dimen_10"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintTop_toBottomOf="@+id/rl_search"
+            app:layout_constraintBottom_toTopOf="@+id/tv_empty"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MediumTextView"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/black_60"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4sp"
+            tools:text="Search for anything"
+            app:layout_constraintTop_toBottomOf="@+id/iv_empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_vendors"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_32"
+            app:tabBackground="@drawable/search_tab_background"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabIndicatorHeight="0dp"
+            android:layout_marginRight="@dimen/dimen_24"
+            android:layout_marginLeft="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_10"
+            app:tabMinWidth="100dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/black_40"
+            app:layout_constraintTop_toBottomOf="@+id/rl_search"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/contest_background"
+            app:layout_constraintTop_toBottomOf="@+id/tl_vendors"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50 Vendors found"
+            style="@style/NormalTextViewGrey"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tl_vendors"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <RelativeLayout
+            android:id="@+id/fl_cart_container"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="?attr/footerCurvedTopBackground"
+            android:elevation="3dp"
+            android:gravity="center_vertical"
+            android:paddingTop="?attr/paddingSmall"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_checkout"
+                style="@style/NormalWhiteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="   VIEW CART  "
+                app:drawableRightCompat="@drawable/ic_cart"
+                android:textColor="@color/colorPrimary"
+                android:transitionName="@string/checkout_trans"
+                android:paddingRight="@dimen/dimen_16"
+                android:paddingLeft="@dimen/dimen_6"
+                />
+
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_cart"
+                style="@style/SmallTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_24"
+                android:text="99" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_order_amount"
+                style="@style/SmallTextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_cart"
+                android:text="Rs 123" />
+
+            <TextView
+                android:id="@+id/tv_extra_charge_label"
+                style="@style/SmallTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_cart"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_24"
+                android:text="Extra Charges may apply"
+                android:textStyle="italic"
+                />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/filter_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <include layout="@layout/search_filter_bottom_sheet"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

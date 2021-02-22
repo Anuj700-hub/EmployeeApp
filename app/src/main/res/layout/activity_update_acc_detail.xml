@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="updateAccountAccountViewModel"
+            type="com.hungerbox.customer.mvvm.viewmodel.UpdateAccountViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:id="@+id/updateAccountActivityParent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_pay"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="8dp"
+            android:stateListAnimator="@null">
+
+            <RelativeLayout
+                android:id="@+id/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="?attr/paddingLarge"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dimen_12"
+                    app:srcCompat="@drawable/ic_accent_back_arrow" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    style="@style/MediumTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="?attr/paddingLarge"
+                    android:layout_toRightOf="@id/iv_back"
+                    android:text="My Account"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tb_pay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_header"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_change_password"
+                    style="@style/NormalCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_header"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/btn_update_account"
+                        android:layout_below="@+id/layout_header"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="24dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="24dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_old_password"
+                            style="@style/NormalTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="?attr/paddingSmall"
+                            app:errorTextAppearance="@style/errorAppearance"
+                            app:passwordToggleTint="@color/colorPrimary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_old_password"
+                                style="@style/NormalTextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_acc_field"
+                            style="@style/NormalTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="?attr/paddingSmall"
+                            app:errorTextAppearance="@style/errorAppearance"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/colorPrimary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_acc_field"
+                                style="@style/NormalTextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_acc_confirm_field"
+                            style="@style/NormalTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="?attr/paddingSmall"
+                            app:errorTextAppearance="@style/errorAppearance"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/colorPrimary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_acc_confirm"
+                                style="@style/NormalTextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_update_account"
+                    style="@style/NormalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_change_password"
+                    android:layout_marginLeft="?attr/paddingLarge"
+                    android:layout_marginTop="@dimen/dimen_32"
+                    android:layout_marginRight="?attr/paddingLarge"
+                    android:text="Update information" />
+
+                <include
+                    android:id="@+id/rl_progress"
+                    layout="@layout/progress_bar_generic"
+                    android:visibility="gone"
+                    app:isVisible="@{updateAccountAccountViewModel.progressbarVisibility}"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>
+

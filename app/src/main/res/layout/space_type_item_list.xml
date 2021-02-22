@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/dimen_2"
+    app:cardCornerRadius="@dimen/dimen_4"
+    android:layout_margin="@dimen/dimen_8"
+    app:cardPreventCornerOverlap="false"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_space_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/space_type_selection"
+        android:padding="@dimen/padding_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_space_image"
+            android:layout_width="@dimen/dimen_30"
+            android:layout_height="@dimen/dimen_30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_table_booking_icon_big" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/NormalTextViewGrey"
+            android:id="@+id/tv_space_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_space_image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@drawable/text_space_state_selector"
+            tools:text="Table" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

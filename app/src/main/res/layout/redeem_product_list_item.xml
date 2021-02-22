@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_redeem_product"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_name"
+        style="@style/ContentMainTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_redeem_product"
+        android:maxWidth="170dp"
+        android:text="product name" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_curved_border"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_redeem"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Redeem for XXX points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text" />
+
+    </RelativeLayout>
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_vendor_name"
+        style="@style/ContentSecondaryTextLabelLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignLeft="@id/tv_name"
+        android:paddingTop="7dp"
+        android:text="Description"
+        android:visibility="visible" />
+
+</RelativeLayout>

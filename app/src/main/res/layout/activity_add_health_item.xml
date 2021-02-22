@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungerbox.customer.health.AddHealthItemActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_curved_border_primary"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/HeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Add Item" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:layout_margin="10dp"
+        android:background="@drawable/grey_border"
+        android:hint="Search for dishes.."
+        android:padding="10dp"
+        android:singleLine="true"
+        style="@style/NormalEditTextDark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv__health_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/et_search" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/iv_no_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/no_orders"
+        android:gravity="center"
+        style="@style/SmallTextViewGrey"
+        android:text="Oops!!\nThe dish is not in our database.\nWe will add this next time for sure."
+        android:visibility="gone" />
+
+</RelativeLayout>

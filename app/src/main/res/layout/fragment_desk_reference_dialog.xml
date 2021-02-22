@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dimen_10"
+    app:cardCornerRadius="@dimen/dimen_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="300dp"
+        android:orientation="vertical">
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/desk_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="?attr/colorAccent"
+        style="@style/LargeTextViewBold"
+        android:textSize="@dimen/medium_extra_large_text"
+        android:layout_margin="@dimen/dimen_16"
+        android:layout_marginTop="?attr/marginMedium"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorTextAppearance="@style/errorAppearance"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusBottomEnd="25dp"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        app:hintTextAppearance="@style/HintTextInputLayoutSmall"
+        app:hintTextColor="@color/black_40">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:singleLine="true"
+            android:id="@+id/et_desk_reference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            style="@style/NormalTextInputEditText"
+            />
+             <requestFocus/>
+    </com.google.android.material.textfield.TextInputLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/bt_exit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/bt_change"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="?attr/colorAccent"
+            android:text="Change"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

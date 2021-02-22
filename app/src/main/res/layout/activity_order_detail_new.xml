@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungerbox.customer.order.activity.OrderDetailNewActivity">
+
+    <include
+        android:id="@+id/tb_global"
+        layout="@layout/toolbar_new_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSurface"
+        android:layout_below="@+id/tb_global">
+
+        <ProgressBar
+            android:id="@+id/pb_order_details"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pb_order_details"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:text="Fetching Order details.."
+            android:textColor="?attr/textColorDark" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/srl_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_global">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:id="@+id/order_detail_root"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorSurface"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/tb_global_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/order_confirmed_checkpoint"/>
+
+                <include layout="@layout/enter_cafe_checkpoint"/>
+
+                <include layout="@layout/pickup_checkpoint"/>
+
+                <include layout="@layout/exit_cafe_checkpoint"/>
+
+                <include layout="@layout/detailed_bill_and_payment"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

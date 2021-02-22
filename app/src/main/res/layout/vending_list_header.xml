@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/dimen_10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_vm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_vm" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_toEndOf="@id/iv_vm"
+            android:layout_toRightOf="@id/iv_vm"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/MediumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="Order from Vending Machine"
+                android:textColor="?attr/colorPrimary" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/SmallTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="Contactless Ordering*" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

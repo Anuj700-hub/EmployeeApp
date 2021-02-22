@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/off_white"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    android:weightSum="3">
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_date"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxWidth="40dp"
+        android:maxLines="1"
+        android:textSize="@dimen/xsmall_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_credit_debit"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:maxLines="1"
+        android:textSize="@dimen/xsmall_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_remarks"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:textSize="@dimen/xsmall_text" />
+
+</LinearLayout>

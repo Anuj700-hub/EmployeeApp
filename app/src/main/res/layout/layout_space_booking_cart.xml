@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_space_guest_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_space_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Table Booking"
+        style="@style/MediumTextViewBold"
+        />
+
+    <ImageView
+        android:id="@+id/iv_space_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_alpha"
+        app:layout_constraintTop_toBottomOf="@id/tv_space_name"
+        android:layout_marginTop="@dimen/margin_small"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_location_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@id/iv_space_divider">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_space_location_title"
+                style="@style/MediumTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text=":"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_space_location"
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Tower 6b, 2 Floor"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_date_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@id/ll_location_tb">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_space_date_title"
+                style="@style/MediumTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:text=":"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_space_date"
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Tower 6b, 2 Floor"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_time_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@id/ll_date_tb">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_space_time_title"
+                style="@style/MediumTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text=":" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_space_time"
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Tower 6b, 2 Floor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_space_guest_title"
+        style="@style/MediumTextViewDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_time_tb"
+        tools:text="Guest List (2)" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_space_guest_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_space_guest_title"
+        tools:listitem="@layout/space_guest_list_cart_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    tools:context="com.hungerbox.customer.order.activity.PostPaidActivity">
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_corner_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:srcCompat = "@drawable/ic_cancel_24_px"
+            android:layout_gravity="end"
+            android:id="@+id/iv_cancel"/>
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#f08853"
+            android:textSize="14sp"
+            android:text="Payment Due Alert" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_dueAmount"
+            android:layout_gravity="center_horizontal"
+            android:textSize="12sp"
+            android:textColor="#2f2f2f"
+            android:lineSpacingExtra="4sp"
+            android:layout_marginTop="10dp"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#99000000"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4sp"
+            android:text="Detailed Bill"
+            android:paddingLeft="35dp"
+            android:background="#f2f2f2"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/rv_orders"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_totalAmount"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <Button
+            android:id="@+id/btn_clear_dues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_curved_border_down"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="0sp"
+            android:paddingTop="5dp"
+            android:text="CLEAR  DUES"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</RelativeLayout>

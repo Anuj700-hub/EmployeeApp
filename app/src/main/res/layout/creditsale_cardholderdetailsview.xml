@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/creditsale_amountview_LNR_saledetails"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/label_font_large" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/creditsale_details_LBL_swipe_amtmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="40.00"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_font_large" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_medium"
+            android:paddingTop="@dimen/margin_medium">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/creditsale_details_IMG_authorise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/wisepad" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/creditsale_details_IMG_card"
+                    android:layout_toRightOf="@+id/creditsale_details_IMG_authorise"
+                    android:gravity="center">
+
+                    <com.hungerbox.customer.cardsaleactivityintegration.CustomProgressAnimView
+                        android:id="@+id/creditsale_details_LNL_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:keepScreenOn="true" />
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/creditsale_details_IMG_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right|center_vertical"
+                    android:src="@drawable/visa" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/creditsale_cardholderdetailsview_authorising"
+                android:textColor="@color/gray"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height_normal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:background="@color/light_grey" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:scrollbars="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal">
+
+                <LinearLayout
+                    android:id="@+id/creditsale_details_LIN_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:keepScreenOn="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/creditsale_details_LBL_lblCardHolderName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="left"
+                        android:text="@string/creditsale_cardholderdetailsview_card_holder"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/label_font" />
+
+
+                    <TextView
+                        android:id="@+id/creditsale_details_LBL_lblExpiryDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="left"
+                        android:text="@string/creditsale_cardholderdetailsview_expiry_date"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/label_font" />
+
+
+                    <TextView
+                        android:id="@+id/creditsale_details_LBL_lblCardNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/creditsale_cardholderdetailsview_last_4_digits"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/label_font" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/creditsale_details_LIN_details"
+                    android:keepScreenOn="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/creditsale_details_LBL_CardHolderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@+id/creditsale_details_LBL_lblCardHolderName"
+                        android:singleLine="true"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/label_font" />
+
+
+                    <TextView
+                        android:id="@+id/creditsale_details_LBL_ExpiryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@+id/creditsale_details_LBL_lblExpiryDate"
+                        android:singleLine="true"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/label_font" />
+
+                    <TextView
+                        android:id="@+id/creditsale_details_LBL_CardNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/creditsale_details_LBL_lblCardNo"
+                        android:singleLine="true"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/label_font" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

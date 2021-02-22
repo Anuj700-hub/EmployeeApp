@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface"
+    android:padding="@dimen/dimen_20">
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Your Password has been reset"
+        style="@style/LargeTextViewDark" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_order_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:gravity="center"
+        android:text="You will be logged out from your account"
+        style="@style/NormalTextView"
+        android:textColor="?attr/textColorDark"
+        />
+
+
+    <Button
+        android:id="@+id/bt_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        style="@style/NormalButton"
+        android:text="Continue"
+        android:textColor="@color/white" />
+
+</LinearLayout>

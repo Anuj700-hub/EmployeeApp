@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hungerbox.customer.health.HealthDetailsActivity"
+    android:id="@+id/healthDetailsActivityParent">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/buttonBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            style="@style/HeaderTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:text="Basic Details" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="Link Device"
+            style="@style/SmallTextView" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_update"
+        android:layout_below="@+id/layout_header"
+        android:fadeScrollbars="false">
+
+        <LinearLayout
+            android:id="@+id/ll_health_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:weightSum="3">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gender"
+                    style="@style/NormalTextViewDark" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        style="?attr/RadioTextViewDark"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?attr/RadioTextViewDark"
+                        android:layout_weight="0.5"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Female" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Age"
+                style="@style/SmallTextViewDark" />
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/grey_border"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:hint="yyyy-MM-dd"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/et_weight"
+                style="@style/NormalEditTextDark" />
+
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Weight (in kgs)"
+                style="@style/SmallTextViewDark" />
+
+            <EditText
+                android:id="@+id/et_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/grey_border"
+                android:hint="Enter Weight (in kgs)"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/et_height"
+                style="@style/NormalEditTextDark" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Height (in cms)"
+                style="@style/SmallTextViewDark" />
+
+            <EditText
+                android:id="@+id/et_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/grey_border"
+                android:hint="Enter Height (in cms)"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/et_goal"
+                style="@style/NormalEditTextDark" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Goal (in kgs)"
+                style="@style/SmallTextViewDark" />
+
+            <EditText
+                android:id="@+id/et_goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/grey_border"
+                android:hint="Enter Weight Goal (in kgs)"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/tv_gender"
+                style="@style/NormalEditTextDark" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Activty Level"
+                style="@style/SmallTextViewDark" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_border"
+                android:layout_marginTop="@dimen/dimen_8"
+                >
+            <Spinner
+                android:id="@+id/sp_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bmi_cal_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_health_details"
+                android:gravity="center|center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/bmiContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            android:id="@+id/tv_bmi"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/accent_circle_indicator"
+                            android:gravity="center"
+                            android:text="BMI"
+                            style="@style/SmallTextView" />
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:text="BMI"
+                            style="@style/SmallTextViewDark" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/rmiContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            android:id="@+id/tv_cal_intake"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/accent_circle_indicator"
+                            android:gravity="center"
+                            android:text="Calorie Intake"
+                            style="@style/SmallTextView" />
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:text="Calorie Intake"
+                            style="@style/SmallTextViewDark" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_health_tracker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_health_tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_delink"
+                    android:layout_alignBottom="@+id/tv_delink"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="Health Tracker"
+                    style="@style/SmallTextViewDark" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_delink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/accent_border"
+                    android:padding="5dp"
+                    android:text="Delink"
+                    android:textColor="?attr/colorAccent"
+                    style="@style/SmallTextView" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/buttonCurvedTopBackground"
+        android:text="update information"
+        style="@style/NormalButton" />
+
+</RelativeLayout>

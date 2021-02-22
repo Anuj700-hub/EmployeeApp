@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.hungerbox.customer.prelogin.activity.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <include
+        android:id="@+id/layout_header"
+        layout="@layout/toolbar_new" />
+
+    <LinearLayout
+        android:id="@+id/ll_user_app_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_header"
+        android:layout_marginTop="10dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_header"
+            android:layout_margin="6dp"
+            app:cardElevation="@dimen/card_elevation"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardUseCompatPadding="true">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/tap_on_back"
+                    android:textColor="@color/blue"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_header"
+            android:layout_margin="6dp"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/login_with_app"
+                    android:textColor="@color/text_dark"
+                    android:textSize="23sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_below="@id/layout_header"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_60"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:id="@+id/ll_login">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_user_name"
+                style="@style/NormalTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/errorAppearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/marginMedium"
+                    android:drawablePadding="?attr/paddingSmall"
+                    android:hint="Username"
+                    android:imeOptions="actionGo"
+                    android:inputType="textPhonetic"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:nextFocusRight="@+id/et_password"
+                    android:nextFocusDown="@+id/et_password"
+                    android:nextFocusForward="@+id/et_password"
+                    android:singleLine="true"
+                    style="@style/NormalTextInputEditText"
+                    android:backgroundTint="@color/black_40"
+                    android:textColor="@color/colorAccent"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/NormalTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_user_name"
+                android:layout_marginTop="?attr/marginSmall"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/marginMedium"
+                    android:drawablePadding="?attr/paddingSmall"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:nextFocusRight="@+id/bt_otp_login"
+                    android:nextFocusDown="@+id/bt_otp_login"
+                    android:nextFocusForward="@+id/bt_otp_login"
+                    android:singleLine="true"
+                    style="@style/NormalTextInputEditText"
+                    android:backgroundTint="@color/black_40"
+                    android:textColor="@color/colorAccent"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/bt_reset_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_login"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/dimen_32"
+        android:text="Forgot Password ?"
+        style="@style/NormalTextViewGrey"
+        android:textColor="@color/colorAccent"
+        android:visibility="visible"
+       />
+
+    <Button
+        android:id="@+id/bt_otp_login"
+        style="@style/NormalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_login"
+        android:layout_marginLeft="?attr/paddingMedium"
+        android:layout_marginTop="?attr/paddingMedium"
+        android:layout_marginBottom="?attr/paddingMedium"
+        android:layout_toRightOf="@id/bt_reset_password"
+        android:text="Login with OTP"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For login through username"
+            android:textSize="18sp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Click here"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_reset_password"
+        android:layout_marginLeft="?attr/marginMedium"
+        android:layout_marginTop="@dimen/dimen_32"
+        android:layout_marginRight="?attr/marginMedium"
+        android:text="LOG IN"
+        style="@style/NormalButton"
+        android:paddingRight="@dimen/dimen_70"
+        android:paddingLeft="@dimen/dimen_70"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/groteskbold"
+        />
+
+    <include
+        android:id="@+id/rl_progress"
+        layout="@layout/progress_bar_generic"
+        android:visibility="gone" />
+
+</RelativeLayout>

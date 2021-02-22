@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_20"
+        android:paddingBottom="@dimen/dimen_20"
+        android:background="@color/white"
+        android:elevation="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:layout_marginLeft="@dimen/dimen_20"
+            />
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_toRightOf="@+id/iv_back"
+            style="@style/NormalTextView"
+            android:textColor="@color/primary_light"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_view_guest"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_add_guests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_margin="@dimen/dimen_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Valid from"
+                        style="@style/NormalTextViewGrey"/>
+
+                    <TextView
+                        android:id="@+id/tv_valid_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:padding="@dimen/dimen_10"
+                        android:textSize="18dp"
+                        android:layout_marginTop="@dimen/dimen_12"
+                        android:background="@drawable/accent_border_grey"
+                        style="@style/MediumTextView"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:textColor="@color/colorAccent"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Valid till"
+                        style="@style/NormalTextViewGrey"/>
+
+                    <TextView
+                        android:id="@+id/tv_valid_till"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:textSize="18dp"
+                        android:background="@drawable/accent_border_grey"
+                        android:layout_marginTop="@dimen/dimen_12"
+                        style="@style/MediumTextView"
+                        android:textColor="@color/colorAccent"
+                        android:padding="@dimen/dimen_10"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    style="@style/NormalTextViewGrey"
+                    android:padding="@dimen/dimen_5"
+                    android:layout_marginTop="@dimen/dimen_20"/>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:lines="1"
+                    style="@style/NormalTextInputEditText"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+                <Button
+                    android:id="@+id/btn_add_more_guests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    style="@style/NormalButton"
+                    android:padding="@dimen/padding_small"
+                    android:text="+ Add"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_select_cafe_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_add_guests"
+                android:text="Please select a cafeteria"
+                android:visibility="gone"
+                android:padding="@dimen/dimen_5"
+                android:layout_marginLeft="@dimen/dimen_8"
+                style="@style/NormalTextViewGrey"/>
+
+            <RadioGroup
+                android:id="@+id/rg_order_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_select_cafe_title"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="@dimen/dimen_5">
+
+                <RadioButton
+                    android:id="@+id/rb_reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regular cafeteria"
+                    style="@style/NormalTextViewDark"/>
+
+                <RadioButton
+                    android:id="@+id/rb_gda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guest dining area"
+                    style="@style/NormalTextViewDark"/>
+            </RadioGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_guests"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_below="@+id/rg_order_place"
+                android:paddingBottom="5dp" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/bt_create_guest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_16"
+        android:text="Submit for Approval"
+        android:visibility="visible"
+        style="@style/NormalBorderedButton"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/dimen_10"/>
+
+    <Button
+        android:id="@+id/bt_view_guest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@id/bt_create_guest"
+        android:layout_margin="@dimen/dimen_16"
+        android:text="View Registered Guests"
+        style="@style/NormalButton"
+         />
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_guest_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:text="Friends Added"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:textStyle="bold"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rl_guest_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_guest_list_title"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        />
+
+    <Button
+        android:id="@+id/bt_ok_guest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/NormalButton"
+        android:text="OK"
+        android:layout_below="@+id/rl_guest_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dimen_60"
+        android:layout_marginRight="@dimen/dimen_60"
+        android:layout_marginBottom="@dimen/dimen_24"/>
+
+</RelativeLayout>

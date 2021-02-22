@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_payment_method_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_8"
+    android:layout_marginRight="@dimen/dimen_8"
+    android:layout_marginLeft="@dimen/dimen_8"
+    android:background="@drawable/white_drawable">
+
+
+    <ImageView
+        android:id="@+id/iv_offers_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_offer_badge" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_offers_badge"
+        android:paddingLeft="@dimen/dimen_6"
+        android:paddingRight="@dimen/dimen_6">
+
+        <ImageView
+            android:id="@+id/iv_payment_logo"
+            android:layout_width="@dimen/dimen_36"
+            android:layout_height="@dimen/dimen_36"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:padding="@dimen/dimen_6"
+            android:src="@mipmap/ic_launcher" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_payment_method"
+            style="@style/ExtraSmallTextViewDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_payment_logo"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="0dp"
+            android:layout_toLeftOf="@id/tv_payment_method_recharge_link"
+            android:layout_toRightOf="@+id/iv_payment_logo"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/dimen_36"
+            android:paddingLeft="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_6"
+            android:paddingBottom="@dimen/dimen_6"
+            android:text="Test Method" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_payment_method_recharge_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_payment_logo"
+            android:layout_alignBottom="@+id/iv_payment_logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_40"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:text="test link"
+            android:textColor="?attr/colorPrimary"
+            style="@style/SmallTextViewMedium"
+            android:visibility="gone" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_payment_logo"
+            android:layout_alignBottom="@+id/iv_payment_logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_40"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:text="( Rs 360)"
+            style="@style/ExtraSmallTextViewDark"
+            android:fontFamily="@font/grotesksemibold"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_payment_method"
+            android:layout_toRightOf="@id/iv_payment_logo"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/tv_card_detail_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_card_detail_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="card detail"
+                    android:paddingLeft="@dimen/dimen_4"
+                    android:paddingBottom="@dimen/dimen_4"
+                    style="@style/ExtraSmallTextViewDark"/>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_card_detail_text_seprator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen_4"
+                    android:paddingBottom="@dimen/dimen_4"
+                    style="@style/ExtraSmallTextViewDark"
+                    android:text="-" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_card_detail_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="card detail 2"
+                    android:paddingLeft="@dimen/dimen_4"
+                    android:paddingBottom="@dimen/dimen_4"
+                    style="@style/ExtraSmallTextViewDark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_offer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_payment_method"
+                android:layout_alignLeft="@id/tv_payment_method"
+                android:layout_toRightOf="@id/iv_payment_logo"
+                android:textStyle="italic"
+                style="@style/ExtraSmallTextView"
+                android:layout_marginRight="@dimen/xsmall_text"
+                android:textColor="?attr/textColorDark"
+                android:text="Offer text"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/dimen_18"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/info_pending_icon"
+                    android:padding="@dimen/dimen_2"/>
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_alert_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ExtraSmallTextViewDark"
+                    android:textColor="?attr/alertColor"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="We are experiencing high failure rate on payment."
+                    />
+            </LinearLayout>
+
+
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimen_4"
+                android:paddingBottom="@dimen/dimen_4"
+                android:text="*Convinience fee of 2.5%  is applicable"
+                android:textColor="?attr/colorError"
+                style="@style/ExtraSmallTextViewDark"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_payment_methods"
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_payment_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_payment_logo"
+            android:layout_alignBottom="@+id/iv_payment_logo"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:visibility="gone"
+            android:theme="@style/RadioSelector"
+            android:scaleX="0.70"
+            android:scaleY="0.70"
+            />
+    </RelativeLayout>
+</RelativeLayout>

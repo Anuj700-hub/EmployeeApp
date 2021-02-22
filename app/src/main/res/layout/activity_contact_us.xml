@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hungerbox.customer.navmenu.activity.ContactUsActivity">
+
+
+    <include
+        android:id="@+id/tb_global"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--<ImageView-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:src="@drawable/ic_plant"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="@dimen/large_text"-->
+    <!--android:text="@string/under_construction"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:gravity="center"-->
+    <!--/>-->
+
+    <WebView
+        android:id="@+id/wv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

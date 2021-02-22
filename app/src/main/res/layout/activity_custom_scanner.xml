@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_20"
+        android:paddingBottom="@dimen/dimen_20"
+        android:background="@color/white"
+        android:elevation="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:layout_marginLeft="@dimen/dimen_20"
+            />
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_toRightOf="@+id/arrow"
+            style="@style/NormalTextView"
+            android:textColor="@color/colorAccent"
+            android:text="Scan QR Code"/>
+    </RelativeLayout>
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/zxing_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zxing_scanner_layout="@layout/custom_barcode_scanner"
+        ></com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+
+</LinearLayout>

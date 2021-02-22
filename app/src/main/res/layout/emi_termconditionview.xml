@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/topbar_LBL_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:typeface="sans"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/emi_CHK_i_agree"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/small_text"
+        android:layout_marginRight="@dimen/small_text">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <com.mswipetech.wisepos.demo.sdk.customviews.CustomBoldTextView
+                android:id="@+id/sponsorbankname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="AXIS"
+                android:textSize="@dimen/large_text" />
+
+            <com.mswipetech.wisepos.demo.sdk.customviews.CustomBoldTextView
+                android:id="@+id/mearchant_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="@dimen/large_text" />
+
+            <TextView
+                android:id="@+id/mearchant_other_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/small_text" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/medium_text"
+                android:layout_marginTop="6dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="SALE"
+                android:textSize="@dimen/label_font_large" />
+
+            <TextView
+                android:id="@+id/transaction_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:textSize="@dimen/label_font_small"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/medium_text"
+                android:layout_marginTop="6dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:id="@+id/emi_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:textSize="@dimen/small_text"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/medium_text"
+                android:layout_marginTop="6dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:text="@string/emi_termconditionview_emi_term_condition"
+                android:textSize="@dimen/label_font_small"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/medium_text"
+                android:layout_marginTop="6dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:id="@+id/final_transction_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:textSize="@dimen/label_font_small"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/emi_CHK_i_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emi_BTN_next"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/small_text"
+        android:button="@drawable/checkbox_img_selector"
+        android:drawableRight="@null"
+        android:gravity="center_vertical"
+        android:text="@string/emi_termconditionview_i_agree"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/label_font"
+        android:checked="false" />
+
+    <ImageButton
+        android:id="@+id/emi_BTN_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/small_text"
+        android:background="@drawable/button_arrownext_img_selector"
+        android:enabled="false" />
+
+</RelativeLayout>

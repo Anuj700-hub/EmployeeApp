@@ -1,0 +1,151 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingTop="16dp"
+        android:paddingRight="10dp"
+        tools:context="com.hungerbox.customer.booking.fragment.BookingDetailFragment">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Order Status"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_below="@id/tv_content_title"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sharedeconomy"
+            android:tint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tv_booking_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_status"
+            android:layout_centerHorizontal="true"
+            android:text="Booking Confirmed"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_booking_status_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_booking_status"
+            android:layout_centerHorizontal="true"
+            android:text="Your booking has been confirmed" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_booking_status_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/v_sep_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_booking_status_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="13dp"
+                android:layerType="software"
+                android:src="@drawable/grey_line" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_location_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v_sep_1"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_location_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_location_name_title"
+                android:text="Halong Bay"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/v_sep_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/tv_location_name"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="13dp"
+                    android:layerType="software"
+                    android:src="@drawable/grey_line" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_date_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_sep_2"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_date_title"
+                    android:text="21 November 2017"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/v_sep_3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_date"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="13dp"
+                android:layerType="software"
+                android:src="@drawable/grey_line" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_location_time_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v_sep_3"
+                android:text="Times"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tv_location_time_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_location_time_title" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

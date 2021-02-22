@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('Kapchat_SDK_BB_Instant_new.aar'))

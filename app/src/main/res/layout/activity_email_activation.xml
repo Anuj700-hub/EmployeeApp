@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    android:padding="30dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clipChildren="true"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/tcs_email_new" />
+
+
+            <com.hungerbox.customer.util.view.HBTextViewBold
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Please verify your email address"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heading"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:padding="10dp"
+                style="@style/NormalTextView"
+                android:textColor="?textColorDark"
+                android:text="A verification link has been sent to the email id. This link is active for 30 mins.First verify your email id and then sign-in." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/msg"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:background="@drawable/button_curved_border_primary"
+                >
+
+                <Button
+                    android:id="@+id/btn_resend_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:stateListAnimator="@null"
+                    android:text="Resend Link"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:gravity="center"
+                    android:layout_weight="0.99"/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/btn_change_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:stateListAnimator="@null"
+                    android:text="Change Email"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:layout_weight="0.99"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

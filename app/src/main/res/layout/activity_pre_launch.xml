@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.hungerbox.customer.prelogin.activity.PreLaunchActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_explore_app"
+        android:src="@drawable/pre_launch_image" />
+
+    <TextView
+        android:id="@+id/tv_pre_launch_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Thank you for Registering.\n Good things take time.\n You will be notified when we go live at your location soon."
+        android:textAlignment="center"
+        android:textSize="@dimen/large_text"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_explore_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Explore the App"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text" />
+</RelativeLayout>

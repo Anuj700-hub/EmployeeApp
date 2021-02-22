@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_payment_method_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:selectableItemBackground"
+    android:padding="5dp">
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_payment_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_payment_logo"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_payment_method_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_payment_method"
+        android:layout_toLeftOf="@+id/cb_payment_method"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_payment_method_recharge_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_payment_method"
+        android:layout_toLeftOf="@+id/tv_payment_method_amount"
+        android:padding="10dp"
+        android:textColor="?attr/colorAccent"
+        android:textSize="@dimen/medium_text" />
+
+    <ImageView
+        android:id="@+id/iv_payment_logo"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_payment_method"
+        android:layout_alignBottom="@+id/tv_payment_method"
+        android:layout_centerVertical="true" />
+
+    <ProgressBar
+        android:id="@+id/pb_payment_methods"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cb_payment_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="false" />
+
+</RelativeLayout>

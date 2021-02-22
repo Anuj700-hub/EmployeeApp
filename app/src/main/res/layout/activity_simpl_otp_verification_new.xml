@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context="com.hungerbox.customer.order.activity.SimplOtpVerificationActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_simpl_help_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_otp_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/back_arrow"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            style="@style/LargeTextView"
+            android:text="Introducing Simpl" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:src="@drawable/simpl_logo" />
+
+            <Button
+                android:id="@+id/btn_skip"
+                style="@style/NormalBorderlessButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:text="Skip >"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+
+        <com.hungerbox.customer.util.view.HBTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="All your orders.\nOne bill."
+            style="@style/LargeTextViewDark" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="- Get one bill for all your orders\n\n- Payable on the 1st and 16th of every month.\n\n- Pay via debit/credit cards or net banking."
+            style="@style/NormalTextViewDark" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_simpl_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/otpBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_otp_verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Verify your number. OTP sent to :"
+                style="@style/NormalTextViewDark" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_otp_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dip"
+                    android:background="@drawable/accent_border"
+                    android:ems="6"
+                    android:gravity="center"
+                    android:hint="Enter OTP"
+                    android:inputType="number"
+                    android:maxEms="6"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/btn_resend_simpl"
+                    style="@style/NormalBorderlessButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="resend"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/pb_otp_verification"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sendCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            style="@style/NormalButton"
+            android:text="Send OTP" />
+
+        <Button
+            android:id="@+id/btn_submit_simpl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="?attr/colorPrimary"
+            style="@style/NormalButton"
+            android:text="Activate Simpl"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_simpl_linked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_simpl_help_text"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_simpl_linked"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/green_tick" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/iv_simpl_linked"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            style="@style/LargeTextViewGrey"
+            android:text="Your Account is Already Linked with Simpl"
+            android:textSize="@dimen/large_text" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

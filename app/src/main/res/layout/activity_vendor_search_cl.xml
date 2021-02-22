@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27"/>
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/search_screen_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guide2"/>
+    <ImageView
+        android:id="@+id/iv_background_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_background"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_white_back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guide1"
+        app:layout_constraintLeft_toLeftOf="@+id/rl_search"/>
+    <com.hungerbox.customer.util.view.HbTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MediumTextView"
+        android:text="Search"
+        android:layout_marginLeft="@dimen/dimen_10"
+        app:layout_constraintTop_toTopOf="@+id/iv_back"
+        app:layout_constraintLeft_toRightOf="@+id/iv_back"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_20"
+        android:background="@drawable/search_background_three_rounded"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide1">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_search"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_4"
+            android:paddingTop="@dimen/dimen_2"
+            app:srcCompat="@drawable/ic_search_new"/>
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="Find food partners"
+            android:layout_toRightOf="@+id/iv_search"
+            android:background="@color/white"/>
+    </RelativeLayout>
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/search_background_three_rounded"-->
+<!--        android:padding="@dimen/dimen_8"-->
+<!--        app:hintEnabled="true"-->
+<!--        android:layout_marginLeft="@dimen/dimen_16"-->
+<!--        android:layout_marginRight="@dimen/dimen_16"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/horizontal_guide1">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/tet_search_text"-->
+<!--            android:singleLine="true"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <LinearLayout
+        android:id="@+id/ll_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_20"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_20"
+        android:background="@drawable/search_activity_bottom_background"
+        app:layout_constraintTop_toBottomOf="@+id/iv_background"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="5dp"
+            android:layout_marginBottom="@dimen/margin_large">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/fl_cart_container"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="?buttonCurvedTopBackground"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/bt_checkout"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="22dp"
+                android:padding="3dp"
+                android:text="VIEW CART"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text"
+                android:transitionName="@string/checkout_trans" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/white"
+                android:src="@drawable/orderhistory" />
+
+
+        </LinearLayout>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="?paddingSmall"
+            android:padding="?paddingSmall"
+            android:text="99"
+            style="@style/SmallTextView"
+            />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="?paddingSmall"
+            android:layout_toRightOf="@+id/tv_cart"
+            android:padding="?paddingSmall"
+            android:text="Rs 123"
+            style="@style/SmallTextView"
+            android:textStyle="bold" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_cart"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="?paddingMedium"
+            android:text="Extra Charges may apply"
+            style="@style/SmallTextView"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

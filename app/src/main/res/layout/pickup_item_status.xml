@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideA"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideB"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideC"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideD"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/background_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/guideD"
+        app:layout_constraintTop_toTopOf="@+id/guideD"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_accepted"
+        app:layout_constraintRight_toRightOf="@+id/iv_ready" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/background_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/guideD"
+        app:layout_constraintTop_toTopOf="@+id/guideD"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_ready"
+        app:layout_constraintRight_toRightOf="@+id/iv_delivered" />
+
+
+    <ImageView
+        android:id="@+id/iv_accepted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hollow_grey"
+        app:layout_constraintLeft_toRightOf="@+id/guideA"
+        app:layout_constraintRight_toLeftOf="@+id/guideA"
+        app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+    <ImageView
+        android:id="@+id/iv_ready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hollow_grey"
+        app:layout_constraintLeft_toRightOf="@+id/guideB"
+        app:layout_constraintRight_toLeftOf="@+id/guideB"
+        app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+    <ImageView
+        android:id="@+id/iv_delivered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hollow_grey"
+        app:layout_constraintLeft_toRightOf="@+id/guideC"
+        app:layout_constraintRight_toLeftOf="@+id/guideC"
+        app:layout_constraintTop_toBottomOf="@+id/parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

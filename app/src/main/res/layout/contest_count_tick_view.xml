@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_days_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/accent_border_grey"
+        android:paddingLeft="@dimen/view_padding_small"
+        android:paddingTop="4dp"
+        android:paddingRight="@dimen/view_padding_small"
+        android:paddingBottom="4dp"
+        android:text="5 left"
+        android:textSize="12sp" />
+
+</LinearLayout>

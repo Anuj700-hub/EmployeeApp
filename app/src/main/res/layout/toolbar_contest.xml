@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    android:elevation="@dimen/dimen_10"
+    android:stateListAnimator="@null">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_toolbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_12"
+            app:srcCompat="@drawable/ic_accent_back_arrow" />
+
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_toolbar_title"
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_toolbar_back"
+            android:gravity="center_vertical"
+            android:text="@string/contest_toolbar_header"
+            android:textColor="?attr/colorAccent"
+            android:textSize="?attr/mediumLargeText" />
+
+        <ImageView
+            android:id="@+id/iv_toolbar_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_8"
+            app:srcCompat="@drawable/ic_share"
+            android:visibility="gone"
+            android:padding="@dimen/dimen_8"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_8"
+            android:src="@drawable/hb_logo_new"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

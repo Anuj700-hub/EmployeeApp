@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/rl_add_container">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:text="Search Item"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/small_text" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_item_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_name"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:text="-- cals"
+            android:textAllCaps="true"
+            android:textColor="@color/warm_grey"
+            android:textSize="@dimen/small_text"
+            android:textStyle="bold" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_item_cal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_cal"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:text="per pack"
+            android:textColor="@color/warm_grey"
+            android:textSize="@dimen/xsmall_text" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_container"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/menu_add_back"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_inc_qty"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tv_quantity"
+            android:padding="5dp"
+            android:src="@drawable/ic_add_black_24dp"
+            android:tint="@color/black" />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/iv_remove"
+            android:enabled="false"
+            android:gravity="center_horizontal"
+            android:text="0"
+            android:textColor="@color/dark_grey"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_dec_qty"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/iv_add"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_remove_black_24dp"
+            android:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_item_add"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/capsule_state_selector"
+        android:gravity="center"
+        android:text="ADD"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

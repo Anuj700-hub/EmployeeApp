@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cl_ms_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+    <View
+        android:id="@+id/first_line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:elevation="0dp"
+        android:background="@color/colorGrey_Dot"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guide"
+        app:layout_constraintRight_toRightOf="@+id/vertical_guide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_mtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        style="@style/SmallTextViewGrey"
+        android:background="@drawable/background_curved_white"
+        android:textColor="@color/contest_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_guide2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

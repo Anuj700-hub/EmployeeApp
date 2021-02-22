@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hungerbox.customer.prelogin.fragment.OnBoardingFragment">
+
+    <ImageView
+        android:id="@+id/iv_onboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/alphaBlackLight" />
+
+    <ImageView
+        android:id="@+id/iv_onboarding_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/tv_onborad"
+        app:srcCompat="@drawable/ic_onboarding_new_1" />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_onborad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/tv_title_body"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8"
+        android:text="@string/ob1"
+        style="@style/MediumTextViewBold"
+        />
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_title_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dimen_8"
+        android:gravity="center"
+        style="@style/NormalTextView"
+        android:textColor="?attr/colorAccent"
+        android:layout_marginLeft="@dimen/dimen_30"
+        android:layout_marginRight="@dimen/dimen_30"
+        android:textSize="@dimen/small_text"
+        />
+</RelativeLayout>

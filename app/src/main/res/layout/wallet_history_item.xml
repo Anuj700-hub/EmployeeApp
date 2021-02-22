@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NormalCardView"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="0dp"
+    android:layout_marginBottom="6dp"
+    card_view:cardUseCompatPadding="false">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="?attr/paddingMedium">
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/transaction_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorAccent"
+            style="@style/NormalTextView"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            tools:text="Online Payment"/>
+        <View
+            android:id="@+id/gap"
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/transaction_type"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_comment"
+            style="@style/NormalTextView"
+            android:textColor="?attr/textColorDark"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/gap"
+            />
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/order_id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/marginSmall"
+            style="@style/NormalTextView"
+            android:textColor="?attr/textColorGrey"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_comment"
+            android:text="Order ID : "/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/transaction_id"
+            android:layout_width="wrap_content"
+            android:maxWidth="200dp"
+            android:layout_height="wrap_content"
+            style="@style/NormalTextView"
+            android:textSize="?attr/mediumTextSize"
+            android:textColor="?attr/textColorDark"
+            card_view:layout_constraintTop_toTopOf="@+id/order_id_label"
+            card_view:layout_constraintLeft_toRightOf="@+id/order_id_label"
+            tools:text="123456jferjf3984"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/transaction_amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/marginSmall"
+            style="@style/NormalTextView"
+            android:textColor="?attr/textColorGrey"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/transaction_id"
+            android:text="Transaction Amount : "/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/NormalTextView"
+            android:padding="0dp"
+            android:textSize="?attr/mediumTextSize"
+            android:textColor="?attr/textColorDark"
+            card_view:layout_constraintTop_toTopOf="@+id/transaction_amount_label"
+            card_view:layout_constraintBottom_toBottomOf="@+id/transaction_amount_label"
+            card_view:layout_constraintLeft_toRightOf="@+id/transaction_amount_label"
+            tools:text="2000.00"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/wallet_amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/marginSmall"
+            style="@style/NormalTextView"
+            android:textColor="?attr/textColorGrey"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/transaction_amount"
+            android:text="Closing Wallet Amount : "
+            android:visibility="gone"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/wallet_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/NormalTextViewDark"
+            android:padding="0dp"
+            card_view:layout_constraintTop_toTopOf="@+id/wallet_amount_label"
+            card_view:layout_constraintBottom_toBottomOf="@+id/wallet_amount_label"
+            card_view:layout_constraintLeft_toRightOf="@+id/wallet_amount_label"
+            tools:text="2000.00"
+            android:visibility="gone"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_wallet_date"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="?attr/marginSmall"
+            style="@style/NormalTextView"
+            android:textColor="?attr/textColorGrey"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/wallet_amount_label"
+            tools:text="29 Jan"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/marginSmall"
+            style="@style/NormalTextView"
+            android:textColor="?attr/textColorGrey"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_wallet_date"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_wallet_date"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv_wallet_date"
+            android:layout_margin="?attr/marginSmall"
+            android:text=" | "/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_wallet_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/marginSmall"
+            style="@style/NormalTextView"
+            android:textColor="?attr/textColorGrey"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_wallet_date"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_wallet_date"
+            card_view:layout_constraintLeft_toRightOf="@+id/separator"
+            android:layout_margin="?attr/marginSmall"
+            tools:text="4:13 PM"/>
+
+        <ImageView
+            android:id="@+id/transaction_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dimen_5"
+            card_view:srcCompat="@drawable/ic_success_icon_wallet_history_page"/>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_transcation_status"
+            card_view:layout_constraintTop_toTopOf="@id/transaction_status"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/dimen_10"
+            style="@style/NormalTextView"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/colorAccent"
+            android:text="Success"
+            android:textAlignment="center"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

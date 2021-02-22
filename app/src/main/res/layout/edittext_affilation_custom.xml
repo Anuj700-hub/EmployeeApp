@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/editText_guest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textPersonName"
+        android:background="@drawable/accent_border_grey"
+        android:imeOptions="actionNext"
+        android:gravity="center_vertical"
+        android:singleLine="false"
+        android:minLines="2"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/black"
+        android:textColorHint="@color/colorAccent"
+
+        />
+</RelativeLayout>

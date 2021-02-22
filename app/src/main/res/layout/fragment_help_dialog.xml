@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.hungerbox.customer.prelogin.fragment.OnBoardingFragment">
+
+    <ImageView
+        android:id="@+id/iv_onboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="75" />
+
+    <TextView
+        android:id="@+id/tv_onborad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Change cafeteria, check wallet balance or select vendors you want to order from"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+</LinearLayout>

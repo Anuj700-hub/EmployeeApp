@@ -1,0 +1,1 @@
+include ':app', ':creditcarddesign', ':MswipeWseriesUniversalDRDSDKVer1.0.10v3.4.2', ':spotlight', ':rusk-debug', ':plower-debug', ':Kapchat_SDK_BB_Instant_new', ':app-release', ':app-prod-release-bb', ':logcatviewer'

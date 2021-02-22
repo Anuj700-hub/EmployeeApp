@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.hungerbox.customer.prelogin.CustomSetupActivity">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tet_tab_passcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tab passcode"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cb_load_company"
+                android:layout_width="match_parent"
+                android:layout_height="29.4dp"
+                android:layout_marginTop="40dp"
+                android:button="@drawable/custom_checkbox"
+                android:checked="false"
+                android:clickable="false"
+                android:lineSpacingExtra="5sp"
+                android:text=" Company Loaded "
+                android:textColor="@color/text_darker" />
+
+            <Button
+                android:id="@+id/bt_relaod"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                style="@style/NormalButton"
+                android:lineSpacingExtra="5sp"
+                android:text="Reload Companies"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:lineSpacingExtra="5sp"
+            android:text="Please select the company of this tab"
+            android:textAlignment="center"
+            android:textColor="?textColorDark"
+            android:textSize="?mediumLargeText"
+            style="@style/NormalTextView"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_border">
+
+            <Spinner
+                android:id="@+id/sp_company_setup"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColor="@color/text_darker"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:lineSpacingExtra="5sp"
+            android:text="Please select the cafe for this tab"
+            android:textAlignment="center"
+            android:textColor="?textColorDark"
+            android:textSize="?mediumLargeText"
+            style="@style/NormalTextView" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_border">
+
+            <Spinner
+                android:id="@+id/sp_location_setup"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:lineSpacingExtra="5sp"
+            android:text="Submit"
+            style="@style/NormalButton"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_load_config_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_image"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>

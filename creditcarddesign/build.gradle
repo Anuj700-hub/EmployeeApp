@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        rc {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        releaseprod {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        qa {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    final SUPPORT_VERSION = "27.+"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.ozodrukh:CircularReveal:1.0.6'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+}

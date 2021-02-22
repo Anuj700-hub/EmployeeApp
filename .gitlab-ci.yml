@@ -1,0 +1,108 @@
+image: openjdk:8-jdk
+
+variables:
+  ANDROID_COMPILE_SDK: "29"
+  ANDROID_BUILD_TOOLS: "29.0.3"
+  ANDROID_SDK_TOOLS:   "4333796"
+  RELEASE_BUILD_TYPE: "ReleaseBundle"
+
+stages:
+  - COMMON_UPLOAD
+  - COMMON_QA
+  - ALL_BUILD
+  - SHARE_BUILD
+
+
+COMMON_UPLOAD:
+  stage: COMMON_UPLOAD
+  when: manual
+  script:
+    - apt-get --quiet update --yes
+    - apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+    - wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
+    - unzip -d android-sdk-linux android-sdk.zip
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "platform-tools" >/dev/null
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS}" >/dev/null
+    - export ANDROID_HOME=$PWD/android-sdk-linux
+    - export PATH=$PATH:$PWD/android-sdk-linux/platform-tools/
+    - chmod +x ./gradlew
+    - set +o pipefail
+    - yes | android-sdk-linux/tools/bin/sdkmanager --licenses
+    - set -o pipefail
+    - echo $PLAY_STORE_CRED > app/play-store-key.json
+    - ./gradlew publishCommon$RELEASE_BUILD_TYPE --stacktrace
+
+  only:
+    - master
+
+  artifacts:
+    paths:
+      - app/build/outputs/
+
+
+COMMON_QA:
+  stage: COMMON_QA
+  when: manual
+  script:
+    - apt-get --quiet update --yes
+    - apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+    - wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
+    - unzip -d android-sdk-linux android-sdk.zip
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "platform-tools" >/dev/null
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS}" >/dev/null
+    - export ANDROID_HOME=$PWD/android-sdk-linux
+    - export PATH=$PATH:$PWD/android-sdk-linux/platform-tools/
+    - chmod +x ./gradlew
+    - set +o pipefail
+    - yes | android-sdk-linux/tools/bin/sdkmanager --licenses
+    - set -o pipefail
+    - ./gradlew assembleCommonQa
+
+
+  artifacts:
+    paths:
+      - app/build/outputs/
+
+
+ALL_BUILD:
+  stage: ALL_BUILD
+  when: always
+  script:
+    - apt-get --quiet update --yes
+    - apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+    - wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
+    - unzip -d android-sdk-linux android-sdk.zip
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "platform-tools" >/dev/null
+    - echo y | android-sdk-linux/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS}" >/dev/null
+    - export ANDROID_HOME=$PWD/android-sdk-linux
+    - export PATH=$PATH:$PWD/android-sdk-linux/platform-tools/
+    - chmod +x ./gradlew
+    - set +o pipefail
+    - yes | android-sdk-linux/tools/bin/sdkmanager --licenses
+    - set -o pipefail
+    - ./gradlew assembleCommonQa
+    - ./gradlew assembleCafeQa
+    - ./gradlew assembleGuestQa
+
+  only:
+    - master
+
+  artifacts:
+    paths:
+      - app/build/outputs/
+
+SHARE_BUILD:
+  stage: SHARE_BUILD
+  when: always
+  image: quay.io/coreos/awscli
+  script:
+    - aws configure set region ap-south-1
+    - aws s3 cp app/build/outputs/apk/common/qa s3://$S3_BUCKET_COMMON/ --recursive --exclude "*" --include "*.apk" --acl public-read-write
+    - aws s3 cp app/build/outputs/apk/cafe/qa s3://$S3_BUCKET_CAFE/ --recursive --exclude "*" --include "*.apk" --acl public-read-write
+    - aws s3 cp app/build/outputs/apk/guest/qa s3://$S3_BUCKET_GUEST/ --recursive --exclude "*" --include "*.apk" --acl public-read-write
+
+  only:
+    - master

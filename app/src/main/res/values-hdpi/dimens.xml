@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="view_pager_height">200dp</dimen>
+    <dimen name="cafe_image_height">200dp</dimen>
+    <dimen name="cafe_image_width">242dp</dimen>
+
+    <dimen name="onboarding_image_height">170dp</dimen>
+    <dimen name="onboarding_image_width">220dp</dimen>
+
+    <dimen name="qr_code_height">160dp</dimen>
+    <dimen name="qr_code_width">160dp</dimen>
+</resources>

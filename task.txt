@@ -1,0 +1,9 @@
+            Task
+1) Error Pop Fragment Fix
+2) BookMark Activity Fix
+3) ConvertDpToPixel
+4) BookmarkPayment Fragment - findAndCreateRecommendation
+5) Trans Id in orderdetail
+6) Cursor Color Changes in Mobile Update Dialog
+7) Optional Desk Ordering
+8) Recharge Button  Handling

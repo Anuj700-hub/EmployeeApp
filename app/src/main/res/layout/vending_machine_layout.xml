@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_24"
+    android:layout_marginTop="@dimen/dimen_16"
+    android:layout_marginRight="@dimen/dimen_24"
+    android:layout_marginBottom="@dimen/dimen_8"
+    android:background="@drawable/rounded_bordered"
+    android:minHeight="60dp">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide_end"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_vm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="@dimen/dimen_8"
+        android:layout_marginBottom="1dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/vertical_guide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vm_new" />
+
+
+    <com.hungerbox.customer.util.view.HbTextView
+        android:id="@+id/tv_vm_name"
+        style="@style/MediumTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:scrollHorizontally="true"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guide_center"
+        app:layout_constraintLeft_toRightOf="@id/vertical_guide"
+        app:layout_constraintRight_toLeftOf="@id/vertical_guide_end"
+        tools:text=" Vending Machine 1"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_desc"
+        style="@style/NormalTextViewGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:drawableLeftCompat="@drawable/ic_location"
+        android:drawablePadding="@dimen/dimen_4"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="0dp"
+        android:scrollHorizontally="true"
+        android:textSize="@dimen/text_size_12sp"
+        app:layout_constraintLeft_toRightOf="@id/vertical_guide"
+        app:layout_constraintRight_toLeftOf="@id/vertical_guide_end"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_guide_center"
+        tools:text="1st floor, Cafe C, Accenture, Bangalore" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

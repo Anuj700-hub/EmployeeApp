@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentOtpVerificationActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical"
+    tools:context="com.hungerbox.customer.prelogin.activity.OtpVerificationActivity">
+
+   <include
+       layout="@layout/toolbar_new"
+       android:id="@+id/layout_header"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/enterCodeBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:layout_below="@+id/layout_header">
+
+        <com.hungerbox.customer.util.view.HbTextView
+            android:id="@+id/tv_otp_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="?attr/paddingSmall"
+            android:text="We have sent an OTP to "
+            style="@style/NormalTextViewDark"
+            android:textSize="@dimen/small_text"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_20"
+            >
+            <requestFocus/>
+            <EditText
+                android:id="@+id/et_otp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                android:nextFocusRight="@id/et_otp2"
+                style="@style/NormalTextInputEditText"
+                android:backgroundTint="@color/colorAccent"
+                />
+            <EditText
+                android:id="@+id/et_otp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                android:nextFocusRight="@id/et_otp3"
+                style="@style/NormalTextInputEditText"
+                android:backgroundTint="@color/colorAccent"/>
+            <EditText
+                android:id="@+id/et_otp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                android:nextFocusRight="@id/et_otp4"
+                style="@style/NormalTextInputEditText"
+                android:backgroundTint="@color/colorAccent"/>
+            <EditText
+                android:id="@+id/et_otp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                android:nextFocusRight="@id/et_otp5"
+                style="@style/NormalTextInputEditText"
+                android:backgroundTint="@color/colorAccent"/>
+            <EditText
+                android:id="@+id/et_otp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                android:nextFocusRight="@id/et_otp6"
+                style="@style/NormalTextInputEditText"
+                android:backgroundTint="@color/colorAccent"/>
+            <EditText
+                android:id="@+id/et_otp6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                style="@style/NormalTextInputEditText"
+                android:backgroundTint="@color/colorAccent"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_30">
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Didn't receive the OTP ?"
+                style="@style/NormalTextViewDark"
+                android:textSize="@dimen/small_text"/>
+            <com.hungerbox.customer.util.view.HbTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resend"
+                style="@style/MediumTextView"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/tv_resend"/>
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_submit_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_50"
+            style="@style/NormalButton"
+            android:paddingRight="@dimen/dimen_70"
+            android:paddingLeft="@dimen/dimen_70"
+            android:text="verify"
+            />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/paddingLarge"
+        android:layout_marginRight="?attr/paddingLarge"
+        android:background="@drawable/card_corner_white"
+        android:layout_below="@+id/enterCodeBox"
+        android:layout_marginTop="@dimen/dimen_30"
+        style="@style/NormalCardView">
+
+        <LinearLayout
+            android:id="@+id/helper_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_simpl_help_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_8"
+                    style="@style/NormalTextViewDark"
+                    android:textSize="@dimen/small_text"/>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/subHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:padding="?attr/paddingSmall"
+                    style="@style/NormalTextViewDark"
+                    android:textSize="@dimen/small_text"/>
+
+                <com.hungerbox.customer.util.view.HbTextView
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_8"
+                    android:textColor="?attr/textColorDark"
+                    style="@style/NormalTextViewDark"
+                    android:textSize="@dimen/small_text"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pb_otp_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

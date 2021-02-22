@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tb_space_dashboard"
+        layout="@layout/toolbar_white_v2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tb_space_dashboard"
+        android:layout_marginBottom="@dimen/dimen_60"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            tools:context=".spaceBooking.SpaceBookingDashboard">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_space_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_space_management_banner" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_space_type"
+                style="@style/MediumTextViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="Book your space"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="@dimen/large_text"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_space_image" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                android:id="@+id/tv_helper_text"
+                style="@style/NormalTextViewGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="Kindly choose your preferences"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_space_type" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rl_space_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_helper_text"
+                tools:listitem="@layout/space_type_item_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <Button
+        android:id="@+id/bt_proceed"
+        style="@style/PaymentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/dimen_12"
+        android:text="Proceed" />
+</RelativeLayout>

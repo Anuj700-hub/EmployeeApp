@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CheckoutFlow</string>
+
+    <string name="next">NEXT</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="card_holder_name_sample">CARD HOLDER</string>
+    <string name="card_holder">CARD HOLDER</string>
+    <string name="card_holder_name_default">Cardholder’s Name</string>
+    <string name="expiry">EXPIRY</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="card_expiry">CARD EXPIRY</string>
+    <string name="card_mm_yy">MM/YY</string>
+    <string name="name_on_card">NAME ON CARD</string>
+    <string name="card_number">CARD NUMBER</string>
+    <string name="error_invalid_month">Invalid month</string>
+    <string name="error_card_expired">Card expired</string>
+    <integer name="card_name_len">25</integer>
+    <string name="card_expiry_label">Expiry</string>
+    <string name="card_mm_hint">MM</string>
+    <string name="card_yy_hint">YY</string>
+    <string name="hint_cvv_front">0000</string>
+    <string name="card_holder_name_label">Name</string>
+    <string name="card_number_label">Card No.</string>
+</resources>

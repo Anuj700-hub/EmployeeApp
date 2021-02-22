@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tb_pay"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:stateListAnimator="@null">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="?attr/paddingLarge"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:paddingRight="?attr/paddingMedium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dimen_12"
+                app:srcCompat="@drawable/ic_accent_back_arrow" />
+
+            <com.hungerbox.customer.util.view.HbTextView
+                style="@style/MediumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_8"
+                android:layout_toRightOf="@id/iv_back"
+                android:text="Guest Order"
+                android:textColor="?attr/colorAccent" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_pay"
+        android:background="?attr/colorSurface">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_guest_menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/ll_guest_count_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_guest_menu_list"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. of Guests"
+                style="@style/MediumTextViewDark"
+                />
+
+            <!--<Spinner-->
+            <!--android:id="@+id/sp_guest_count"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--&gt;</Spinner>-->
+            <EditText
+                android:id="@+id/et_guest_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="0"
+                android:inputType="number"
+                android:minEms="5" />
+
+            <requestFocus />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_order_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_guest_count_container"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/rb_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regular cafeteria" />
+
+            <RadioButton
+                android:id="@+id/rb_gda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guest dining area" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/bt_place_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="@dimen/dimen_24"
+            style="@style/NormalButton"
+            android:padding="5dp"
+            android:text="PLACE ORDER"
+          />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

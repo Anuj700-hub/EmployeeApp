@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="myAccountViewModel"
+            type="com.hungerbox.customer.mvvm.viewmodel.MYAccountViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:fillViewport="true">
+
+
+        <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorSurface">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tb_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="@color/white"
+                    android:elevation="8dp"
+                    android:stateListAnimator="@null">
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="?attr/paddingLarge"
+                        android:elevation="8dp"
+                        android:gravity="center_vertical"
+                        android:paddingRight="?attr/paddingMedium">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dimen_12"
+                            app:srcCompat="@drawable/ic_accent_back_arrow"/>
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            style="@style/MediumTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dimen_8"
+                            android:layout_toRightOf="@id/iv_back"
+                            android:text="My Account"
+                            android:textColor="?attr/colorAccent" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/ctv_log"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            android:padding="@dimen/dimen_6"
+                            android:text="Log"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            android:theme="@style/NormalSwitchGreenNew"
+                            android:layout_alignParentRight="true"
+                            app:switchChecked="@{myAccountViewModel.logSettingChecked}"
+                            app:isVisible="@{myAccountViewModel.logSettingVisibility}"/>
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_account"
+                    style="@style/NormalCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tb_pay"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/btn_update_account"
+                        android:layout_below="@+id/layout_header"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_8"
+                        android:paddingTop="@dimen/dimen_24"
+                        android:paddingRight="@dimen/dimen_8"
+                        android:paddingBottom="@dimen/dimen_24">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/NormalTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.5">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_name"
+                                style="@style/NormalTextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:elevation="0dp"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:hint="Name"
+                                android:text="@={myAccountViewModel.etEmployeeName}"
+                                android:inputType="none"
+                                android:textIsSelectable="false"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/NormalTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:alpha="0.5">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_emp_id"
+                                style="@style/NormalTextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:elevation="0dp"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:hint="Employee id"
+                                android:inputType="none"
+                                android:text="@={myAccountViewModel.etEmployeeId}"
+                                android:textIsSelectable="false"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/NormalTextInputLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:alpha="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_phone_number"
+                                    style="@style/NormalTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:elevation="0dp"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="Phone Number"
+                                    android:inputType="none"
+                                    android:textIsSelectable="false"
+                                    android:text="@={myAccountViewModel.etContactNumber}"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:id="@+id/ll_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:gravity="bottom"
+                            android:layout_weight="1"
+                            app:isVisible="@{myAccountViewModel.genderSectionVisibility}"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="NormalTextView"
+                                android:paddingLeft="@dimen/dimen_10"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:textColor="@color/violation_better_than"
+                                android:text="Gender"
+                                app:isVisible="@{myAccountViewModel.tvGenderVisibility}"
+                                android:layout_alignParentTop="true"/>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tip_gender"
+                                android:visibility="gone"
+                                style="@style/NormalTextInputLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                app:isVisible="@{myAccountViewModel.tipGenderVisibility}"
+                                android:alpha="0.5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_gender"
+                                    style="@style/NormalTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:elevation="0dp"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="Gender"
+                                    android:inputType="none"
+                                    android:text="@={myAccountViewModel.etGender}"
+                                    app:isVisible="@{myAccountViewModel.etGenderVisibility}"
+                                    android:textIsSelectable="false" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Spinner
+                                android:id="@+id/sp_gender"
+                                style="@style/Widget.AppCompat.Spinner.Underlined"
+                                android:layout_marginTop="19dp"
+                                android:backgroundTint="@color/violation_better_than"
+                                android:layout_width="match_parent"
+                                app:isVisible="@{myAccountViewModel.spGenderVisibility}"
+                                android:layout_height="45dp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/NormalTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:alpha="0.5">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_email"
+                                style="@style/NormalTextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:elevation="0dp"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:hint="Email"
+                                android:drawableRight="@drawable/status_success"
+                                android:inputType="none"
+                                android:text="@={myAccountViewModel.etEmpEmail}"
+                                android:textIsSelectable="false"
+                                app:rightDrawable="@{myAccountViewModel.etEmailRightDrawable}"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_desk_reference"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:isVisible="@{myAccountViewModel.deskReferenceVisibility}">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/txtInputLayout"
+                                style="@style/NormalTextInputLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:hint="@{myAccountViewModel.etDeskReferenceHint}">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_desk_reference"
+                                    style="@style/NormalTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:elevation="0dp"
+                                    android:focusable="false"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:paddingRight="@dimen/dimen_60"
+                                    android:text="@={myAccountViewModel.etDeskReference}"
+                                    app:isFocus="@{myAccountViewModel.etDeskReferenceFocusability}"
+                                    android:textIsSelectable="false" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/btn_edit_desk"
+                                style="@style/NormalBorderlessButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen_24"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/button_curved_border_white_new"
+                                android:gravity="center_vertical|right"
+                                android:text="Edit"
+                                android:textAlignment="center"
+                                android:textColor="?attr/colorPrimary"
+                                android:visibility="visible"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/bt_change_password"
+                    style="@style/NormalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_account"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="?attr/paddingSmall"
+                    android:layout_marginTop="@dimen/dimen_32"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/button_curved_border_white_new"
+                    android:fontFamily="@font/grotesksemibold"
+                    android:paddingLeft="@dimen/dimen_36"
+                    android:paddingRight="@dimen/dimen_36"
+                    android:text="Change Password"
+                    android:textColor="@color/colorPrimary"
+                    app:isVisible="@{myAccountViewModel.btnChangePassVisibility}"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_permissions"
+                    style="@style/NormalCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bt_change_password"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    app:isVisible="@{myAccountViewModel.cvProximityOptionsVisibility}">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/ctv_bluetooth_proximity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            android:padding="@dimen/dimen_6"
+                            android:text="Bluetooth Proximity"
+                            android:theme="@style/NormalSwitchGreenNew"
+                            app:switchChecked="@{myAccountViewModel.proximitySwitchChecked}"
+                            app:isVisible="@{myAccountViewModel.proximitySwitchVisibility}"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_share"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dimen_6"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            app:isVisible="@{myAccountViewModel.shareOptionVisibility}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Share my contact tracing data"
+                                android:textSize="@dimen/text_size_14"
+                                android:textColor="@color/black_87"/>
+
+                            <Button
+                                android:id="@+id/btn_share_data"
+                                style="@style/NormalBorderlessButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen_24"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/button_curved_border"
+                                android:gravity="center"
+                                android:text="Share"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_delete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dimen_6"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            app:isVisible="@{myAccountViewModel.deleteOptionVisibility}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Delete my contact tracing data"
+                                android:textSize="@dimen/text_size_14"
+                                android:textColor="@color/black_87"/>
+
+                            <Button
+                                android:id="@+id/btn_delete_data"
+                                style="@style/NormalBorderlessButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen_24"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/button_curved_border"
+                                android:text="DELETE"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_setting"
+                    style="@style/NormalCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_permissions"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="32dp"
+                    app:isVisible="@{myAccountViewModel.btnCVSettingVisibility}">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            style="@style/MediumTextViewBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Don’t miss out !"
+                            android:textColor="?attr/textColorDark"
+                            android:textSize="?attr/largeTextSize" />
+
+                        <com.hungerbox.customer.util.view.HbTextView
+                            style="@style/SmallTextViewDark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="Get notified about order status and special offers" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/ctv_sms_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            android:padding="@dimen/dimen_6"
+                            android:text="SMS"
+                            android:theme="@style/NormalSwitchGreenNew"
+                            app:switchChecked="@{myAccountViewModel.smsSettingChecked}"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/ctv_notification_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            android:padding="@dimen/dimen_6"
+                            android:text="App Notifications"
+                            android:theme="@style/NormalSwitchGreenNew"
+                            app:switchChecked="@{myAccountViewModel.notificationSettingChecked}"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/ctv_pip_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_6"
+                            android:padding="@dimen/dimen_6"
+                            android:theme="@style/NormalSwitchGreenNew"
+                            android:visibility="gone"
+                            app:switchChecked="@{myAccountViewModel.pipSettingChecked}"
+                            android:text="@={myAccountViewModel.pipSettingValue}"
+                            app:isVisible="@{myAccountViewModel.pipSettingVisibility}"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/ctv_chat_head_setting"
+                            style="@style/NormalSwitchAccent"
+                            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                            android:gravity="center"
+                            android:text="See a active order head to quickly access your current order"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_privacy_policy"
+                    android:layout_below="@id/cv_setting"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    style="@style/SmallTextView"
+                    app:spannableText="@{myAccountViewModel.privacyPolicy}" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/rl_progress"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:isVisible="@{myAccountViewModel.progressbarVisibility}"/>
+        </RelativeLayout>
+    </ScrollView>
+</layout>
